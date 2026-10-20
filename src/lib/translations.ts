@@ -28,7 +28,7 @@ export const translations = {
         legalDesc: "Πλήρης συμμόρφωση με τον νέο Κώδικα Μετανάστευσης",
         experienceBadge: "Εξειδικευμένο Δίκτυο",
         experienceDesc: "Συνεργασίες με κορυφαία agencies σε Ασία & Αφρική",
-        supportBadge: "End-to-End Υποστήριξη",
+        supportBadge: "Ολοκληρωμένη Υποστήριξη",
         supportDesc: "Από τη συνέντευξη μέχρι την άφιξη και ένταξη",
       },
     },
@@ -39,7 +39,7 @@ export const translations = {
       stat2Label: "Συνεργαζόμενες Χώρες Προέλευσης",
       stat3Number: "5+",
       stat3Label: "Βασικοί Παραγωγικοί Τομείς",
-      stat4Number: "End-to-End",
+      stat4Number: "Ολοκληρωμένη",
       stat4Label: "Διαχείριση Γραφειοκρατίας & Visas",
     },
     about: {
