@@ -87,6 +87,9 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+  a {
+    text-decoration: none;
+  }
   button,
   [role="button"],
   input[type="button"],

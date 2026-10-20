@@ -4,10 +4,10 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Hotel, Wheat, HardHat, Factory, Package, ArrowUpRight } from "lucide-react";
+import { Hotel, Wheat, HardHat, Factory, Package, ArrowUpRight, ArrowRight } from "lucide-react";
 
 export function SectorsSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const getIcon = (id: string) => {
     switch (id) {
@@ -76,7 +76,7 @@ export function SectorsSection() {
                 {/* Role tags */}
                 <div className="space-y-2">
                   <div className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                    Ενδεικτικές Ειδικότητες:
+                    {language === "el" ? "Ενδεικτικές Ειδικότητες:" : "Key Roles / Positions:"}
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {sector.roles.map((role, idx) => (
@@ -93,13 +93,16 @@ export function SectorsSection() {
               </div>
 
               {/* Bottom Card Footer with Direct Action */}
-              <div className="px-7 py-4 bg-slate-50/70 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-700 dark:text-slate-300">
-                <span>Άμεση κάλυψη αναγκών</span>
+              <div className="px-7 py-3.5 bg-slate-50/80 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <span className="text-slate-500 dark:text-slate-400">
+                  {language === "el" ? "Άμεση κάλυψη αναγκών" : "Fast deployment ready"}
+                </span>
                 <a
                   href="#contact"
-                  className="text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1"
+                  className="group/cta inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-500 text-sky-700 dark:text-sky-300 hover:text-white dark:hover:text-white transition-all duration-200 font-semibold cursor-pointer shadow-2xs hover:shadow-md hover:shadow-sky-500/20 active:scale-95 no-underline"
                 >
-                  Ζητήστε Προσφορά &rarr;
+                  <span>{language === "el" ? "Ζητήστε Προσφορά" : "Request a Quote"}</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/cta:translate-x-1" />
                 </a>
               </div>
             </Card>
