@@ -36,7 +36,7 @@ export function Navbar() {
           : "bg-white/80 dark:bg-slate-950/80 backdrop-blur-sm border-b border-slate-100 dark:border-slate-900 py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
         <div className="flex items-center justify-between">
           {/* Logo / Brand */}
           <a
