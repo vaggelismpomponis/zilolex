@@ -9,6 +9,7 @@ import { WhyUsSection } from "@/components/WhyUsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <ContactFormSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
