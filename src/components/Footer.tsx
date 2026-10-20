@@ -107,12 +107,13 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col items-center justify-center gap-3 text-xs text-slate-500 text-center">
           <div>{t.footer.copyright}</div>
-          <div className="flex gap-6">
+          <div className="flex items-center justify-center gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">
               {t.footer.privacyPolicy}
             </a>
+            <span className="text-slate-700">•</span>
             <a href="#" className="hover:text-slate-400 transition-colors">
               {t.footer.termsOfUse}
             </a>
