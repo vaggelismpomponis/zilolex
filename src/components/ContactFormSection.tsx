@@ -170,11 +170,10 @@ export function ContactFormSection() {
               </div>
 
               {/* Direct call mobile prompt */}
-              <div className="mt-10 pt-6 border-t border-slate-800 flex items-center justify-between">
+              <div className="mt-10 pt-6 border-t border-slate-800">
                 <span className="text-xs text-slate-400 font-medium">
                   Άμεση ανταπόκριση εντός 24 ωρών
                 </span>
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
               </div>
             </div>
           </div>
