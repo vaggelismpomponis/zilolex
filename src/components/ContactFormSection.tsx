@@ -195,7 +195,7 @@ export function ContactFormSection() {
                   <Button
                     onClick={() => setStatus("idle")}
                     variant="outline"
-                    className="font-medium"
+                    className="font-medium border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white cursor-pointer"
                   >
                     Υποβολή νέου αιτήματος
                   </Button>
@@ -372,7 +372,7 @@ export function ContactFormSection() {
                   <Button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3.5 h-auto text-base rounded-lg transition-all shadow-md"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white font-semibold py-3.5 h-auto text-base rounded-lg transition-all shadow-md cursor-pointer"
                   >
                     {status === "loading" ? (
                       <span className="flex items-center justify-center gap-2">

@@ -57,7 +57,7 @@ export function Hero() {
               href="#process"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "w-full sm:w-auto bg-slate-800/60 hover:bg-slate-800 text-slate-200 border-slate-700 px-8 py-3.5 h-auto text-base backdrop-blur-sm cursor-pointer"
+                "w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-white hover:text-white border-slate-600 hover:border-slate-400 px-8 py-3.5 h-auto text-base backdrop-blur-sm cursor-pointer transition-colors shadow-sm"
               )}
             >
               {t.hero.ctaSecondary}

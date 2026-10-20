@@ -104,7 +104,7 @@ export function Navbar() {
               href="#contact"
               className={cn(
                 buttonVariants({ variant: "default" }),
-                "bg-slate-900 hover:bg-slate-800 text-white shadow-sm font-medium text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer"
+                "bg-slate-900 hover:bg-slate-800 text-white hover:text-white shadow-sm font-medium text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer"
               )}
             >
               <span>{t.nav.cta}</span>
@@ -166,7 +166,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   buttonVariants({ variant: "default" }),
-                  "w-full bg-slate-900 hover:bg-slate-800 text-white py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer"
+                  "w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer"
                 )}
               >
                 <span>{t.nav.cta}</span>
