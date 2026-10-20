@@ -39,7 +39,7 @@ export function FaqSection() {
                 <button
                   type="button"
                   onClick={() => toggleIndex(idx)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">

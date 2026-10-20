@@ -119,7 +119,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full ${
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${
                   language === "el" ? "bg-slate-900 text-white" : "text-slate-600"
                 }`}
               >
@@ -128,7 +128,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full ${
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${
                   language === "en" ? "bg-slate-900 text-white" : "text-slate-600"
                 }`}
               >
@@ -139,7 +139,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
+              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none cursor-pointer"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

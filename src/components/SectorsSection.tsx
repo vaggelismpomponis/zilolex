@@ -55,7 +55,7 @@ export function SectorsSection() {
                   </div>
                   <a
                     href="#contact"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 cursor-pointer"
                     title="Αίτημα Προσωπικού"
                     aria-label={`Αίτημα για ${sector.title}`}
                   >

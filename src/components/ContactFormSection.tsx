@@ -372,7 +372,7 @@ export function ContactFormSection() {
                   <Button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white font-semibold py-3.5 h-auto text-base rounded-lg transition-all shadow-md cursor-pointer"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white font-semibold py-3.5 h-auto text-base rounded-lg transition-all shadow-md cursor-pointer disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? (
                       <span className="flex items-center justify-center gap-2">
