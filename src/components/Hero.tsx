@@ -1,0 +1,115 @@
+"use client";
+
+import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ShieldCheck, ArrowRight, Award, Users, FileCheck } from "lucide-react";
+
+export function Hero() {
+  const { t } = useLanguage();
+
+  return (
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 text-white">
+      {/* Background Subtle Geometric Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-sky-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-3xl" />
+        {/* Subtle grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Regulatory Compliance Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-sky-400 text-xs sm:text-sm font-medium mb-6 shadow-xs backdrop-blur-sm">
+            <ShieldCheck className="w-4 h-4 text-sky-400" />
+            <span>{t.hero.badge}</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
+            {t.hero.titleStart}{" "}
+            <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
+              {t.hero.titleHighlight}
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-base sm:text-lg lg:text-xl text-slate-300 mb-10 leading-relaxed font-normal max-w-2xl mx-auto">
+            {t.hero.subtitle}
+          </p>
+
+          {/* Call To Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <a
+              href="#contact"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "w-full sm:w-auto bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-8 py-3.5 h-auto text-base shadow-lg shadow-sky-500/20 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 cursor-pointer"
+              )}
+            >
+              <span>{t.hero.ctaPrimary}</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+
+            <a
+              href="#process"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "w-full sm:w-auto bg-slate-800/60 hover:bg-slate-800 text-slate-200 border-slate-700 px-8 py-3.5 h-auto text-base backdrop-blur-sm cursor-pointer"
+              )}
+            >
+              {t.hero.ctaSecondary}
+            </a>
+          </div>
+
+          {/* 3 Pillars Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left pt-6 border-t border-slate-800/80">
+            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs flex items-start gap-3.5">
+              <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400 shrink-0">
+                <FileCheck className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white mb-0.5">
+                  {t.hero.stats.legalBadge}
+                </h4>
+                <p className="text-xs text-slate-400 leading-snug">
+                  {t.hero.stats.legalDesc}
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs flex items-start gap-3.5">
+              <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 shrink-0">
+                <Users className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white mb-0.5">
+                  {t.hero.stats.experienceBadge}
+                </h4>
+                <p className="text-xs text-slate-400 leading-snug">
+                  {t.hero.stats.experienceDesc}
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs flex items-start gap-3.5">
+              <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
+                <Award className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white mb-0.5">
+                  {t.hero.stats.supportBadge}
+                </h4>
+                <p className="text-xs text-slate-400 leading-snug">
+                  {t.hero.stats.supportDesc}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
