@@ -46,8 +46,8 @@ export function AboutSection() {
 
           {/* Right Highlight Card Column */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-8 shadow-xl border border-slate-200 dark:border-slate-800">
-              <div className="absolute top-0 right-0 -mt-3 -mr-3 px-3 py-1 rounded-full bg-sky-500 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-sm">
+            <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-800">
+              <div className="absolute -top-3 right-4 sm:right-6 px-3 py-1 rounded-full bg-sky-500 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-sm">
                 Ν. 5038/2023
               </div>
 
