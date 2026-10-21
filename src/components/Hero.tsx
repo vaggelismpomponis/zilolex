@@ -4,7 +4,7 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ShieldCheck, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -21,12 +21,6 @@ export function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Regulatory Compliance Badge */}
-          <div className="inline-flex max-w-full items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-sky-400 text-[11px] sm:text-xs md:text-sm font-medium mb-6 shadow-xs backdrop-blur-sm">
-            <ShieldCheck className="w-4 h-4 text-sky-400 shrink-0" />
-            <span className="truncate sm:whitespace-normal">{t.hero.badge}</span>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
             {t.hero.titleStart}{" "}
