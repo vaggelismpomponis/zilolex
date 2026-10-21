@@ -18,8 +18,8 @@ export function StatsBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-1">
+            <div key={index} className="text-center min-w-0">
+              <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-1 truncate px-1">
                 {stat.number}
               </div>
               <div className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">

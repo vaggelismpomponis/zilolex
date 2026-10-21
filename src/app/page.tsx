@@ -13,7 +13,7 @@ import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
+    <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden w-full">
       <Navbar />
       <main className="flex-1">
         <Hero />

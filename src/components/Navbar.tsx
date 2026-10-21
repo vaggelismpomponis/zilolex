@@ -64,17 +64,18 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Actions: Language Switcher & Primary CTA */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Desktop Actions (>= lg) */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             {/* Language Switcher */}
             <div className="flex items-center p-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${language === "el"
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+                  language === "el"
                     ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                  }`}
+                }`}
                 aria-label="Ελληνικά"
               >
                 GR
@@ -82,10 +83,11 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${language === "en"
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+                  language === "en"
                     ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                  }`}
+                }`}
                 aria-label="English"
               >
                 EN
@@ -96,7 +98,7 @@ export function Navbar() {
               href="#contact"
               className={cn(
                 buttonVariants({ variant: "default" }),
-                "bg-slate-900 hover:bg-slate-800 text-white hover:text-white shadow-sm font-medium text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer"
+                "bg-slate-900 hover:bg-slate-800 text-white hover:text-white shadow-sm font-medium text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0"
               )}
             >
               <span>{t.nav.cta}</span>
@@ -104,23 +106,29 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          {/* Mobile & Tablet Menu Button (< lg) */}
+          <div className="flex items-center gap-2 sm:gap-3 lg:hidden shrink-0">
             {/* Mobile Lang Switcher */}
-            <div className="flex items-center p-0.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 sm:hidden">
+            <div className="flex items-center p-0.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0">
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${language === "el" ? "bg-slate-900 text-white" : "text-slate-600"
-                  }`}
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
+                  language === "el"
+                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                }`}
               >
                 GR
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${language === "en" ? "bg-slate-900 text-white" : "text-slate-600"
-                  }`}
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
+                  language === "en"
+                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                }`}
               >
                 EN
               </button>
@@ -129,7 +137,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none cursor-pointer"
+              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none cursor-pointer shrink-0"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
