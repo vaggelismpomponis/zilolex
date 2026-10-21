@@ -273,6 +273,7 @@ export const translations = {
         hoursTime: "09:00 - 18:00",
         hours: "Δευτέρα - Παρασκευή: 09:00 - 18:00",
         hoursLabel: "Ωράριο Λειτουργίας",
+        responseTime: "Άμεση ανταπόκριση εντός 24 ωρών",
       },
     },
     footer: {
@@ -560,6 +561,7 @@ export const translations = {
         hoursTime: "09:00 - 18:00 (EET)",
         hours: "Monday - Friday: 09:00 - 18:00 (EET)",
         hoursLabel: "Working Hours",
+        responseTime: "Immediate response within 24 hours",
       },
     },
     footer: {

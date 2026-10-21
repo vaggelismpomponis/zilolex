@@ -98,10 +98,10 @@ export function ContactFormSection() {
           {/* Left Info Column */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div className="rounded-2xl bg-slate-900 text-white p-8 sm:p-10 shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-3">
+              <h3 className="text-2xl font-bold text-white mb-3 text-center">
                 {t.contact.directContact.title}
               </h3>
-              <p className="text-sm text-slate-300 mb-8 leading-relaxed">
+              <p className="text-sm text-slate-300 mb-8 leading-relaxed text-center">
                 {t.contact.directContact.desc}
               </p>
 
@@ -171,9 +171,9 @@ export function ContactFormSection() {
               </div>
 
               {/* Direct call mobile prompt */}
-              <div className="mt-10 pt-6 border-t border-slate-800">
+              <div className="mt-10 pt-6 border-t border-slate-800 text-center">
                 <span className="text-xs text-slate-400 font-medium">
-                  Άμεση ανταπόκριση εντός 24 ωρών
+                  {t.contact.directContact.responseTime}
                 </span>
               </div>
             </div>
