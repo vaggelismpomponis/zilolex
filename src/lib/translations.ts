@@ -138,7 +138,7 @@ export const translations = {
           number: "03",
           title: "Νομική Διεκπεραίωση & Έκδοση Visa D",
           description: "Καταθέτουμε τον πλήρη φάκελο στην αρμόδια Αποκεντρωμένη Διοίκηση, παρακολουθούμε την έγκριση και συντονίζουμε την έκδοση της θεώρησης εισόδου (Visa) μέσω της Πρεσβείας.",
-          duration: "Σύμφωνα με τους χρόνους υπηρεσιών",
+          duration: "Βάσει Υπηρεσιών",
           details: ["Ηλεκτρονική υποβολή στο ΟΠΣ Μετανάστευση", "Σύνταξη συμβάσεων εργασίας", "Συντονισμός ραντεβού στο Προξενείο"],
         },
         {
@@ -427,7 +427,7 @@ export const translations = {
           number: "03",
           title: "Legal Processing & Visa D Issuance",
           description: "We file the dossier with the competent Decentralized Administration, monitor approval, and coordinate the National Visa D issuance with the Greek Embassy.",
-          duration: "As per authorities' timeline",
+          duration: "Per Authorities",
           details: ["Filing through the Migration Portal", "Employment contract formulation", "Embassy interview scheduling"],
         },
         {

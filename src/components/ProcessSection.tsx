@@ -31,14 +31,14 @@ export function ProcessSection() {
             >
               <div>
                 {/* Step Number & Duration */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-black text-sky-600 dark:text-sky-400">
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <span className="text-3xl font-black text-sky-600 dark:text-sky-400 shrink-0">
                     {step.number}
                   </span>
                   {step.duration && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-semibold">
-                      <Clock className="w-3 h-3 text-slate-500" />
-                      {step.duration}
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-semibold whitespace-nowrap shrink-0">
+                      <Clock className="w-3 h-3 text-slate-500 shrink-0" />
+                      <span>{step.duration}</span>
                     </span>
                   )}
                 </div>
