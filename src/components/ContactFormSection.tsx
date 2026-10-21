@@ -204,7 +204,7 @@ export function ContactFormSection() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                    <h3 className="mx-auto text-center text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
                       {t.contact.form.title}
                     </h3>
                   </div>
