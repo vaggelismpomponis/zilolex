@@ -223,6 +223,7 @@ export const translations = {
       title: "Ζητήστε Εργατικό Δυναμικό Σήμερα",
       subtitle: "Συμπληρώστε τη φόρμα ενδιαφέροντος και ένας εξειδικευμένος σύμβουλος θα επικοινωνήσει άμεσα μαζί σας για να συζητήσετε τις ανάγκες σας.",
       form: {
+        title: "Φόρμα Επικοινωνίας",
         fullName: "Ονοματεπώνυμο Υπευθύνου",
         fullNamePlaceholder: "π.χ. Ιωάννης Παπαδόπουλος",
         companyName: "Επωνυμία Επιχείρησης",
@@ -511,6 +512,7 @@ export const translations = {
       title: "Request Workforce Today",
       subtitle: "Fill out the inquiry form and a dedicated corporate advisor will contact you within 24 hours to discuss your staffing needs.",
       form: {
+        title: "Contact Form",
         fullName: "Contact Person Full Name",
         fullNamePlaceholder: "e.g. John Doe",
         companyName: "Company Name",

@@ -203,6 +203,12 @@ export function ContactFormSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                      {t.contact.form.title}
+                    </h3>
+                  </div>
+
                   {status === "error" && (
                     <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900 flex items-start gap-3 text-red-800 dark:text-red-300 text-sm">
                       <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-red-600 dark:text-red-400" />
