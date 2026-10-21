@@ -17,7 +17,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <span>{t.nav.brand} {t.nav.brandSub}</span>
+              <span>{t.nav.brand}</span>
             </div>
             <p className="text-xs leading-relaxed text-slate-400 mb-6">
               {t.footer.brandDesc}
@@ -29,7 +29,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Mail className="w-3.5 h-3.5 text-sky-400" />
-                <span>info@hellasworkforce.gr</span>
+                <span>info@ZILOLEX.gr</span>
               </div>
             </div>
           </div>

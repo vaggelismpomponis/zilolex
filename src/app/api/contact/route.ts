@@ -14,7 +14,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipientEmail = process.env.CONTACT_EMAIL || "info@hellasworkforce.gr";
+    const recipientEmail = process.env.CONTACT_EMAIL || "info@ZILOLEX.gr";
     const apiKey = process.env.RESEND_API_KEY;
 
     if (apiKey) {
@@ -30,11 +30,11 @@ export async function POST(request: Request) {
         <p><strong>Περιγραφή Αναγκών / Μήνυμα:</strong></p>
         <p style="white-space: pre-wrap; background-color: #f4f6f8; padding: 12px; border-radius: 6px;">${escapeHtml(message || "-")}</p>
         <hr />
-        <small>Αυτό το μήνυμα στάλθηκε αυτόματα από τη φόρμα επικοινωνίας της ιστοσελίδας HellasWorkforce Solutions.</small>
+        <small>Αυτό το μήνυμα στάλθηκε αυτόματα από τη φόρμα επικοινωνίας της ιστοσελίδας ZILOLEX.</small>
       `;
 
       // In production with verified domain or onboarding@resend.dev during testing
-      const fromEmail = process.env.RESEND_FROM_EMAIL || "HellasWorkforce <onboarding@resend.dev>";
+      const fromEmail = process.env.RESEND_FROM_EMAIL || "ZILOLEX <onboarding@resend.dev>";
 
       await resend.emails.send({
         from: fromEmail,

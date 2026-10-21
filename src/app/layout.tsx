@@ -16,10 +16,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://hellasworkforce.gr"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ZILOLEX.gr"),
   title: {
-    default: "HellasWorkforce Solutions | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
-    template: "%s | HellasWorkforce Solutions",
+    default: "ZILOLEX | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
+    template: "%s | ZILOLEX",
   },
   description:
     "Ολοκληρωμένες υπηρεσίες νόμιμης μετάκλησης και στελέχωσης προσωπικού από τρίτες χώρες (Ν. 5038/2023). Κάλυψη αναγκών σε Τουρισμό, Αγροτικό Τομέα, Κατασκευές & Βιομηχανία.",
@@ -35,21 +35,21 @@ export const metadata: Metadata = {
     "workforce recruitment greece",
     "visa D greece",
   ],
-  authors: [{ name: "HellasWorkforce Solutions" }],
-  creator: "HellasWorkforce Solutions",
+  authors: [{ name: "ZILOLEX" }],
+  creator: "ZILOLEX",
   openGraph: {
     type: "website",
     locale: "el_GR",
     alternateLocale: ["en_US"],
-    url: "https://hellasworkforce.gr",
-    title: "HellasWorkforce Solutions | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
+    url: "https://ZILOLEX.gr",
+    title: "ZILOLEX | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
     description:
       "Αξιόπιστο & ελεγμένο προσωπικό από τρίτες χώρες για ελληνικές επιχειρήσεις. Πλήρης συμμόρφωση με τον Κώδικα Μετανάστευσης (Ν. 5038/2023).",
-    siteName: "HellasWorkforce Solutions",
+    siteName: "ZILOLEX",
   },
   twitter: {
     card: "summary_large_image",
-    title: "HellasWorkforce Solutions | Μετάκληση Εργαζομένων",
+    title: "ZILOLEX | Μετάκληση Εργαζομένων",
     description: "Νόμιμη μετάκληση εργατικού δυναμικού για Τουρισμό, Γεωργία, Κατασκευές & Βιομηχανία στην Ελλάδα.",
   },
   robots: {
@@ -72,10 +72,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "EmploymentAgency",
-    name: "HellasWorkforce Solutions",
+    name: "ZILOLEX",
     description:
       "Εξειδικευμένες υπηρεσίες νόμιμης μετάκλησης εργαζομένων από τρίτες χώρες (Ν. 5038/2023) για Τουρισμό, Αγροτικό Τομέα, Κατασκευές και Βιομηχανία.",
-    url: "https://hellasworkforce.gr",
+    url: "https://ZILOLEX.gr",
     telephone: "+30 210 0000000",
     address: {
       "@type": "PostalAddress",

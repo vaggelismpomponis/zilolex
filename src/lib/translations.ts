@@ -1,13 +1,13 @@
 export const translations = {
   el: {
     meta: {
-      title: "HellasWorkforce Solutions | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
+      title: "ZILOLEX | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
       description: "Ολοκληρωμένες υπηρεσίες νόμιμης μετάκλησης και στελέχωσης προσωπικού από τρίτες χώρες (Ν. 5038/2023). Κάλυψη αναγκών σε Τουρισμό, Αγροτικό Τομέα, Κατασκευές & Βιομηχανία.",
       keywords: "μετάκληση εργαζομένων, τρίτες χώρες, εργάτες γης, προσωπικό τουρισμού, εργάτες κατασκευών, βίζα εργασίας, νόμος 5038 2023, εύρεση προσωπικού ελλάδα",
     },
     nav: {
-      brand: "HellasWorkforce",
-      brandSub: "Solutions",
+      brand: "ZILOLEX",
+      brandSub: "",
       about: "Σχετικά",
       sectors: "Κλάδοι",
       process: "Διαδικασία",
@@ -45,7 +45,7 @@ export const translations = {
     about: {
       tag: "Ποιοι Είμαστε",
       title: "Γεφυρώνουμε τις Ανάγκες των Ελληνικών Επιχειρήσεων με Παγκόσμιο Ανθρώπινο Δυναμικό",
-      lead: "Η HellasWorkforce Solutions εξειδικεύεται στη νόμιμη μετάκληση και διάθεση εξειδικευμένου και ανειδίκευτου προσωπικού από τρίτες χώρες, προσφέροντας ασφάλεια και σταθερότητα στους Έλληνες εργοδότες.",
+      lead: "Η ZILOLEX εξειδικεύεται στη νόμιμη μετάκληση και διάθεση εξειδικευμένου και ανειδίκευτου προσωπικού από τρίτες χώρες, προσφέροντας ασφάλεια και σταθερότητα στους Έλληνες εργοδότες.",
       body1: "Η σοβαρή έλλειψη προσωπικού σε κρίσιμους κλάδους της οικονομίας αποτελεί σήμερα το μεγαλύτερο εμπόδιο στην ανάπτυξη. Με βαθιά γνώση του νομικού πλαισίου (Ν. 5038/2023) και των διακρατικών συμφωνιών, αναλαμβάνουμε εξ ολοκλήρου τη διαδικασία για λογαριασμό σας.",
       body2: "Διαθέτουμε αξιόπιστο δίκτυο εταίρων στις χώρες προέλευσης, πραγματοποιούμε αυστηρό pre-screening και συνεντεύξεις, και αναλαμβάνουμε κάθε βήμα: από την υποβολή φακέλου στην Αποκεντρωμένη Διοίκηση και την έγκριση των προξενικών αρχών, έως την άφιξη και την έκδοση ΑΦΜ/ΑΜΚΑ.",
       bullets: [
@@ -152,7 +152,7 @@ export const translations = {
     },
     whyUs: {
       tag: "Τα Πλεονεκτήματά μας",
-      title: "Γιατί να Επιλέξετε την HellasWorkforce Solutions",
+      title: "Γιατί να επιλέξετε την ZILOLEX",
       subtitle: "Είμαστε ο στρατηγικός σας σύμμαχος για την αντιμετώπιση του προβλήματος εξεύρεσης προσωπικού.",
       items: [
         {
@@ -265,7 +265,7 @@ export const translations = {
         desc: "Είμαστε στη διάθεσή σας για κάθε ερώτηση ή άμεση τηλεφωνική συμβουλευτική.",
         phone: "+30 210 0000000",
         phoneLabel: "Τηλεφωνικό Κέντρο",
-        email: "info@hellasworkforce.gr",
+        email: "info@ZILOLEX.gr",
         emailLabel: "Email Επικοινωνίας",
         address: "Αθήνα, Ελλάδα",
         addressLabel: "Έδρα Εταιρείας",
@@ -281,18 +281,18 @@ export const translations = {
       legalText: "Όλες οι διαδικασίες διενεργούνται σε αυστηρή συμμόρφωση με τον Νόμο 5038/2023 (Κώδικας Μετανάστευσης) και τις ισχύουσες υπουργικές αποφάσεις.",
       privacyPolicy: "Πολιτική Απορρήτου",
       termsOfUse: "Όροι Χρήσης",
-      copyright: "© 2026 HellasWorkforce Solutions. Με την επιφύλαξη παντός δικαιώματος.",
+      copyright: "© 2026 ZILOLEX. Με την επιφύλαξη παντός δικαιώματος.",
     },
   },
   en: {
     meta: {
-      title: "HellasWorkforce Solutions | Third-Country Workforce Recruitment to Greece",
+      title: "ZILOLEX | Third-Country Workforce Recruitment to Greece",
       description: "Comprehensive and legal recruitment services for non-EU workforce (Law 5038/2023). Covering labor shortages in Tourism, Agriculture, Construction & Industry.",
       keywords: "workforce recruitment greece, foreign workers greece, agricultural labor, seasonal workers, construction staffing, work visa D, law 5038 2023",
     },
     nav: {
-      brand: "HellasWorkforce",
-      brandSub: "Solutions",
+      brand: "ZILOLEX",
+      brandSub: "",
       about: "About",
       sectors: "Sectors",
       process: "Process",
@@ -330,7 +330,7 @@ export const translations = {
     about: {
       tag: "About Us",
       title: "Bridging Greek Enterprise Needs with Global Talent",
-      lead: "HellasWorkforce Solutions specializes in the legal recruitment and deployment of skilled and semi-skilled workers from third countries, ensuring operational security for Greek employers.",
+      lead: "ZILOLEX specializes in the legal recruitment and deployment of skilled and semi-skilled workers from third countries, ensuring operational security for Greek employers.",
       body1: "Labor shortages in vital sectors of the economy are currently the single greatest constraint on business growth. With comprehensive mastery of Greek migration legislation (Law 5038/2023) and bilateral governmental agreements, we manage the entire process on your behalf.",
       body2: "Our verified international partner network conducts thorough background checks, skills testing, and interviews. We take care of every legal step: from filing with the Decentralized Administration and consular approval, to arrival coordination, tax ID (AFM), and social security registration.",
       bullets: [
@@ -437,7 +437,7 @@ export const translations = {
     },
     whyUs: {
       tag: "Our Advantages",
-      title: "Why Partner with HellasWorkforce Solutions",
+      title: "Why Partner with ZILOLEX",
       subtitle: "Your strategic ally in resolving labor shortages safely, quickly, and professionally.",
       items: [
         {
@@ -550,7 +550,7 @@ export const translations = {
         desc: "We are readily available for immediate phone consultations or in-person meetings.",
         phone: "+30 210 0000000",
         phoneLabel: "Phone Lines",
-        email: "info@hellasworkforce.gr",
+        email: "info@ZILOLEX.gr",
         emailLabel: "Inquiry Email",
         address: "Athens, Greece",
         addressLabel: "Headquarters",
@@ -566,7 +566,7 @@ export const translations = {
       legalText: "All processes are executed in strict accordance with Greek Law 5038/2023 (Migration Code) and ministerial quota determinations.",
       privacyPolicy: "Privacy Policy",
       termsOfUse: "Terms of Use",
-      copyright: "© 2026 HellasWorkforce Solutions. All rights reserved.",
+      copyright: "© 2026 ZILOLEX. All rights reserved.",
     },
   },
 };

@@ -30,11 +30,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 dark:border-slate-800 py-3"
           : "bg-white/80 dark:bg-slate-950/80 backdrop-blur-sm border-b border-slate-100 dark:border-slate-900 py-4"
-      }`}
+        }`}
     >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -42,19 +41,14 @@ export function Navbar() {
           <a
             href="#"
             className="flex items-center gap-3 group focus:outline-none"
-            aria-label="HellasWorkforce Home"
+            aria-label={`${t.nav.brand} Home`}
           >
             <div className="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-lg shadow-inner group-hover:bg-slate-800 transition-colors">
               <ShieldCheck className="w-6 h-6 text-sky-400" />
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight tracking-tight text-slate-900 dark:text-white">
-                {t.nav.brand}
-              </span>
-              <span className="text-[11px] font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                {t.nav.brandSub}
-              </span>
-            </div>
+            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white">
+              {t.nav.brand}
+            </span>
           </a>
 
           {/* Desktop Navigation Links */}
@@ -77,11 +71,10 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
-                  language === "el"
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${language === "el"
                     ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                }`}
+                  }`}
                 aria-label="Ελληνικά"
               >
                 GR
@@ -89,11 +82,10 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
-                  language === "en"
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${language === "en"
                     ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                }`}
+                  }`}
                 aria-label="English"
               >
                 EN
@@ -119,18 +111,16 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${
-                  language === "el" ? "bg-slate-900 text-white" : "text-slate-600"
-                }`}
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${language === "el" ? "bg-slate-900 text-white" : "text-slate-600"
+                  }`}
               >
                 GR
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${
-                  language === "en" ? "bg-slate-900 text-white" : "text-slate-600"
-                }`}
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer ${language === "en" ? "bg-slate-900 text-white" : "text-slate-600"
+                  }`}
               >
                 EN
               </button>
