@@ -163,7 +163,8 @@ export function ContactFormSection() {
                       {t.contact.directContact.hoursLabel}
                     </div>
                     <div className="text-base font-semibold text-white">
-                      {t.contact.directContact.hours}
+                      <span className="block sm:inline">{t.contact.directContact.hoursDays} </span>
+                      <span className="block sm:inline whitespace-nowrap">{t.contact.directContact.hoursTime}</span>
                     </div>
                   </div>
                 </div>
