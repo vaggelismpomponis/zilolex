@@ -55,11 +55,20 @@ export const metadata: Metadata = {
     description:
       "Αξιόπιστο & ελεγμένο προσωπικό από τρίτες χώρες για ελληνικές επιχειρήσεις. Πλήρης συμμόρφωση με τον Κώδικα Μετανάστευσης (Ν. 5038/2023).",
     siteName: "ZILOLEX",
+    images: [
+      {
+        url: "/brand/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ZILOLEX - Μετάκληση Εργαζομένων",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ZILOLEX | Μετάκληση Εργαζομένων",
     description: "Νόμιμη μετάκληση εργατικού δυναμικού για Τουρισμό, Γεωργία, Κατασκευές & Βιομηχανία στην Ελλάδα.",
+    images: ["/brand/og-image.png"],
   },
   robots: {
     index: true,

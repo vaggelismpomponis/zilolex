@@ -20,7 +20,7 @@ export function Footer() {
                 className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 transition-opacity hover:opacity-90"
                 aria-label={`${t.nav.brand} Home`}
               >
-                <Logo className="h-8 sm:h-9 w-auto text-white" symbolColor="#34d399" />
+                <Logo variant="footer" className="h-8 sm:h-9 w-auto" />
               </a>
             </div>
             <p className="text-xs leading-relaxed text-slate-400 mb-6">
