@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { CustomSelect, SelectOption } from "@/components/ui/select";
 import { SectorType, ContactFormData } from "@/lib/types";
 import {
   Phone,
@@ -40,6 +41,20 @@ export function ContactFormSection() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  const sectorOptions: SelectOption[] = [
+    { value: "tourism", label: t.contact.form.sectorsList.tourism },
+    { value: "agriculture", label: t.contact.form.sectorsList.agriculture },
+    { value: "construction", label: t.contact.form.sectorsList.construction },
+    { value: "industry", label: t.contact.form.sectorsList.industry },
+    { value: "logistics", label: t.contact.form.sectorsList.logistics },
+    { value: "other", label: t.contact.form.sectorsList.other },
+  ];
+
+  const workersOptions: SelectOption[] = t.contact.form.workersOptions.map((opt) => ({
+    value: opt,
+    label: opt,
+  }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -311,20 +326,16 @@ export function ContactFormSection() {
                       >
                         {t.contact.form.sector}
                       </label>
-                      <select
+                      <CustomSelect
                         id="sector"
                         name="sector"
                         value={formData.sector}
-                        onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-emerald-400)] dark:focus:ring-emerald-400"
-                      >
-                        <option value="tourism">{t.contact.form.sectorsList.tourism}</option>
-                        <option value="agriculture">{t.contact.form.sectorsList.agriculture}</option>
-                        <option value="construction">{t.contact.form.sectorsList.construction}</option>
-                        <option value="industry">{t.contact.form.sectorsList.industry}</option>
-                        <option value="logistics">{t.contact.form.sectorsList.logistics}</option>
-                        <option value="other">{t.contact.form.sectorsList.other}</option>
-                      </select>
+                        onChange={(value) =>
+                          setFormData((prev) => ({ ...prev, sector: value as SectorType }))
+                        }
+                        options={sectorOptions}
+                        aria-label={t.contact.form.sector}
+                      />
                     </div>
 
                     {/* Workers Count */}
@@ -335,19 +346,16 @@ export function ContactFormSection() {
                       >
                         {t.contact.form.workersCount}
                       </label>
-                      <select
+                      <CustomSelect
                         id="workersCount"
                         name="workersCount"
                         value={formData.workersCount}
-                        onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-emerald-400)] dark:focus:ring-emerald-400"
-                      >
-                        {t.contact.form.workersOptions.map((opt, i) => (
-                          <option key={i} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
+                        onChange={(value) =>
+                          setFormData((prev) => ({ ...prev, workersCount: value }))
+                        }
+                        options={workersOptions}
+                        aria-label={t.contact.form.workersCount}
+                      />
                     </div>
                   </div>
 

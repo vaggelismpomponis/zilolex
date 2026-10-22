@@ -52,7 +52,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.90 0.01 135);
   --input: oklch(0.90 0.01 135);
-  --ring: var(--color-emerald-400);
+  --ring: #34d399;
   --radius: 0.625rem;
 }
 
@@ -74,7 +74,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: var(--color-emerald-400);
+  --ring: #34d399;
 }
 
 @layer base {
