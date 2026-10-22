@@ -37,6 +37,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "ZILOLEX" }],
   creator: "ZILOLEX",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "el_GR",

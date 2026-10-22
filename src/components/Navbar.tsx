@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X, ArrowRight, ShieldCheck } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
@@ -46,15 +47,10 @@ export function Navbar() {
           {/* Logo / Brand */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 transition-opacity hover:opacity-90"
             aria-label={`${t.nav.brand} Home`}
           >
-            <div className="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-lg shadow-inner group-hover:bg-slate-800 transition-colors">
-              <ShieldCheck className="w-6 h-6 text-sky-400" />
-            </div>
-            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white">
-              {t.nav.brand}
-            </span>
+            <Logo className="h-8 sm:h-9 md:h-10 w-auto text-slate-950 dark:text-white" />
           </a>
 
           {/* Desktop Navigation Links */}

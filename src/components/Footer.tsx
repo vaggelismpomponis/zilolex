@@ -2,7 +2,8 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { ShieldCheck, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -13,11 +14,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Info */}
           <div>
-            <div className="flex items-center gap-2.5 text-white font-bold text-lg mb-4">
-              <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <span>{t.nav.brand}</span>
+            <div className="mb-5">
+              <a
+                href="#"
+                className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 transition-opacity hover:opacity-90"
+                aria-label={`${t.nav.brand} Home`}
+              >
+                <Logo className="h-8 sm:h-9 w-auto text-white" symbolColor="#34d399" />
+              </a>
             </div>
             <p className="text-xs leading-relaxed text-slate-400 mb-6">
               {t.footer.brandDesc}
