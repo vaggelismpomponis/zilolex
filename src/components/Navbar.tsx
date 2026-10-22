@@ -47,7 +47,7 @@ export function Navbar() {
           {/* Logo / Brand */}
           <a
             href="#"
-            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 transition-opacity hover:opacity-90"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#24500F] rounded-lg py-1 transition-opacity hover:opacity-90"
             aria-label={`${t.nav.brand} Home`}
           >
             <Logo className="h-8 sm:h-9 md:h-10 w-auto text-slate-950 dark:text-white" />
@@ -75,7 +75,7 @@ export function Navbar() {
                 onClick={() => setLanguage("el")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   language === "el"
-                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    ? "bg-[#24500F] text-white shadow-xs"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
                 }`}
                 aria-label="Ελληνικά"
@@ -87,7 +87,7 @@ export function Navbar() {
                 onClick={() => setLanguage("en")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   language === "en"
-                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    ? "bg-[#24500F] text-white shadow-xs"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
                 }`}
                 aria-label="English"
@@ -100,7 +100,7 @@ export function Navbar() {
               href="#contact"
               className={cn(
                 buttonVariants({ variant: "default" }),
-                "bg-slate-900 hover:bg-slate-800 text-white hover:text-white shadow-sm font-medium text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0"
+                "bg-[#24500F] hover:bg-[#1a3d0b] text-white hover:text-white shadow-sm font-semibold text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0 transition-colors"
               )}
             >
               <span>{t.nav.cta}</span>
@@ -117,7 +117,7 @@ export function Navbar() {
                 onClick={() => setLanguage("el")}
                 className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
                   language === "el"
-                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    ? "bg-[#24500F] text-white shadow-xs"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
                 }`}
               >
@@ -128,7 +128,7 @@ export function Navbar() {
                 onClick={() => setLanguage("en")}
                 className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
                   language === "en"
-                    ? "bg-slate-900 text-white shadow-xs dark:bg-slate-100 dark:text-slate-900"
+                    ? "bg-[#24500F] text-white shadow-xs"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
                 }`}
               >
@@ -166,7 +166,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   buttonVariants({ variant: "default" }),
-                  "w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer"
+                  "w-full bg-[#24500F] hover:bg-[#1a3d0b] text-white hover:text-white py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer font-semibold"
                 )}
               >
                 <span>{t.nav.cta}</span>

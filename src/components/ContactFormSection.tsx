@@ -107,7 +107,7 @@ export function ContactFormSection() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -116,7 +116,7 @@ export function ContactFormSection() {
                     </div>
                     <a
                       href={`tel:${t.contact.directContact.phone.replace(/\s+/g, "")}`}
-                      className="text-base font-semibold text-white hover:text-sky-300 transition-colors"
+                      className="text-base font-semibold text-white hover:text-emerald-300 transition-colors"
                     >
                       {t.contact.directContact.phone}
                     </a>
@@ -124,7 +124,7 @@ export function ContactFormSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export function ContactFormSection() {
                     </div>
                     <a
                       href={`mailto:${t.contact.directContact.email}`}
-                      className="text-base font-semibold text-white hover:text-sky-300 transition-colors"
+                      className="text-base font-semibold text-white hover:text-emerald-300 transition-colors"
                     >
                       {t.contact.directContact.email}
                     </a>
@@ -141,7 +141,7 @@ export function ContactFormSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export function ContactFormSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -316,7 +316,7 @@ export function ContactFormSection() {
                         name="sector"
                         value={formData.sector}
                         onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#24500F] dark:focus:ring-emerald-500"
                       >
                         <option value="tourism">{t.contact.form.sectorsList.tourism}</option>
                         <option value="agriculture">{t.contact.form.sectorsList.agriculture}</option>
@@ -340,7 +340,7 @@ export function ContactFormSection() {
                         name="workersCount"
                         value={formData.workersCount}
                         onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#24500F] dark:focus:ring-emerald-500"
                       >
                         {t.contact.form.workersOptions.map((opt, i) => (
                           <option key={i} value={opt}>
@@ -379,7 +379,7 @@ export function ContactFormSection() {
                   <Button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-slate-900 hover:bg-slate-800 text-white hover:text-white font-semibold py-3.5 h-auto text-base rounded-lg transition-all shadow-md cursor-pointer disabled:cursor-not-allowed"
+                    className="w-full bg-[#24500F] hover:bg-[#1a3d0b] text-white hover:text-white font-bold py-3.5 h-auto text-base rounded-lg transition-all shadow-md shadow-[#24500F]/25 cursor-pointer disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? (
                       <span className="flex items-center justify-center gap-2">

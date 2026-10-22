@@ -34,7 +34,7 @@ export function AboutSection() {
               {t.about.bullets.map((bullet, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="mt-1 w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 text-sky-400 stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" />
                   </div>
                   <span className="text-sm sm:text-base font-medium text-slate-800 dark:text-slate-200">
                     {bullet}
@@ -47,7 +47,7 @@ export function AboutSection() {
           {/* Right Highlight Card Column */}
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-800">
-              <div className="absolute -top-3 right-4 sm:right-6 px-3 py-1 rounded-full bg-sky-500 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-sm">
+              <div className="absolute -top-3 right-4 sm:right-6 px-3 py-1 rounded-full bg-[#24500F] text-white border border-emerald-500/40 font-bold text-xs uppercase tracking-wider shadow-sm">
                 Ν. 5038/2023
               </div>
 

@@ -17,7 +17,7 @@ export function Footer() {
             <div className="mb-5">
               <a
                 href="#"
-                className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 transition-opacity hover:opacity-90"
+                className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-lg py-1 transition-opacity hover:opacity-90"
                 aria-label={`${t.nav.brand} Home`}
               >
                 <Logo variant="footer" className="h-8 sm:h-9 w-auto" />
@@ -28,11 +28,11 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-xs">
               <div className="flex items-center gap-2 text-slate-300">
-                <Phone className="w-3.5 h-3.5 text-sky-400" />
+                <Phone className="w-3.5 h-3.5 text-emerald-400" />
                 <span>+30 210 0000000</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
-                <Mail className="w-3.5 h-3.5 text-sky-400" />
+                <Mail className="w-3.5 h-3.5 text-emerald-400" />
                 <span>info@ZILOLEX.gr</span>
               </div>
             </div>
@@ -102,7 +102,7 @@ export function Footer() {
               {t.footer.legalText}
             </p>
             <div className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-slate-400">
-              <span className="text-sky-400 font-semibold block mb-0.5">
+              <span className="text-emerald-400 font-semibold block mb-0.5">
                 Συμμόρφωση GDPR
               </span>
               Τήρηση των αρχών προστασίας προσωπικών δεδομένων βάσει του Γενικού Κανονισμού (ΕΕ) 2016/679.

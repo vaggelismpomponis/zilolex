@@ -13,8 +13,8 @@ export function Hero() {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 text-white">
       {/* Background Subtle Geometric Glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-sky-600/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-3xl" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#24500F]/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl" />
         {/* Subtle grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
@@ -24,7 +24,7 @@ export function Hero() {
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
             {t.hero.titleStart}{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-200 bg-clip-text text-transparent">
               {t.hero.titleHighlight}
             </span>
           </h1>
@@ -40,7 +40,7 @@ export function Hero() {
               href="#contact"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "w-full sm:w-auto bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-8 py-3.5 h-auto text-base shadow-lg shadow-sky-500/20 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 cursor-pointer"
+                "w-full sm:w-auto bg-[#24500F] hover:bg-[#1b3d0b] text-white font-bold px-8 py-3.5 h-auto text-base shadow-lg shadow-[#24500F]/30 hover:shadow-[#24500F]/50 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 cursor-pointer border border-emerald-500/30"
               )}
             >
               <span>{t.hero.ctaPrimary}</span>

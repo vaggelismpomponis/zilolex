@@ -12,13 +12,13 @@ export function CountriesSection() {
     <section id="countries" className="py-20 bg-slate-900 text-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#24500F]/25 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sky-400 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-semibold mb-4">
             <Globe className="w-3.5 h-3.5" />
             <span>{t.countries.tag}</span>
           </div>
@@ -40,10 +40,10 @@ export function CountriesSection() {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-sky-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                     {country.name}
                   </h3>
-                  <Badge className="bg-slate-700/80 text-sky-300 border-slate-600 text-[11px] font-semibold">
+                  <Badge className="bg-slate-700/80 text-emerald-300 border-slate-600 text-[11px] font-semibold">
                     {country.tag}
                   </Badge>
                 </div>
@@ -63,7 +63,7 @@ export function CountriesSection() {
         {/* Bottom Banner */}
         <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-slate-800/80 via-slate-800 to-slate-800/80 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div className="flex items-center gap-4">
-            <div className="p-3 rounded-xl bg-sky-500/10 text-sky-400 shrink-0 hidden sm:block">
+            <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0 hidden sm:block">
               <Handshake className="w-7 h-7" />
             </div>
             <div>
@@ -77,7 +77,7 @@ export function CountriesSection() {
           </div>
           <a
             href="#contact"
-            className="shrink-0 px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-colors shadow-sm"
+            className="shrink-0 px-5 py-2.5 rounded-lg bg-[#24500F] hover:bg-[#1a3d0b] text-white border border-emerald-500/30 font-bold text-sm transition-all shadow-md shadow-[#24500F]/30"
           >
             Επικοινωνήστε Μαζί μας
           </a>

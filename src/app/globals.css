@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -34,47 +34,47 @@
 }
 
 :root {
-  /* Deep Corporate Navy & Slate Palette */
-  --background: oklch(0.99 0.005 245);
-  --foreground: oklch(0.18 0.04 250);
+  /* Official ZILOLEX Brand Palette: Green House 4 (#24500F) & Black 1 (#000000) */
+  --background: oklch(0.99 0.003 135);
+  --foreground: oklch(0.12 0.01 135);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.04 250);
+  --card-foreground: oklch(0.12 0.01 135);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.04 250);
-  --primary: oklch(0.24 0.07 250); /* Deep Corporate Navy */
+  --popover-foreground: oklch(0.12 0.01 135);
+  --primary: oklch(0.385 0.105 137.7); /* Green House 4 (#24500F) */
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.94 0.02 245); /* Soft Slate */
-  --secondary-foreground: oklch(0.24 0.07 250);
-  --muted: oklch(0.95 0.015 245);
-  --muted-foreground: oklch(0.48 0.04 245); /* Slate gray */
-  --accent: oklch(0.92 0.03 245);
-  --accent-foreground: oklch(0.24 0.07 250);
+  --secondary: oklch(0.96 0.015 135);
+  --secondary-foreground: oklch(0.385 0.105 137.7);
+  --muted: oklch(0.96 0.01 135);
+  --muted-foreground: oklch(0.45 0.02 135);
+  --accent: oklch(0.93 0.025 137);
+  --accent-foreground: oklch(0.24 0.08 137);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.89 0.02 245);
-  --input: oklch(0.89 0.02 245);
-  --ring: oklch(0.35 0.09 250);
+  --border: oklch(0.90 0.01 135);
+  --input: oklch(0.90 0.01 135);
+  --ring: oklch(0.385 0.105 137.7);
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: oklch(0.13 0.03 250); /* Deep Midnight Navy */
-  --foreground: oklch(0.98 0.01 245);
-  --card: oklch(0.17 0.04 250);
-  --card-foreground: oklch(0.98 0.01 245);
-  --popover: oklch(0.17 0.04 250);
-  --popover-foreground: oklch(0.98 0.01 245);
-  --primary: oklch(0.92 0.03 245);
-  --primary-foreground: oklch(0.16 0.04 250);
-  --secondary: oklch(0.23 0.04 250);
-  --secondary-foreground: oklch(0.98 0.01 245);
-  --muted: oklch(0.23 0.04 250);
-  --muted-foreground: oklch(0.72 0.03 245);
-  --accent: oklch(0.25 0.05 250);
-  --accent-foreground: oklch(0.98 0.01 245);
+  --background: oklch(0.11 0.02 135); /* Deep Forest Charcoal Black */
+  --foreground: oklch(0.98 0.005 135);
+  --card: oklch(0.14 0.02 135);
+  --card-foreground: oklch(0.98 0.005 135);
+  --popover: oklch(0.14 0.02 135);
+  --popover-foreground: oklch(0.98 0.005 135);
+  --primary: oklch(0.75 0.16 150); /* Vibrant Emerald Accent for Dark Mode */
+  --primary-foreground: oklch(0.10 0.02 135);
+  --secondary: oklch(0.20 0.03 135);
+  --secondary-foreground: oklch(0.98 0.005 135);
+  --muted: oklch(0.18 0.02 135);
+  --muted-foreground: oklch(0.70 0.02 135);
+  --accent: oklch(0.22 0.04 137);
+  --accent-foreground: oklch(0.98 0.005 135);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.65 0.08 250);
+  --ring: oklch(0.75 0.16 150);
 }
 
 @layer base {
@@ -88,6 +88,10 @@
     @apply bg-background text-foreground antialiased;
     overflow-x: clip;
     max-width: 100vw;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-sans), sans-serif;
+    letter-spacing: -0.02em;
   }
   a {
     text-decoration: none;

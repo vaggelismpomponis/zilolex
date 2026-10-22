@@ -47,7 +47,7 @@ export function FaqSection() {
                   </span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-sky-500" : ""
+                      isOpen ? "rotate-180 text-[#24500F] dark:text-emerald-400" : ""
                     }`}
                   />
                 </button>

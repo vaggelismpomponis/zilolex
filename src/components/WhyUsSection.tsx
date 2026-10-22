@@ -10,19 +10,19 @@ export function WhyUsSection() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "shield-check":
-        return <ShieldCheck className="w-6 h-6 text-sky-500" />;
+        return <ShieldCheck className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       case "clock":
-        return <Clock className="w-6 h-6 text-sky-500" />;
+        return <Clock className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       case "user-check":
-        return <UserCheck className="w-6 h-6 text-sky-500" />;
+        return <UserCheck className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       case "refresh-cw":
-        return <RefreshCw className="w-6 h-6 text-sky-500" />;
+        return <RefreshCw className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       case "headset":
-        return <Headphones className="w-6 h-6 text-sky-500" />;
+        return <Headphones className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       case "globe":
-        return <Globe className="w-6 h-6 text-sky-500" />;
+        return <Globe className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
       default:
-        return <ShieldCheck className="w-6 h-6 text-sky-500" />;
+        return <ShieldCheck className="w-6 h-6 text-[#24500F] dark:text-emerald-400" />;
     }
   };
 

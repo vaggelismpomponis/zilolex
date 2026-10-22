@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
@@ -9,8 +9,15 @@ const inter = Inter({
   display: "swap",
 });
 
+const manrope = Manrope({
+  variable: "--font-heading",
+  subsets: ["latin", "greek"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 export const viewport: Viewport = {
-  themeColor: "#0B192C",
+  themeColor: "#24500F",
   width: "device-width",
   initialScale: 1,
 };
@@ -111,7 +118,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="el" className={`${inter.variable} font-sans`}>
+    <html lang="el" className={`${inter.variable} ${manrope.variable} font-sans`}>
       <head>
         <script
           type="application/ld+json"

@@ -32,7 +32,7 @@ export function ProcessSection() {
               <div>
                 {/* Step Number & Duration */}
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="text-3xl font-black text-sky-600 dark:text-sky-400 shrink-0">
+                  <span className="text-3xl font-black text-[#24500F] dark:text-emerald-400 shrink-0">
                     {step.number}
                   </span>
                   {step.duration && (
@@ -55,7 +55,7 @@ export function ProcessSection() {
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
                 {step.details.map((detail, dIdx) => (
                   <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#24500F] dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span>{detail}</span>
                   </div>
                 ))}
@@ -71,7 +71,7 @@ export function ProcessSection() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-[#24500F] dark:hover:text-emerald-400 transition-colors"
           >
             <span>Συμπληρώστε τη φόρμα αιτήματος</span>
             <ArrowRight className="w-4 h-4" />
