@@ -17,7 +17,7 @@ const manrope = Manrope({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#24500F",
+  themeColor: "#34d399",
   width: "device-width",
   initialScale: 1,
 };

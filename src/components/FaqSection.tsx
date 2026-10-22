@@ -16,7 +16,7 @@ export function FaqSection() {
     <section id="faq" className="py-24 bg-slate-50 dark:bg-slate-950/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4">
             {t.faq.tag}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
@@ -47,7 +47,7 @@ export function FaqSection() {
                   </span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#24500F] dark:text-emerald-400" : ""
+                      isOpen ? "rotate-180 text-emerald-600 dark:text-emerald-400" : ""
                     }`}
                   />
                 </button>

@@ -12,7 +12,7 @@ export function CountriesSection() {
     <section id="countries" className="py-20 bg-slate-900 text-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#24500F]/25 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl" />
       </div>
 

@@ -316,7 +316,7 @@ export function ContactFormSection() {
                         name="sector"
                         value={formData.sector}
                         onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#24500F] dark:focus:ring-emerald-500"
+                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-emerald-400)] dark:focus:ring-emerald-400"
                       >
                         <option value="tourism">{t.contact.form.sectorsList.tourism}</option>
                         <option value="agriculture">{t.contact.form.sectorsList.agriculture}</option>
@@ -340,7 +340,7 @@ export function ContactFormSection() {
                         name="workersCount"
                         value={formData.workersCount}
                         onChange={handleChange}
-                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#24500F] dark:focus:ring-emerald-500"
+                        className="w-full h-11 px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-emerald-400)] dark:focus:ring-emerald-400"
                       >
                         {t.contact.form.workersOptions.map((opt, i) => (
                           <option key={i} value={opt}>

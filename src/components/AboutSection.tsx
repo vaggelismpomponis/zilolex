@@ -13,7 +13,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7">
-            <span className="inline-block px-3 py-1 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-bold uppercase tracking-wider mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4">
               {t.about.tag}
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
@@ -33,8 +33,8 @@ export function AboutSection() {
             <div className="space-y-3">
               {t.about.bullets.map((bullet, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" />
+                  <div className="mt-0.5 w-5 h-5 rounded-full bg-[var(--color-emerald-400)] text-slate-950 flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3.5 h-3.5 text-slate-950 stroke-[3]" />
                   </div>
                   <span className="text-sm sm:text-base font-medium text-slate-800 dark:text-slate-200">
                     {bullet}
@@ -47,7 +47,7 @@ export function AboutSection() {
           {/* Right Highlight Card Column */}
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-800">
-              <div className="absolute -top-3 right-4 sm:right-6 px-3 py-1 rounded-full bg-[#24500F] text-white border border-emerald-500/40 font-bold text-xs uppercase tracking-wider shadow-sm">
+              <div className="absolute -top-3 right-4 sm:right-6 px-3.5 py-1 rounded-full bg-[var(--color-emerald-400)] text-slate-950 border border-emerald-300/60 font-extrabold text-xs uppercase tracking-wider shadow-sm">
                 Ν. 5038/2023
               </div>
 

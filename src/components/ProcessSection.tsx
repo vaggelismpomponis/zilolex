@@ -5,13 +5,13 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Clock, CheckCircle2, ArrowRight } from "lucide-react";
 
 export function ProcessSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="process" className="py-24 bg-slate-50 dark:bg-slate-950/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4">
             {t.process.tag}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
@@ -27,12 +27,12 @@ export function ProcessSection() {
           {t.process.steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative rounded-2xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between hover:shadow-md transition-shadow"
+              className="relative rounded-2xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between hover:shadow-md hover:border-emerald-400/40 dark:hover:border-emerald-600/40 transition-all"
             >
               <div>
                 {/* Step Number & Duration */}
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="text-3xl font-black text-[#24500F] dark:text-emerald-400 shrink-0">
+                  <span className="text-3xl font-black text-emerald-600 dark:text-emerald-400 shrink-0">
                     {step.number}
                   </span>
                   {step.duration && (
@@ -55,7 +55,7 @@ export function ProcessSection() {
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
                 {step.details.map((detail, dIdx) => (
                   <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#24500F] dark:text-emerald-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span>{detail}</span>
                   </div>
                 ))}
@@ -66,14 +66,16 @@ export function ProcessSection() {
 
         {/* Bottom CTA Callout */}
         <div className="mt-14 text-center">
-          <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-4">
-            Θέλετε να ξεκινήσουμε άμεσα τον έλεγχο επιλεξιμότητας για την επιχείρησή σας;
+          <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-5">
+            {language === "el"
+              ? "Θέλετε να ξεκινήσουμε άμεσα τον έλεγχο επιλεξιμότητας για την επιχείρησή σας;"
+              : "Ready to verify hiring eligibility for your company immediately?"}
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-[#24500F] dark:hover:text-emerald-400 transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-sm shadow-md shadow-emerald-400/25 hover:shadow-emerald-400/40 active:scale-95 transition-all cursor-pointer"
           >
-            <span>Συμπληρώστε τη φόρμα αιτήματος</span>
+            <span>{language === "el" ? "Συμπληρώστε τη φόρμα αιτήματος" : "Fill out the Request Form"}</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

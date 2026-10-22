@@ -47,7 +47,7 @@ export function Navbar() {
           {/* Logo / Brand */}
           <a
             href="#"
-            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#24500F] rounded-lg py-1 transition-opacity hover:opacity-90"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg py-1 transition-opacity hover:opacity-90"
             aria-label={`${t.nav.brand} Home`}
           >
             <Logo className="h-8 sm:h-9 md:h-10 w-auto text-slate-950 dark:text-white" />
