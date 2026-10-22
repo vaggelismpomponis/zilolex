@@ -40,7 +40,7 @@ export function Hero() {
               href="#contact"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "w-full sm:w-auto bg-[#24500F] hover:bg-[#1b3d0b] text-white font-bold px-8 py-3.5 h-auto text-base shadow-lg shadow-[#24500F]/30 hover:shadow-[#24500F]/50 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 cursor-pointer border border-emerald-500/30"
+                "w-full sm:w-auto bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold px-8 py-3.5 h-auto text-base shadow-lg shadow-emerald-400/25 hover:shadow-emerald-400/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer border-0"
               )}
             >
               <span>{t.hero.ctaPrimary}</span>

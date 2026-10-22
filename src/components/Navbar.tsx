@@ -75,8 +75,8 @@ export function Navbar() {
                 onClick={() => setLanguage("el")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   language === "el"
-                    ? "bg-[#24500F] text-white shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                    ? "bg-[var(--color-emerald-400)] text-slate-950 font-bold shadow-xs"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
                 aria-label="Ελληνικά"
               >
@@ -87,8 +87,8 @@ export function Navbar() {
                 onClick={() => setLanguage("en")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   language === "en"
-                    ? "bg-[#24500F] text-white shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                    ? "bg-[var(--color-emerald-400)] text-slate-950 font-bold shadow-xs"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
                 aria-label="English"
               >
@@ -100,7 +100,7 @@ export function Navbar() {
               href="#contact"
               className={cn(
                 buttonVariants({ variant: "default" }),
-                "bg-[#24500F] hover:bg-[#1a3d0b] text-white hover:text-white shadow-sm font-semibold text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0 transition-colors"
+                "bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 hover:text-slate-950 shadow-sm hover:shadow-md hover:shadow-emerald-400/20 font-bold text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0 transition-all active:scale-95"
               )}
             >
               <span>{t.nav.cta}</span>
@@ -117,8 +117,8 @@ export function Navbar() {
                 onClick={() => setLanguage("el")}
                 className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
                   language === "el"
-                    ? "bg-[#24500F] text-white shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                    ? "bg-[var(--color-emerald-400)] text-slate-950 shadow-xs"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 GR
@@ -128,8 +128,8 @@ export function Navbar() {
                 onClick={() => setLanguage("en")}
                 className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
                   language === "en"
-                    ? "bg-[#24500F] text-white shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                    ? "bg-[var(--color-emerald-400)] text-slate-950 shadow-xs"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 EN
@@ -166,7 +166,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   buttonVariants({ variant: "default" }),
-                  "w-full bg-[#24500F] hover:bg-[#1a3d0b] text-white hover:text-white py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer font-semibold"
+                  "w-full bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 hover:text-slate-950 py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer font-bold transition-colors shadow-sm"
                 )}
               >
                 <span>{t.nav.cta}</span>

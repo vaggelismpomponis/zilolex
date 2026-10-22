@@ -6,7 +6,7 @@ import { Globe, CheckCircle, Handshake } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function CountriesSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="countries" className="py-20 bg-slate-900 text-white relative overflow-hidden">
@@ -68,18 +68,22 @@ export function CountriesSection() {
             </div>
             <div>
               <h4 className="text-base font-bold text-white">
-                Ενδιαφέρεστε για συγκεκριμένη εθνικότητα ή ειδικότητα;
+                {language === "el"
+                  ? "Ενδιαφέρεστε για συγκεκριμένη εθνικότητα ή ειδικότητα;"
+                  : "Interested in a specific nationality or skillset?"}
               </h4>
               <p className="text-xs sm:text-sm text-slate-300">
-                Μπορούμε να διοργανώσουμε εξατομικευμένη καμπάνια προσλήψεων με live video συνεντεύξεις.
+                {language === "el"
+                  ? "Μπορούμε να διοργανώσουμε εξατομικευμένη καμπάνια προσλήψεων με live video συνεντεύξεις."
+                  : "We can organize a customized recruitment drive with live video interviews."}
               </p>
             </div>
           </div>
           <a
             href="#contact"
-            className="shrink-0 px-5 py-2.5 rounded-lg bg-[#24500F] hover:bg-[#1a3d0b] text-white border border-emerald-500/30 font-bold text-sm transition-all shadow-md shadow-[#24500F]/30"
+            className="shrink-0 px-5 py-2.5 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-sm transition-all shadow-md shadow-emerald-400/25 hover:shadow-emerald-400/40 active:scale-95 cursor-pointer"
           >
-            Επικοινωνήστε Μαζί μας
+            {language === "el" ? "Επικοινωνήστε Μαζί μας" : "Contact Us"}
           </a>
         </div>
       </div>

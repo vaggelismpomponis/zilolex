@@ -34,15 +34,15 @@
 }
 
 :root {
-  /* Official ZILOLEX Brand Palette: Green House 4 (#24500F) & Black 1 (#000000) */
+  /* Official ZILOLEX Brand Palette: Green House 4 (#24500F) & Emerald 400 buttons */
   --background: oklch(0.99 0.003 135);
   --foreground: oklch(0.12 0.01 135);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.12 0.01 135);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.12 0.01 135);
-  --primary: oklch(0.385 0.105 137.7); /* Green House 4 (#24500F) */
-  --primary-foreground: oklch(0.99 0 0);
+  --primary: var(--color-emerald-400); /* var(--color-emerald-400) */
+  --primary-foreground: oklch(0.12 0.01 135); /* High-contrast near-black */
   --secondary: oklch(0.96 0.015 135);
   --secondary-foreground: oklch(0.385 0.105 137.7);
   --muted: oklch(0.96 0.01 135);
@@ -52,7 +52,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.90 0.01 135);
   --input: oklch(0.90 0.01 135);
-  --ring: oklch(0.385 0.105 137.7);
+  --ring: var(--color-emerald-400);
   --radius: 0.625rem;
 }
 
@@ -63,8 +63,8 @@
   --card-foreground: oklch(0.98 0.005 135);
   --popover: oklch(0.14 0.02 135);
   --popover-foreground: oklch(0.98 0.005 135);
-  --primary: oklch(0.75 0.16 150); /* Vibrant Emerald Accent for Dark Mode */
-  --primary-foreground: oklch(0.10 0.02 135);
+  --primary: var(--color-emerald-400); /* var(--color-emerald-400) */
+  --primary-foreground: oklch(0.12 0.01 135);
   --secondary: oklch(0.20 0.03 135);
   --secondary-foreground: oklch(0.98 0.005 135);
   --muted: oklch(0.18 0.02 135);
@@ -74,7 +74,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.75 0.16 150);
+  --ring: var(--color-emerald-400);
 }
 
 @layer base {
