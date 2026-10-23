@@ -60,7 +60,7 @@ export function Hero() {
 
           {/* 3 Pillars Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left pt-6 border-t border-slate-800/80">
-            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs">
+            <div className="p-4 rounded-xl bg-slate-800/60 border border-slate-800/80">
               <h4 className="text-sm font-semibold text-white mb-1">
                 {t.hero.stats.legalBadge}
               </h4>
@@ -69,7 +69,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs">
+            <div className="p-4 rounded-xl bg-slate-800/60 border border-slate-800/80">
               <h4 className="text-sm font-semibold text-white mb-1">
                 {t.hero.stats.experienceBadge}
               </h4>
@@ -78,7 +78,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-800/80 backdrop-blur-xs">
+            <div className="p-4 rounded-xl bg-slate-800/60 border border-slate-800/80">
               <h4 className="text-sm font-semibold text-white mb-1">
                 {t.hero.stats.supportBadge}
               </h4>

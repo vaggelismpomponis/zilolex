@@ -35,7 +35,7 @@ export function CountriesSection() {
           {t.countries.countriesList.map((country, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 hover:border-slate-600 transition-all backdrop-blur-xs flex flex-col justify-between"
+              className="p-6 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:border-slate-600 transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">

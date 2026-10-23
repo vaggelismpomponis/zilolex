@@ -118,14 +118,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="el" className={`${inter.variable} ${manrope.variable} font-sans`}>
+    <html lang="el" suppressHydrationWarning className={`${inter.variable} ${manrope.variable} font-sans`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground antialiased selection:bg-slate-800 selection:text-white">
+      <body suppressHydrationWarning className="min-h-screen bg-background text-foreground antialiased selection:bg-slate-800 selection:text-white">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
