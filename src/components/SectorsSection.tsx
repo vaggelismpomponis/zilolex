@@ -49,13 +49,13 @@ export function SectorsSection() {
               className="group relative flex flex-col justify-between hover:shadow-xl transition-all duration-300 border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 overflow-hidden hover:-translate-y-1"
             >
               <div className="p-7">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-150 dark:border-slate-700 flex items-center justify-center">
+                <div className="relative flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-150 dark:border-slate-700 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:border-emerald-300 dark:group-hover:border-emerald-600 transition-all duration-200">
                     {getIcon(sector.id)}
                   </div>
                   <a
                     href="#contact"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 cursor-pointer"
+                    className="absolute right-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 cursor-pointer"
                     title="Αίτημα Προσωπικού"
                     aria-label={`Αίτημα για ${sector.title}`}
                   >
