@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Globe, CheckCircle, Handshake } from "lucide-react";
+import { Globe, Handshake } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function CountriesSection() {
@@ -47,14 +47,9 @@ export function CountriesSection() {
                     {country.tag}
                   </Badge>
                 </div>
-                <p className="text-sm text-slate-300 leading-relaxed mb-4">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   {country.desc}
                 </p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-700/60 flex items-center gap-2 text-xs text-slate-400">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Πιστοποιημένο τοπικό recruitment agency</span>
               </div>
             </div>
           ))}
