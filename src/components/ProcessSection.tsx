@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Clock, CheckCircle2, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 
 export function ProcessSection() {
   const { t, language } = useLanguage();
@@ -27,39 +27,27 @@ export function ProcessSection() {
           {t.process.steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative rounded-2xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between hover:shadow-md hover:border-emerald-400/40 dark:hover:border-emerald-600/40 transition-all"
+              className="relative rounded-2xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200/90 dark:border-slate-800 flex flex-col hover:shadow-md hover:border-emerald-400/40 dark:hover:border-emerald-600/40 transition-all"
             >
-              <div>
-                {/* Step Number & Duration */}
-                <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="text-3xl font-black text-emerald-600 dark:text-emerald-400 shrink-0">
-                    {step.number}
+              {/* Step Number & Duration */}
+              <div className="flex items-center justify-between gap-2 mb-4">
+                <span className="text-3xl font-black text-emerald-600 dark:text-emerald-400 shrink-0">
+                  {step.number}
+                </span>
+                {step.duration && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-semibold whitespace-nowrap shrink-0">
+                    <Clock className="w-3 h-3 text-slate-500 shrink-0" />
+                    <span>{step.duration}</span>
                   </span>
-                  {step.duration && (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-semibold whitespace-nowrap shrink-0">
-                      <Clock className="w-3 h-3 text-slate-500 shrink-0" />
-                      <span>{step.duration}</span>
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                  {step.description}
-                </p>
+                )}
               </div>
 
-              {/* Sub-steps / Details list */}
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
-                {step.details.map((detail, dIdx) => (
-                  <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" />
-                    <span>{detail}</span>
-                  </div>
-                ))}
-              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+                {step.title}
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
