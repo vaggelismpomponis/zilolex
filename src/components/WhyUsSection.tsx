@@ -48,8 +48,10 @@ export function WhyUsSection() {
               key={idx}
               className="group p-8 rounded-2xl bg-slate-50/70 dark:bg-slate-800/40 border border-slate-150 dark:border-slate-800 hover:border-emerald-400/50 dark:hover:border-emerald-600/50 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-200"
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200/70 dark:border-emerald-800/60 flex items-center justify-center mb-6 shadow-xs group-hover:scale-105 group-hover:bg-emerald-100/70 dark:group-hover:bg-emerald-900/40 transition-all duration-200">
-                {getIcon(item.icon)}
+              <div className="flex justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200/70 dark:border-emerald-800/60 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-emerald-100/70 dark:group-hover:bg-emerald-900/40 transition-all duration-200">
+                  {getIcon(item.icon)}
+                </div>
               </div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">
                 {item.title}
