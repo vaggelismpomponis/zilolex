@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { legalContent } from "@/lib/legalContent";
-import { FileText, Shield, X, Printer, CheckCircle2, ChevronRight } from "lucide-react";
+import { FileText, Shield, X, CheckCircle2 } from "lucide-react";
 
 export function LegalModal() {
   const { language } = useLanguage();
@@ -98,26 +98,14 @@ export function LegalModal() {
               </div>
             </div>
 
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                onClick={() => window.print()}
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                title={language === "el" ? "Εκτύπωση" : "Print"}
-              >
-                <Printer className="w-4 h-4" />
-                <span>{language === "el" ? "Εκτύπωση" : "Print"}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                aria-label={language === "el" ? "Κλείσιμο" : "Close"}
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+              aria-label={language === "el" ? "Κλείσιμο" : "Close"}
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
           {/* Subtitle */}
@@ -130,22 +118,20 @@ export function LegalModal() {
             <button
               type="button"
               onClick={() => setActiveTab("terms")}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
-                activeTab === "terms"
+              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${activeTab === "terms"
                   ? "bg-emerald-600 text-white shadow-xs"
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
-              }`}
+                }`}
             >
               {language === "el" ? "Όροι Χρήσης" : "Terms of Use"}
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("privacy")}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
-                activeTab === "privacy"
+              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${activeTab === "privacy"
                   ? "bg-emerald-600 text-white shadow-xs"
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
-              }`}
+                }`}
             >
               {language === "el" ? "Πολιτική Απορρήτου" : "Privacy Policy"}
             </button>
@@ -192,7 +178,7 @@ export function LegalModal() {
             onClick={() => setIsOpen(false)}
             className="px-5 py-2 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/20 active:scale-95 transition-all cursor-pointer"
           >
-            {language === "el" ? "Κατάλαβα & Κλείσιμο" : "I Understand & Close"}
+            {language === "el" ? "Κατάλαβα & Κλείσιμο" : "Close"}
           </button>
         </div>
       </div>
