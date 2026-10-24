@@ -70,68 +70,71 @@ export function LegalModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-5 sm:p-6 border-b border-slate-150 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/40">
-          <div className="flex items-start justify-between gap-4 mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0 shadow-xs">
-                {activeTab === "terms" ? (
-                  <FileText className="w-5 h-5" />
-                ) : (
-                  <Shield className="w-5 h-5" />
-                )}
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300">
-                    {currentDoc.badge}
-                  </span>
-                  <span className="text-xs text-slate-400 dark:text-slate-500">
-                    {language === "el" ? "Ενημέρωση:" : "Updated:"} {currentDoc.lastUpdated}
-                  </span>
-                </div>
-                <h2
-                  id="legal-modal-title"
-                  className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight"
-                >
-                  {currentDoc.title}
-                </h2>
-              </div>
+        <div className="relative p-4 sm:p-6 border-b border-slate-150 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/40">
+          {/* Close button absolutely positioned on mobile & desktop */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors cursor-pointer z-10"
+            aria-label={language === "el" ? "Κλείσιμο" : "Close"}
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Title Row with Icon */}
+          <div className="flex items-center gap-3 pr-10 sm:pr-12 mb-3">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0 shadow-xs">
+              {activeTab === "terms" ? (
+                <FileText className="w-5 h-5" />
+              ) : (
+                <Shield className="w-5 h-5" />
+              )}
             </div>
 
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-              aria-label={language === "el" ? "Κλείσιμο" : "Close"}
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="min-w-0">
+              <h2
+                id="legal-modal-title"
+                className="text-lg sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-snug"
+              >
+                {currentDoc.title}
+              </h2>
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-0.5">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 shrink-0 whitespace-nowrap">
+                  {currentDoc.badge}
+                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 whitespace-nowrap">
+                  {language === "el" ? "Ενημέρωση:" : "Updated:"} {currentDoc.lastUpdated}
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Subtitle */}
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 pr-2">
             {currentDoc.subtitle}
           </p>
 
           {/* Tab Selector */}
-          <div className="mt-4 flex items-center gap-2 border-t border-slate-200/80 dark:border-slate-800 pt-3">
+          <div className="flex items-center gap-2 border-t border-slate-200/80 dark:border-slate-800 pt-3">
             <button
               type="button"
               onClick={() => setActiveTab("terms")}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${activeTab === "terms"
+              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                activeTab === "terms"
                   ? "bg-emerald-600 text-white shadow-xs"
-                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
-                }`}
+                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800"
+              }`}
             >
               {language === "el" ? "Όροι Χρήσης" : "Terms of Use"}
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("privacy")}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${activeTab === "privacy"
+              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                activeTab === "privacy"
                   ? "bg-emerald-600 text-white shadow-xs"
-                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
-                }`}
+                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800"
+              }`}
             >
               {language === "el" ? "Πολιτική Απορρήτου" : "Privacy Policy"}
             </button>
