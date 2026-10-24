@@ -181,7 +181,7 @@ export function LegalModal() {
             onClick={() => setIsOpen(false)}
             className="px-5 py-2 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/20 active:scale-95 transition-all cursor-pointer"
           >
-            {language === "el" ? "Κατάλαβα & Κλείσιμο" : "Close"}
+            {language === "el" ? "Κλείσιμο" : "Close"}
           </button>
         </div>
       </div>
