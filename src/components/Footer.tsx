@@ -113,7 +113,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col items-center justify-center gap-3 text-xs text-slate-500 text-center">
           <div>{t.footer.copyright}</div>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">
               {t.footer.privacyPolicy}
             </a>
@@ -121,6 +121,18 @@ export function Footer() {
             <a href="#" className="hover:text-slate-400 transition-colors">
               {t.footer.termsOfUse}
             </a>
+            <span className="text-slate-700">•</span>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("zilolex_open_cookie_modal"));
+                }
+              }}
+              className="hover:text-slate-400 transition-colors cursor-pointer"
+            >
+              {t.footer.cookieSettings}
+            </button>
           </div>
         </div>
       </div>

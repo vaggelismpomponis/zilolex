@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -126,7 +127,10 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="min-h-screen bg-background text-foreground antialiased selection:bg-slate-800 selection:text-white">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <CookieConsent />
+        </LanguageProvider>
       </body>
     </html>
   );
