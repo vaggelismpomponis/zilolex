@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { CookieConsent } from "@/components/CookieConsent";
+import { LegalModal } from "@/components/LegalModal";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -130,6 +131,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <CookieConsent />
+          <LegalModal />
         </LanguageProvider>
       </body>
     </html>

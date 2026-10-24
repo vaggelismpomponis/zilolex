@@ -114,11 +114,29 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col items-center justify-center gap-3 text-xs text-slate-500 text-center">
           <div>{t.footer.copyright}</div>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a
+              href="/terms"
+              onClick={(e) => {
+                if (typeof window !== "undefined" && window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent("zilolex_open_privacy_modal"));
+                }
+              }}
+              className="hover:text-slate-400 transition-colors cursor-pointer"
+            >
               {t.footer.privacyPolicy}
             </a>
             <span className="text-slate-700">•</span>
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a
+              href="/terms"
+              onClick={(e) => {
+                if (typeof window !== "undefined" && window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent("zilolex_open_terms_modal"));
+                }
+              }}
+              className="hover:text-slate-400 transition-colors cursor-pointer"
+            >
               {t.footer.termsOfUse}
             </a>
             <span className="text-slate-700">•</span>
