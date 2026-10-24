@@ -166,23 +166,15 @@ export function LegalModal() {
         </div>
 
         {/* Footer */}
-        <div className="p-4 sm:p-5 border-t border-slate-150 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/60 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-slate-500">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+        <div className="p-4 border-t border-slate-150 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/60 flex items-center justify-center text-center">
+          <div className="flex items-center justify-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-medium">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
             <span>
               {language === "el"
                 ? "Πλήρης νομική ισχύς σύμφωνα με το ελληνικό δίκαιο"
                 : "Legally compliant under Greek & EU regulations"}
             </span>
           </div>
-
-          <button
-            type="button"
-            onClick={() => setIsOpen(false)}
-            className="px-5 py-2 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/20 active:scale-95 transition-all cursor-pointer"
-          >
-            {language === "el" ? "Κλείσιμο" : "Close"}
-          </button>
         </div>
       </div>
     </div>
