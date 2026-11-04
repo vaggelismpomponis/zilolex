@@ -19,7 +19,7 @@ export function Logo({
   ...props
 }: LogoProps) {
   // Determine effective colors based on variant
-  let resolvedSymbolColor = symbolColor || "#245409";
+  let resolvedSymbolColor = symbolColor || "#34d399";
   let resolvedTextColor = textColor || "currentColor";
 
   if (variant === "white") {

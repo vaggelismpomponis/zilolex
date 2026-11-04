@@ -2,94 +2,108 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { CheckCircle2, ShieldAlert, Award, FileText, Check } from "lucide-react";
+import { Check, Shield, User, ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-slate-50 dark:bg-slate-950/50">
+    <section id="about" className="py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
-            {t.about.tag}
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Text Column */}
+        {/* Company Overview & Mission */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
           <div className="lg:col-span-7">
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+            <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 transition-transform hover:scale-105 duration-200">
+              {t.about.tag}
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
               {t.about.title}
             </h2>
-            <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium mb-4 leading-relaxed">
+            <p className="text-base font-semibold text-slate-800 mb-3 leading-relaxed">
               {t.about.lead}
             </p>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              {t.about.body1}
-            </p>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-              {t.about.body2}
+            <p className="text-sm text-slate-600 leading-relaxed mb-8">
+              {t.about.body}
             </p>
 
-            {/* Checklist */}
-            <div className="space-y-3">
-              {t.about.bullets.map((bullet, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-5 h-5 rounded-full bg-[var(--color-emerald-400)] text-slate-950 flex items-center justify-center shrink-0 shadow-xs">
-                    <Check className="w-3.5 h-3.5 text-slate-950 stroke-[3]" />
+            {/* Mission & Vision */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg bg-white border border-slate-200 hover:border-emerald-500/40 hover:shadow-xs transition-all duration-200">
+                <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
+                  {t.about.missionTitle}
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {t.about.missionText}
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-white border border-slate-200 hover:border-emerald-500/40 hover:shadow-xs transition-all duration-200">
+                <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
+                  {t.about.visionTitle}
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {t.about.visionText}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Values */}
+          <div className="lg:col-span-5 p-6 rounded-lg bg-white border border-slate-200 hover:border-emerald-500/40 hover:shadow-md transition-all duration-300">
+            <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Shield className="w-5 h-5 text-emerald-800" />
+              <span>{t.about.valuesTitle}</span>
+            </h3>
+            <div className="space-y-3.5">
+              {t.about.values.map((val, idx) => (
+                <div key={idx} className="flex items-start gap-2.5 group/val hover:translate-x-1 transition-transform duration-200">
+                  <div className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-emerald-600" />
                   </div>
-                  <span className="text-sm sm:text-base font-medium text-slate-800 dark:text-slate-200">
-                    {bullet}
-                  </span>
+                  <div>
+                    <span className="text-xs font-bold text-slate-900 block group-hover/val:text-emerald-700 transition-colors">{val.title}</span>
+                    <span className="text-xs text-slate-600 leading-normal">{val.desc}</span>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Right Highlight Card Column */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-800">
-              <div className="absolute -top-3 right-4 sm:right-6 px-3.5 py-1 rounded-full bg-[var(--color-emerald-400)] text-slate-950 border border-emerald-300/60 font-extrabold text-xs uppercase tracking-wider shadow-sm">
-                Ν. 5038/2023
+        {/* Team Section */}
+        <div className="pt-10 border-t border-slate-200">
+          <div className="max-w-2xl mx-auto text-center mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
+              {t.about.teamTitle}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600">
+              {t.about.teamSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { role: t.about.teamRoleGM, title: "Executive Management" },
+              { role: t.about.teamRoleOps, title: "Logistics & Housing" },
+              { role: t.about.teamRoleLegal, title: "Statutory Procedures" },
+            ].map((member, idx) => (
+              <div key={idx} className="group p-5 rounded-lg bg-white border border-slate-200 text-center hover:border-emerald-500/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu">
+                <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200 group-hover:border-emerald-300 group-hover:bg-emerald-50 flex items-center justify-center mx-auto mb-3 text-slate-500 group-hover:text-emerald-600 transition-all duration-300">
+                  <User className="w-6 h-6" />
+                </div>
+                <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{member.role}</div>
+                <div className="text-xs text-emerald-800 font-medium">{member.title}</div>
               </div>
+            ))}
+          </div>
 
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                Εγγύηση Διαφάνειας & Νομιμότητας
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                Όλες οι ενέργειες πραγματοποιούνται μέσω του Ολοκληρωμένου Πληροφοριακού Συστήματος (ΟΠΣ) Μετανάστευση και των επίσημων διακρατικών συμφωνιών της Ελληνικής Δημοκρατίας.
-              </p>
-
-              <div className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
-                  <div className="font-semibold text-sm text-slate-900 dark:text-white">
-                    Πλήρης Έλεγχος Ποινικού Μητρώου & Υγείας
-                  </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    Κάθε εργαζόμενος υποβάλλεται σε ιατρικό έλεγχο και προσκομίζει καθαρό αντίγραφο ποινικού μητρώου από τη χώρα προέλευσης.
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
-                  <div className="font-semibold text-sm text-slate-900 dark:text-white">
-                    Σύνταξη & Κατάθεση Συμβάσεων Εργασίας
-                  </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    Συμβάσεις ορισμένου χρόνου ή εποχικής απασχόλησης σύμφωνα με την ελληνική εργατική νομοθεσία και τις συλλογικές συμβάσεις.
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
-                  <div className="font-semibold text-sm text-slate-900 dark:text-white">
-                    Διεκπεραίωση ΑΦΜ, ΑΜΚΑ & Τραπεζικού Λογαριασμού
-                  </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    Διασφάλιση της ομαλής έναρξης εργασίας χωρίς γραφειοκρατικό φόρτο για το λογιστήριο της επιχείρησής σας.
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mt-10">
+            <a
+              href="#contact"
+              className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs uppercase tracking-wider border border-slate-300 hover:border-slate-400 active:scale-95 transition-all duration-200"
+            >
+              <span>{t.about.cta}</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+            </a>
           </div>
         </div>
       </div>

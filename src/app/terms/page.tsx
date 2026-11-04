@@ -123,12 +123,12 @@ export default function TermsPage() {
                   : "Have legal questions regarding Greek workforce migration Law 5038/2023?"}
               </div>
             </div>
-            <a
+            <Link
               href="/#contact"
               className="shrink-0 px-5 py-2.5 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/25 active:scale-95 transition-all cursor-pointer"
             >
               {language === "el" ? "Επικοινωνία" : "Contact Us"}
-            </a>
+            </Link>
           </div>
         </div>
       </main>

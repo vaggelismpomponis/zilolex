@@ -4,9 +4,21 @@ import { Resend } from "resend";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { fullName, companyName, email, phone, sector, workersCount, message } = body;
+    const {
+      audience = "employer",
+      fullName,
+      companyName,
+      email,
+      phone,
+      sector,
+      workersCount,
+      startDate,
+      housing,
+      message,
+      gdprConsent,
+    } = body;
 
-    // Validation
+    // Strict validation
     if (!fullName || !email || !phone) {
       return NextResponse.json(
         { error: "Παρακαλούμε συμπληρώστε τα υποχρεωτικά πεδία (Όνομα, Email, Τηλέφωνο)." },
@@ -14,43 +26,55 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipientEmail = process.env.CONTACT_EMAIL || "info@ZILOLEX.gr";
+    if (gdprConsent === false) {
+      return NextResponse.json(
+        { error: "Απαιτείται η συγκατάθεση στην επεξεργασία δεδομένων." },
+        { status: 400 }
+      );
+    }
+
+    const recipientEmail = process.env.CONTACT_EMAIL || "info@zilolex.gr";
     const apiKey = process.env.RESEND_API_KEY;
 
     if (apiKey) {
       const resend = new Resend(apiKey);
       const emailContent = `
-        <h2>Νέο Αίτημα Εργατικού Δυναμικού από την Ιστοσελίδα</h2>
+        <h2>Νέο Αίτημα από την Ιστοσελίδα ZILOLEX</h2>
+        <p><strong>Ιδιότητα / Ενδιαφέρον:</strong> ${escapeHtml(audience)}</p>
         <p><strong>Ονοματεπώνυμο:</strong> ${escapeHtml(fullName)}</p>
-        <p><strong>Εταιρεία:</strong> ${escapeHtml(companyName || "-")}</p>
+        <p><strong>Επωνυμία Εταιρείας / Οργανισμού:</strong> ${escapeHtml(companyName || "-")}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Τηλέφωνο:</strong> ${escapeHtml(phone)}</p>
         <p><strong>Κλάδος:</strong> ${escapeHtml(sector || "-")}</p>
-        <p><strong>Αριθμός Εργαζομένων:</strong> ${escapeHtml(workersCount || "-")}</p>
-        <p><strong>Περιγραφή Αναγκών / Μήνυμα:</strong></p>
+        <p><strong>Ειδικότητες / Αριθμός Ατόμων:</strong> ${escapeHtml(workersCount || "-")}</p>
+        <p><strong>Επιθυμητή Ημερομηνία Έναρξης:</strong> ${escapeHtml(startDate || "-")}</p>
+        <p><strong>Ανάγκη Στέγασης:</strong> ${escapeHtml(housing || "-")}</p>
+        <p><strong>Μήνυμα / Σχόλια:</strong></p>
         <p style="white-space: pre-wrap; background-color: #f4f6f8; padding: 12px; border-radius: 6px;">${escapeHtml(message || "-")}</p>
         <hr />
-        <small>Αυτό το μήνυμα στάλθηκε αυτόματα από τη φόρμα επικοινωνίας της ιστοσελίδας ZILOLEX.</small>
+        <small>Αυτό το μήνυμα στάλθηκε αυτόματα από την ιστοσελίδα ZILOLEX.</small>
       `;
 
-      // In production with verified domain or onboarding@resend.dev during testing
       const fromEmail = process.env.RESEND_FROM_EMAIL || "ZILOLEX <onboarding@resend.dev>";
 
       await resend.emails.send({
         from: fromEmail,
         to: recipientEmail,
         replyTo: email,
-        subject: `[Νέο Αίτημα Προσωπικού] ${companyName ? companyName + " - " : ""}${fullName}`,
+        subject: `[Αίτημα Ιστοσελίδας - ${audience.toUpperCase()}] ${companyName ? companyName + " - " : ""}${fullName}`,
         html: emailContent,
       });
     } else {
-      console.log("[Dev Mode - No RESEND_API_KEY configured yet] Received contact form submission:", {
+      console.log("[Dev Mode - No RESEND_API_KEY] Contact form submission:", {
+        audience,
         fullName,
         companyName,
         email,
         phone,
         sector,
         workersCount,
+        startDate,
+        housing,
         message,
         targetEmail: recipientEmail,
       });

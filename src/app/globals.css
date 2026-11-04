@@ -34,7 +34,7 @@
 }
 
 :root {
-  /* Official ZILOLEX Brand Palette: Green House 4 (#24500F) & Emerald 400 buttons */
+  /* Official ZILOLEX Brand Palette: Emerald 600 & Emerald 400 (#34d399) */
   --background: oklch(0.99 0.003 135);
   --foreground: oklch(0.12 0.01 135);
   --card: oklch(1 0 0);

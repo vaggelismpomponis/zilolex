@@ -2,109 +2,108 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Hotel, Wheat, HardHat, Factory, Package, ArrowUpRight, ArrowRight } from "lucide-react";
+import { HardHat, UtensilsCrossed, Building2, ArrowRight } from "lucide-react";
 
 export function SectorsSection() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  const getIcon = (id: string) => {
+  const getSectorIcon = (id: string) => {
+    const iconClass = "w-5 h-5 text-emerald-800 group-hover:text-white transition-colors duration-300";
     switch (id) {
-      case "tourism":
-        return <Hotel className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />;
-      case "agriculture":
-        return <Wheat className="w-6 h-6 text-amber-500" />;
-      case "construction":
-        return <HardHat className="w-6 h-6 text-orange-500" />;
-      case "industry":
-        return <Factory className="w-6 h-6 text-indigo-500" />;
-      case "logistics":
-        return <Package className="w-6 h-6 text-emerald-600" />;
+      case "construction_industry":
+        return <HardHat className={iconClass} />;
+      case "tourism_hospitality":
+        return <UtensilsCrossed className={iconClass} />;
       default:
-        return <Hotel className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />;
+        return <Building2 className={iconClass} />;
     }
   };
 
   return (
-    <section id="sectors" className="py-24 bg-white dark:bg-slate-900">
+    <section id="sectors" className="py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 transition-transform hover:scale-105 duration-200">
             {t.sectors.tag}
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             {t.sectors.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {t.sectors.subtitle}
           </p>
         </div>
 
-        {/* Sectors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 3 Sectors Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {t.sectors.items.map((sector) => (
-            <Card
+            <div
               key={sector.id}
-              className="group relative flex flex-col justify-between hover:shadow-xl transition-all duration-300 border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 overflow-hidden hover:-translate-y-1"
+              className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu"
             >
-              <div className="p-7">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-150 dark:border-slate-700 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:border-emerald-300 dark:group-hover:border-emerald-600 transition-all duration-200">
-                    {getIcon(sector.id)}
-                  </div>
-                  <a
-                    href="#contact"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 cursor-pointer"
-                    title="Αίτημα Προσωπικού"
-                    aria-label={`Αίτημα για ${sector.title}`}
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
+              <div>
+                <div className="w-10 h-10 rounded-md bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center mb-4 transition-colors duration-300">
+                  {getSectorIcon(sector.id)}
                 </div>
-
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-emerald-700 transition-colors duration-200">
                   {sector.title}
                 </h3>
-                <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider">
+                <div className="text-xs font-semibold text-emerald-800 mb-3">
                   {sector.subtitle}
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                <p className="text-xs text-slate-600 leading-relaxed mb-5">
                   {sector.description}
                 </p>
 
-                {/* Role tags */}
-                <div className="space-y-2">
-                  <div className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                    {language === "el" ? "Ενδεικτικές Ειδικότητες:" : "Key Roles / Positions:"}
+                {/* Roles */}
+                <div className="mb-4">
+                  <div className="text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Ενδεικτικές Ειδικότητες
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {sector.roles.map((role, idx) => (
-                      <Badge
-                        key={idx}
-                        variant="secondary"
-                        className="text-xs font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 border-0 py-1 px-2.5"
+                    {sector.roles.map((role, rIdx) => (
+                      <span
+                        key={rIdx}
+                        className="px-2 py-0.5 rounded-sm bg-white border border-slate-200 text-[11px] font-medium text-slate-700 hover:border-emerald-300 hover:text-emerald-900 transition-colors"
                       >
                         {role}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                 </div>
+
+                {/* Focus */}
+                <div className="mb-6 pt-3 border-t border-slate-200">
+                  <div className="text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    Τι προσέχουμε
+                  </div>
+                  <ul className="space-y-1">
+                    {sector.focus.map((fItem, fIdx) => (
+                      <li key={fIdx} className="text-xs text-slate-600 flex items-start gap-1.5">
+                        <span className="text-emerald-700 font-bold">•</span>
+                        <span>{fItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              {/* Bottom Card Footer with Direct Action */}
-              <div className="px-7 py-3.5 bg-slate-50/80 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-center text-xs font-semibold text-slate-700 dark:text-slate-300">
-                <a
-                  href="#contact"
-                  className="group/cta inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 hover:bg-[var(--color-emerald-400)] text-emerald-700 dark:text-emerald-300 hover:text-slate-950 dark:hover:text-slate-950 transition-all duration-200 font-semibold cursor-pointer shadow-2xs hover:shadow-md hover:shadow-emerald-400/25 active:scale-95 no-underline"
-                >
-                  <span>{language === "el" ? "Ζητήστε Προσφορά" : "Request a Quote"}</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/cta:translate-x-1" />
-                </a>
-              </div>
-            </Card>
+              {/* Card CTA */}
+              <a
+                href={sector.ctaHref}
+                className="group/btn w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-white hover:bg-emerald-600 border border-slate-300 hover:border-emerald-600 text-slate-800 hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-2xs active:scale-95"
+              >
+                <span>{sector.ctaText}</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />
+              </a>
+            </div>
           ))}
         </div>
+
+        {/* Note */}
+        <p className="text-xs text-center text-slate-500 italic">
+          {t.sectors.note}
+        </p>
       </div>
     </section>
   );

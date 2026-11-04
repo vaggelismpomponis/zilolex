@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useSyncExternalStore } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Cookie, ShieldCheck, BarChart3, Megaphone, Sliders, Check, X, Lock } from "lucide-react";
 
@@ -15,28 +15,32 @@ export interface CookiePreferences {
 
 export function CookieConsent() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [analytics, setAnalytics] = useState(true);
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    const saved = localStorage.getItem(COOKIE_STORAGE_KEY);
-    if (!saved) {
-      // First visit: show cookie consent banner
-      const timer = setTimeout(() => setIsOpen(true), 600);
-      return () => clearTimeout(timer);
-    } else {
-      try {
-        const parsed: CookiePreferences = JSON.parse(saved);
-        setAnalytics(parsed.analytics ?? true);
-        setMarketing(parsed.marketing ?? false);
-      } catch {
+    const timer = setTimeout(() => {
+      const saved = localStorage.getItem(COOKIE_STORAGE_KEY);
+      if (!saved) {
         setIsOpen(true);
+      } else {
+        try {
+          const parsed: CookiePreferences = JSON.parse(saved);
+          setAnalytics(parsed.analytics ?? true);
+          setMarketing(parsed.marketing ?? false);
+        } catch {
+          setIsOpen(true);
+        }
       }
-    }
+    }, 600);
+    return () => clearTimeout(timer);
   }, []);
 
   // Listen for custom trigger to reopen modal (e.g. from footer link or floating badge)
@@ -90,7 +94,7 @@ export function CookieConsent() {
     saveConsent({ necessary: true, analytics, marketing });
   };
 
-  if (!mounted) return null;
+  if (!isMounted) return null;
 
   return (
     <>

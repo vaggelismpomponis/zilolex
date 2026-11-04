@@ -89,6 +89,9 @@ export function CustomSelect({
     }
   };
 
+  const generatedId = React.useId();
+  const listboxId = id ? `${id}-listbox` : `select-${generatedId}-listbox`;
+
   return (
     <div ref={containerRef} className="relative w-full">
       {/* Hidden input for form submission compatibility */}
@@ -100,6 +103,7 @@ export function CustomSelect({
         type="button"
         role="combobox"
         aria-expanded={isOpen}
+        aria-controls={listboxId}
         aria-haspopup="listbox"
         aria-label={ariaLabel}
         disabled={disabled}
@@ -128,6 +132,7 @@ export function CustomSelect({
       {/* Dropdown Menu */}
       {isOpen && (
         <div
+          id={listboxId}
           role="listbox"
           tabIndex={-1}
           className="absolute z-50 left-0 right-0 top-full mt-1.5 p-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xl shadow-slate-900/10 dark:shadow-black/50 max-h-60 overflow-y-auto animate-in fade-in-0 zoom-in-95 duration-150 backdrop-blur-md"

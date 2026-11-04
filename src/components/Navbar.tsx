@@ -1,173 +1,142 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, MessageSquare, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { NavTopBar } from "@/components/NavTopBar";
 
 export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const navLinks = [
-    { href: "#about", label: t.nav.about },
+    { href: "#employers", label: t.nav.employers },
     { href: "#sectors", label: t.nav.sectors },
-    { href: "#process", label: t.nav.process },
-    { href: "#countries", label: t.nav.countries },
-    { href: "#faq", label: t.nav.faq },
+    { href: "#services", label: t.nav.services },
+    { href: "#how-it-works", label: t.nav.howItWorks },
+    { href: "#partnerships", label: t.nav.partnerships },
+    { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },
   ];
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 transform-gpu ${
-        isScrolled
-          ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b border-slate-200/90 dark:border-slate-800 py-3"
-          : "bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-900 py-4"
-      }`}
-      style={{
-        WebkitTransform: "translateZ(0)",
-        transform: "translateZ(0)",
-      }}
-    >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo / Brand */}
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+      {/* Top Utility Bar on Desktop */}
+      <NavTopBar />
+
+      {/* Main Navbar */}
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-4 lg:gap-8">
+          {/* Logo */}
           <a
             href="#"
-            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg py-1 transition-opacity hover:opacity-90"
-            aria-label={`${t.nav.brand} Home`}
+            className="flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700 rounded-md py-1"
+            aria-label="ZILOLEX Home"
           >
-            <Logo className="h-8 sm:h-9 md:h-10 w-auto text-slate-950 dark:text-white" />
+            <Logo className="h-8 sm:h-9 md:h-10 w-auto text-slate-900" />
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+                className="text-xs xl:text-sm font-semibold text-slate-700 hover:text-emerald-700 transition-colors whitespace-nowrap py-1"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Desktop Actions (>= lg) */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
-            {/* Language Switcher */}
-            <div className="flex items-center p-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-              <button
-                type="button"
-                onClick={() => setLanguage("el")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
-                  language === "el"
-                    ? "bg-[var(--color-emerald-400)] text-slate-950 font-bold shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                }`}
-                aria-label="Ελληνικά"
-              >
-                GR
-              </button>
-              <button
-                type="button"
-                onClick={() => setLanguage("en")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
-                  language === "en"
-                    ? "bg-[var(--color-emerald-400)] text-slate-950 font-bold shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                }`}
-                aria-label="English"
-              >
-                EN
-              </button>
-            </div>
-
+          {/* Desktop Right CTA */}
+          <div className="hidden lg:flex items-center shrink-0">
             <a
               href="#contact"
-              className={cn(
-                buttonVariants({ variant: "default" }),
-                "bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 hover:text-slate-950 shadow-sm hover:shadow-md hover:shadow-emerald-400/20 font-bold text-sm px-5 py-2 h-auto flex items-center gap-2 cursor-pointer shrink-0 transition-all active:scale-95"
-              )}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-xs whitespace-nowrap active:scale-95"
             >
               <span>{t.nav.cta}</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
 
-          {/* Mobile & Tablet Menu Button (< lg) */}
-          <div className="flex items-center gap-2 sm:gap-3 lg:hidden shrink-0">
-            {/* Mobile Lang Switcher */}
-            <div className="flex items-center p-0.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0">
+          {/* Mobile Actions (< lg) */}
+          <div className="flex items-center gap-2 lg:hidden shrink-0">
+            {/* Phone Icon */}
+            <a
+              href={`tel:${t.nav.phone.replace(/\s+/g, "")}`}
+              className="p-2 rounded-md text-slate-700 hover:bg-slate-100"
+              title={t.nav.phone}
+              aria-label="Call Zilolex"
+            >
+              <Phone className="w-4 h-4 text-emerald-600" />
+            </a>
+
+            {/* WhatsApp Icon */}
+            <a
+              href={`https://wa.me/${t.nav.whatsappNumber.replace(/[^0-9]/g, "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-md text-slate-700 hover:bg-slate-100"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <MessageSquare className="w-4 h-4 text-emerald-600" />
+            </a>
+
+            {/* Language Switcher */}
+            <div className="flex items-center p-0.5 rounded-md bg-slate-100 border border-slate-200">
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
-                  language === "el"
-                    ? "bg-[var(--color-emerald-400)] text-slate-950 shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                className={`px-1.5 py-0.5 text-[11px] font-bold rounded-sm ${
+                  language === "el" ? "bg-emerald-600 text-white" : "text-slate-600"
                 }`}
               >
-                GR
+                EL
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-full cursor-pointer transition-all ${
-                  language === "en"
-                    ? "bg-[var(--color-emerald-400)] text-slate-950 shadow-xs"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                className={`px-1.5 py-0.5 text-[11px] font-bold rounded-sm ${
+                  language === "en" ? "bg-emerald-600 text-white" : "text-slate-600"
                 }`}
               >
                 EN
               </button>
             </div>
 
+            {/* Hamburger Button */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none cursor-pointer shrink-0"
+              className="p-2 rounded-md text-slate-800 hover:bg-slate-100 cursor-pointer"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-3 pt-3 pb-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+          <div className="lg:hidden py-4 border-t border-slate-200 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-base font-medium rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="px-3 py-2 text-sm font-semibold rounded-md text-slate-800 hover:bg-slate-50 transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-2">
+            <div className="pt-3 mt-2 border-t border-slate-100">
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className={cn(
-                  buttonVariants({ variant: "default" }),
-                  "w-full bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 hover:text-slate-950 py-2.5 h-auto text-center flex items-center justify-center gap-2 cursor-pointer font-bold transition-colors shadow-sm"
-                )}
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-xs"
               >
                 <span>{t.nav.cta}</span>
                 <ArrowRight className="w-4 h-4" />

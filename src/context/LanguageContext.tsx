@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 import { Language } from "@/lib/types";
 import { translations } from "@/lib/translations";
 
@@ -14,23 +14,36 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("languagechange", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("languagechange", callback);
+  };
+}
+
+function getSnapshot(): Language {
+  if (typeof window === "undefined") return "el";
+  const saved = localStorage.getItem("preferred_lang");
+  return saved === "en" ? "en" : "el";
+}
+
+function getServerSnapshot(): Language {
+  return "el";
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("el");
+  const language = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    const saved = localStorage.getItem("preferred_lang") as Language | null;
-    if (saved && (saved === "el" || saved === "en")) {
-      setLanguageState(saved);
-      document.documentElement.lang = saved;
-    } else {
-      document.documentElement.lang = "el";
-    }
-  }, []);
+    document.documentElement.lang = language;
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
     localStorage.setItem("preferred_lang", lang);
     document.documentElement.lang = lang;
+    window.dispatchEvent(new Event("languagechange"));
   };
 
   const t = translations[language];

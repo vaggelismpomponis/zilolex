@@ -19,30 +19,28 @@ const manrope = Manrope({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#34d399",
+  themeColor: "#059669",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ZILOLEX.gr"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://zilolex.gr"),
   title: {
-    default: "ZILOLEX | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
+    default: "ZILOLEX | Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους",
     template: "%s | ZILOLEX",
   },
   description:
-    "Ολοκληρωμένες υπηρεσίες νόμιμης μετάκλησης και στελέχωσης προσωπικού από τρίτες χώρες (Ν. 5038/2023). Κάλυψη αναγκών σε Τουρισμό, Αγροτικό Τομέα, Κατασκευές & Βιομηχανία.",
+    "Συντονισμός αναζήτησης και επιλογής προσωπικού, μετάκλησης, μετακίνηση και διαμονή εργαζομένων από τρίτες χώρες στην Ελλάδα. Εστίαση σε Κατασκευές, Βιομηχανία και Τουρισμό.",
   keywords: [
     "μετάκληση εργαζομένων",
     "τρίτες χώρες",
-    "εργάτες γης",
+    "στελέχωση επιχειρήσεων",
+    "προσωπικό κατασκευών",
     "προσωπικό τουρισμού",
-    "εργάτες κατασκευών",
-    "βίζα εργασίας",
-    "νόμος 5038 2023",
-    "εύρεση προσωπικού ελλάδα",
-    "workforce recruitment greece",
-    "visa D greece",
+    "στέγαση εργαζομένων",
+    "συντονισμός μετεγκατάστασης",
+    "zilolex",
   ],
   authors: [{ name: "ZILOLEX" }],
   creator: "ZILOLEX",
@@ -59,24 +57,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "el_GR",
     alternateLocale: ["en_US"],
-    url: "https://ZILOLEX.gr",
-    title: "ZILOLEX | Μετάκληση Εργαζομένων από Τρίτες Χώρες",
+    url: "https://zilolex.gr",
+    title: "ZILOLEX | Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους",
     description:
-      "Αξιόπιστο & ελεγμένο προσωπικό από τρίτες χώρες για ελληνικές επιχειρήσεις. Πλήρης συμμόρφωση με τον Κώδικα Μετανάστευσης (Ν. 5038/2023).",
+      "Συντονισμός αναζήτησης και επιλογής προσωπικού, μετάκλησης, μετακίνησης και διαμονής εργαζομένων από τρίτες χώρες στην Ελλάδα.",
     siteName: "ZILOLEX",
     images: [
       {
         url: "/brand/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ZILOLEX - Μετάκληση Εργαζομένων",
+        alt: "ZILOLEX - Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZILOLEX | Μετάκληση Εργαζομένων",
-    description: "Νόμιμη μετάκληση εργατικού δυναμικού για Τουρισμό, Γεωργία, Κατασκευές & Βιομηχανία στην Ελλάδα.",
+    title: "ZILOLEX | Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους",
+    description: "Συντονισμός αναζήτησης και επιλογής προσωπικού, μετάκλησης, μετακίνησης και διαμονής εργαζομένων στην Ελλάδα.",
     images: ["/brand/og-image.png"],
   },
   robots: {
@@ -101,21 +99,22 @@ export default function RootLayout({
     "@type": "EmploymentAgency",
     name: "ZILOLEX",
     description:
-      "Εξειδικευμένες υπηρεσίες νόμιμης μετάκλησης εργαζομένων από τρίτες χώρες (Ν. 5038/2023) για Τουρισμό, Αγροτικό Τομέα, Κατασκευές και Βιομηχανία.",
-    url: "https://ZILOLEX.gr",
-    telephone: "+30 210 0000000",
+      "Συντονισμός αναζήτησης και επιλογής προσωπικού, μετάκλησης, μετακίνησης και διαμονής εργαζομένων από τρίτες χώρες στην Ελλάδα.",
+    url: "https://zilolex.gr",
+    telephone: "+30 210 9400000",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Athens",
+      streetAddress: "Λεωφ. Αμφιθέας 77",
+      addressLocality: "Παλαιό Φάληρο, Αθήνα",
+      postalCode: "17564",
       addressCountry: "GR",
     },
     areaServed: "GR",
     serviceType: [
-      "Μετάκληση Εργαζομένων Τρίτων Χωρών",
-      "Εποχικοί Εργάτες Γης",
-      "Προσωπικό Τουρισμού & Εστίασης",
-      "Εργάτες Κατασκευών & Βιομηχανίας",
-      "Διεκπεραίωση Visa D & ΟΠΣ Μετανάστευση",
+      "Αναζήτηση & Επιλογή Προσωπικού",
+      "Συντονισμός Μετάκλησης & Διαδικασιών",
+      "Οργάνωση Μετακίνησης & Άφιξης",
+      "Εξεύρεση & Διαχείριση Στέγασης Εργαζομένων",
     ],
   };
 
@@ -127,7 +126,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body suppressHydrationWarning className="min-h-screen bg-background text-foreground antialiased selection:bg-slate-800 selection:text-white">
+      <body suppressHydrationWarning className="min-h-dvh bg-white text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-950">
         <LanguageProvider>
           {children}
           <CookieConsent />
