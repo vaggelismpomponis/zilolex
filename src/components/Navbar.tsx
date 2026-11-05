@@ -187,7 +187,7 @@ export function Navbar() {
                 aria-label="Ελληνικά"
                 aria-pressed={language === "el"}
               >
-                EL
+                GR
               </button>
               <button
                 type="button"

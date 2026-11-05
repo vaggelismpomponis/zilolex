@@ -55,7 +55,7 @@ export function NavTopBar() {
                           aria-label="Ελληνικά"
                           aria-pressed={language === "el"}
                         >
-                          EL
+                          GR
                         </button>
                         <button
                           type="button"
