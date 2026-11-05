@@ -87,12 +87,13 @@ export function ContactForm() {
       {/* Audience selector */}
       <div>
         <label className="text-xs font-bold text-slate-800 block mb-1.5">{f.audienceLabel}</label>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+        <div role="group" aria-label={f.audienceLabel} className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
           {(["employer", "agency", "student", "institution", "candidate"] as AudienceType[]).map((aud) => (
             <button
               key={aud}
               type="button"
               onClick={() => setFormData((p) => ({ ...p, audience: aud }))}
+              aria-pressed={formData.audience === aud}
               className={`px-2.5 py-1.5 rounded-md text-[11px] font-bold border transition-all duration-200 active:scale-95 cursor-pointer ${
                 formData.audience === aud
                   ? "bg-emerald-600 text-white border-emerald-600 shadow-2xs"
@@ -108,11 +109,14 @@ export function ContactForm() {
       {/* Name & Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.fullName} *</label>
+          <label htmlFor="contact-fullName" className="text-xs font-semibold text-slate-700 block mb-1">{f.fullName} *</label>
           <input
+            id="contact-fullName"
             name="fullName"
             type="text"
             required
+            aria-required="true"
+            aria-label={f.fullName}
             value={formData.fullName}
             onChange={handleChange}
             placeholder={f.fullNamePlaceholder}
@@ -120,10 +124,12 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.companyName}</label>
+          <label htmlFor="contact-companyName" className="text-xs font-semibold text-slate-700 block mb-1">{f.companyName}</label>
           <input
+            id="contact-companyName"
             name="companyName"
             type="text"
+            aria-label={f.companyName}
             value={formData.companyName}
             onChange={handleChange}
             placeholder={f.companyNamePlaceholder}
@@ -135,11 +141,14 @@ export function ContactForm() {
       {/* Email & Phone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.email} *</label>
+          <label htmlFor="contact-email" className="text-xs font-semibold text-slate-700 block mb-1">{f.email} *</label>
           <input
+            id="contact-email"
             name="email"
             type="email"
             required
+            aria-required="true"
+            aria-label={f.email}
             value={formData.email}
             onChange={handleChange}
             placeholder={f.emailPlaceholder}
@@ -147,11 +156,14 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.phone} *</label>
+          <label htmlFor="contact-phone" className="text-xs font-semibold text-slate-700 block mb-1">{f.phone} *</label>
           <input
+            id="contact-phone"
             name="phone"
             type="tel"
             required
+            aria-required="true"
+            aria-label={f.phone}
             value={formData.phone}
             onChange={handleChange}
             placeholder={f.phonePlaceholder}
@@ -163,9 +175,11 @@ export function ContactForm() {
       {/* Sector & Headcount */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.sector}</label>
+          <label htmlFor="contact-sector" className="text-xs font-semibold text-slate-700 block mb-1">{f.sector}</label>
           <select
+            id="contact-sector"
             name="sector"
+            aria-label={f.sector}
             value={formData.sector}
             onChange={handleChange}
             className={`${inputClass} bg-white cursor-pointer`}
@@ -176,9 +190,11 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.workersCount}</label>
+          <label htmlFor="contact-workersCount" className="text-xs font-semibold text-slate-700 block mb-1">{f.workersCount}</label>
           <select
+            id="contact-workersCount"
             name="workersCount"
+            aria-label={f.workersCount}
             value={formData.workersCount}
             onChange={handleChange}
             className={`${inputClass} bg-white cursor-pointer`}
@@ -193,10 +209,12 @@ export function ContactForm() {
       {/* Start Date & Housing */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.startDate}</label>
+          <label htmlFor="contact-startDate" className="text-xs font-semibold text-slate-700 block mb-1">{f.startDate}</label>
           <input
+            id="contact-startDate"
             name="startDate"
             type="text"
+            aria-label={f.startDate}
             value={formData.startDate}
             onChange={handleChange}
             placeholder={f.startDatePlaceholder}
@@ -204,9 +222,11 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="text-xs font-semibold text-slate-700 block mb-1">{f.housingLabel}</label>
+          <label htmlFor="contact-housing" className="text-xs font-semibold text-slate-700 block mb-1">{f.housingLabel}</label>
           <select
+            id="contact-housing"
             name="housing"
+            aria-label={f.housingLabel}
             value={formData.housing}
             onChange={handleChange}
             className={`${inputClass} bg-white cursor-pointer`}
@@ -220,10 +240,12 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label className="text-xs font-semibold text-slate-700 block mb-1">{f.message}</label>
+        <label htmlFor="contact-message" className="text-xs font-semibold text-slate-700 block mb-1">{f.message}</label>
         <textarea
+          id="contact-message"
           name="message"
           rows={3}
+          aria-label={f.message}
           value={formData.message}
           onChange={handleChange}
           placeholder={f.messagePlaceholder}
@@ -234,15 +256,17 @@ export function ContactForm() {
       {/* GDPR Consent */}
       <div className="flex items-start gap-2 pt-1">
         <input
+          id="contact-gdpr"
           name="gdprConsent"
           type="checkbox"
-          id="gdpr"
           required
+          aria-required="true"
+          aria-label={f.privacyNote}
           checked={formData.gdprConsent}
           onChange={handleChange}
           className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
         />
-        <label htmlFor="gdpr" className="text-[11px] text-slate-600 leading-tight cursor-pointer">
+        <label htmlFor="contact-gdpr" className="text-[11px] text-slate-600 leading-tight cursor-pointer">
           {f.privacyNote}
         </label>
       </div>
