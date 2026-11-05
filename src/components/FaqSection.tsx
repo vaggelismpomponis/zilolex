@@ -75,7 +75,7 @@ export function FaqSection() {
           </span>
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-xs active:scale-95 transition-all duration-200 shrink-0 cursor-pointer"
+            className="group inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider hover:shadow-xs active:scale-95 transition-all duration-200 shrink-0 cursor-pointer"
           >
             <span>Επικοινωνία</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />

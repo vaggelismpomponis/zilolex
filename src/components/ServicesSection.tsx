@@ -64,7 +64,7 @@ export function ServicesSection() {
               {/* Service CTA */}
               <Link
                 href="/contact"
-                className="group/btn w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-slate-100 hover:bg-emerald-600 text-slate-800 hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-2xs active:scale-95 cursor-pointer"
+                className="group/btn w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-white hover:bg-emerald-700 border border-slate-300 hover:border-emerald-700 text-slate-800 hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-2xs active:scale-95 cursor-pointer"
               >
                 <span>{service.ctaText}</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />

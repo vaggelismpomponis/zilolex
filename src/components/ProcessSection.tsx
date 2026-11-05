@@ -13,7 +13,7 @@ export function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 transition-transform hover:scale-105 duration-200">
+          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
             {t.howItWorks.tag}
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -29,10 +29,10 @@ export function ProcessSection() {
           {t.howItWorks.steps.map((step) => (
             <div
               key={step.number}
-              className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu"
+              className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300"
             >
               <div>
-                <span className="text-2xl font-black text-emerald-600 mb-2 block group-hover:scale-105 transition-transform duration-200 origin-left">
+                <span className="text-2xl font-black text-emerald-700 mb-2 block">
                   {step.number}
                 </span>
                 <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors duration-200">
@@ -87,7 +87,7 @@ export function ProcessSection() {
         <div className="text-center">
           <Link
             href="/contact"
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 shadow-xs cursor-pointer"
+            className="group inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-700/20 active:scale-95 transition-all duration-200 shadow-xs cursor-pointer"
           >
             <span>{t.howItWorks.cta}</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

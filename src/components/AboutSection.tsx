@@ -99,7 +99,7 @@ export function AboutSection() {
           <div className="text-center mt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-700/20 active:scale-95 transition-all shadow-xs cursor-pointer"
             >
               <span>{t.about.cta}</span>
               <ArrowRight className="w-4 h-4" />

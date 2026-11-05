@@ -47,7 +47,7 @@ export function NavTopBar() {
                         type="button"
                         onClick={() => setLanguage("el")}
                         className={`px-2.5 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${language === "el"
-                            ? "bg-emerald-600 text-white shadow-2xs"
+                            ? "bg-emerald-700 text-white shadow-2xs"
                             : "text-slate-600 hover:text-slate-900"
                           }`}
                         aria-label="Ελληνικά"
@@ -58,7 +58,7 @@ export function NavTopBar() {
                         type="button"
                         onClick={() => setLanguage("en")}
                         className={`px-2.5 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${language === "en"
-                            ? "bg-emerald-600 text-white shadow-2xs"
+                            ? "bg-emerald-700 text-white shadow-2xs"
                             : "text-slate-600 hover:text-slate-900"
                           }`}
                         aria-label="English"

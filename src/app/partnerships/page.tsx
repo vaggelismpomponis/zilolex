@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
+import { PageBanner } from "@/components/PageBanner";
 import { PartnershipsSection } from "@/components/PartnershipsSection";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { Footer } from "@/components/Footer";
@@ -18,38 +19,43 @@ export default function PartnershipsPage() {
     <div className="min-h-dvh flex flex-col bg-white text-slate-900 w-full antialiased">
       <Navbar />
 
-      <main className="flex-1 w-full pt-28 sm:pt-36 lg:pt-40">
-        {/* Banner */}
-        <section className="bg-slate-50 border-b border-slate-200 py-12 sm:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
-                {t.partnerships.tag}
-              </div>
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-                {t.partnerships.title}
-              </h1>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
-                {t.partnerships.subtitle}
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
-              >
-                <span>{language === "el" ? "Ξεκινήστε Συνεργασία" : "Start a Partnership"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+      <main className="flex-1 w-full">
+        <PageBanner
+          tag={t.partnerships.tag}
+          title={
+            language === "el" ? (
+              <>
+                <span>Στρατηγικές Συνεργασίες </span>
+                <span className="text-emerald-600">&amp; Διεθνή Δίκτυα</span>
+              </>
+            ) : (
+              <>
+                <span>Strategic Partnerships </span>
+                <span className="text-emerald-600">&amp; Global Networks</span>
+              </>
+            )
+          }
+          subtitle={t.partnerships.subtitle}
+          imageSrc="/images/audience-agency.jpg"
+          imageAlt="Partnerships in Greece"
+          objectPosition="object-[65%_25%] sm:object-[60%_30%] lg:object-right"
+          primaryCta={{
+            href: "/contact",
+            text: language === "el" ? "Ξεκινήστε Συνεργασία" : "Start a Partnership",
+          }}
+          secondaryCta={{
+            href: "/services",
+            text: t.nav.services,
+          }}
+        />
 
         {/* Visual Partner Pillars */}
-        <section className="py-14 bg-white border-b border-slate-200">
+        <section className="py-14 sm:py-16 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Agency card */}
-              <div className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 flex flex-col sm:flex-row">
-                <div className="relative w-full sm:w-1/2 aspect-[4/3] sm:aspect-auto">
+              <div className="rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-emerald-500/50 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row">
+                <div className="relative w-full sm:w-1/2 aspect-[16/10] sm:aspect-auto min-h-[220px]">
                   <Image
                     src="/images/audience-agency.jpg"
                     alt="Recruitment Agencies"
@@ -73,17 +79,17 @@ export default function PartnershipsPage() {
                   </div>
                   <Link
                     href="/contact"
-                    className="mt-4 text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1"
+                    className="mt-4 text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1.5"
                   >
-                    <span>{language === "el" ? "Μάθετε περισσότερα" : "Learn more"}</span>
+                    <span>{language === "el" ? "Συνεργαστείτε μαζί μας" : "Partner with us"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>
 
               {/* Institution card */}
-              <div className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 flex flex-col sm:flex-row">
-                <div className="relative w-full sm:w-1/2 aspect-[4/3] sm:aspect-auto">
+              <div className="rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-emerald-500/50 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row">
+                <div className="relative w-full sm:w-1/2 aspect-[16/10] sm:aspect-auto min-h-[220px]">
                   <Image
                     src="/images/audience-institution.jpg"
                     alt="Educational Institutions"
@@ -107,9 +113,9 @@ export default function PartnershipsPage() {
                   </div>
                   <Link
                     href="/contact"
-                    className="mt-4 text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1"
+                    className="mt-4 text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1.5"
                   >
-                    <span>{language === "el" ? "Μάθετε περισσότερα" : "Learn more"}</span>
+                    <span>{language === "el" ? "Συνεργαστείτε μαζί μας" : "Partner with us"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -130,4 +136,3 @@ export default function PartnershipsPage() {
     </div>
   );
 }
-

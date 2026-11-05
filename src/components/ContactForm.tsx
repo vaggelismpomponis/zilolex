@@ -86,7 +86,7 @@ export function ContactForm() {
             setFormData(INITIAL_FORM);
             setStatus("idle");
           }}
-          className="px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider active:scale-95 transition-all duration-200 shadow-xs cursor-pointer"
+          className="px-4 py-2 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold uppercase tracking-wider active:scale-95 transition-all duration-200 shadow-xs cursor-pointer"
         >
           Νέο Αίτημα
         </button>
@@ -309,7 +309,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full py-3 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+        className="w-full py-3 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-700/20 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
       >
         {status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : f.submitBtn}
       </button>
