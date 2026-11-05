@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Menu, X, Phone, MessageSquare, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { NavTopBar } from "@/components/NavTopBar";
 
@@ -22,7 +22,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
-      {/* Top Utility Bar on Desktop */}
+      {/* Top Utility Bar */}
       <NavTopBar />
 
       {/* Main Navbar */}
@@ -63,45 +63,25 @@ export function Navbar() {
 
           {/* Mobile Actions (< lg) */}
           <div className="flex items-center gap-2 lg:hidden shrink-0">
-            {/* Phone Icon */}
-            <a
-              href={`tel:${t.nav.phone.replace(/\s+/g, "")}`}
-              className="p-2 rounded-md text-slate-700 hover:bg-slate-100"
-              title={t.nav.phone}
-              aria-label="Call Zilolex"
-            >
-              <Phone className="w-4 h-4 text-emerald-600" />
-            </a>
-
-            {/* WhatsApp Icon */}
-            <a
-              href={`https://wa.me/${t.nav.whatsappNumber.replace(/[^0-9]/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-md text-slate-700 hover:bg-slate-100"
-              title="WhatsApp"
-              aria-label="WhatsApp"
-            >
-              <MessageSquare className="w-4 h-4 text-emerald-600" />
-            </a>
-
             {/* Language Switcher */}
-            <div className="flex items-center p-0.5 rounded-md bg-slate-100 border border-slate-200">
+            <div role="group" aria-label="Language selection" className="flex items-center p-0.5 rounded-md bg-slate-100 border border-slate-200">
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-1.5 py-0.5 text-[11px] font-bold rounded-sm ${
-                  language === "el" ? "bg-emerald-600 text-white" : "text-slate-600"
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${
+                  language === "el" ? "bg-emerald-600 text-white shadow-2xs" : "text-slate-600 hover:text-slate-900"
                 }`}
+                aria-label="Ελληνικά"
               >
                 EL
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-1.5 py-0.5 text-[11px] font-bold rounded-sm ${
-                  language === "en" ? "bg-emerald-600 text-white" : "text-slate-600"
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${
+                  language === "en" ? "bg-emerald-600 text-white shadow-2xs" : "text-slate-600 hover:text-slate-900"
                 }`}
+                aria-label="English"
               >
                 EN
               </button>
@@ -111,8 +91,9 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md text-slate-800 hover:bg-slate-100 cursor-pointer"
-              aria-label="Toggle menu"
+              className="p-2 rounded-md text-slate-800 hover:bg-slate-100 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
