@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
 import { PartnershipsSection } from "@/components/PartnershipsSection";
-import { ContactFormSection } from "@/components/ContactFormSection";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { useLanguage } from "@/context/LanguageContext";
@@ -126,9 +125,6 @@ export default function PartnershipsPage() {
 
         {/* Detailed Partnerships Content */}
         <PartnershipsSection />
-
-        {/* Form */}
-        <ContactFormSection />
       </main>
 
       <Footer />
