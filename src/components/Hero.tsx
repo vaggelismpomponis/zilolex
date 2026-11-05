@@ -1,113 +1,87 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, UserCheck, FileText, Plane, Home, ShieldCheck, Building2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const { t } = useLanguage();
 
-  const getHelpIcon = (id: string) => {
-    const iconClass = "w-5 h-5 text-emerald-800 group-hover:text-white transition-colors duration-300";
-    switch (id) {
-      case "search":
-        return <UserCheck className={iconClass} />;
-      case "relocation":
-        return <FileText className={iconClass} />;
-      case "travel":
-        return <Plane className={iconClass} />;
-      case "housing":
-        return <Home className={iconClass} />;
-      default:
-        return <UserCheck className={iconClass} />;
-    }
-  };
-
   return (
-    <section className="pt-32 sm:pt-40 lg:pt-44 pb-16 sm:pb-20 bg-white border-b border-slate-200">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        {/* Main Hero Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          {/* Tagline */}
-          <div className="inline-block px-3.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 transition-transform hover:scale-105 duration-200">
-            <span>{t.hero.tagline}</span>
-          </div>
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 bg-white border-b border-slate-200 overflow-hidden">
+      {/* Background Hero Image with Left White Gradient Fade */}
+      <div className="absolute right-0 top-0 w-full lg:w-3/5 h-full pointer-events-none select-none z-0">
+        <Image
+          src="/images/hero-athens.jpg"
+          alt="Athens Acropolis Greece"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 60vw"
+          className="object-cover object-center lg:object-right"
+        />
+        {/* Gradients: White fade to the left, and subtle bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:via-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80" />
+      </div>
 
-          {/* Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
-            {t.hero.titleStart}{" "}
-            <span className="text-emerald-700 underline decoration-emerald-400 decoration-2 underline-offset-4">
-              {t.hero.titleHighlight}
-            </span>
+      <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        {/* Hero Content Area */}
+        <div className="max-w-2xl lg:max-w-3xl pt-4 sm:pt-8 pb-10 sm:pb-16">
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-4">
+            <span>{t.hero.titleStart}</span>
+            <br />
+            <span className="text-emerald-600">{t.hero.titleHighlight}</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto">
+          {/* Subtitle / Service tagline */}
+          <p className="text-base sm:text-xl font-semibold text-slate-800 mb-3 tracking-tight">
+            {t.hero.serviceTagline}
+          </p>
+
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 max-w-xl">
             {t.hero.subtitle}
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
-            <a
-              href="#contact"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm tracking-wide shadow-xs hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200"
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 cursor-pointer"
             >
               <span>{t.hero.ctaPrimary}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
-            <a
-              href="#how-it-works"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-300 hover:border-slate-400 shadow-2xs active:scale-95 transition-all duration-200"
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs uppercase tracking-wider border border-slate-300 hover:border-slate-400 shadow-2xs active:scale-95 transition-all cursor-pointer"
             >
-              {t.hero.ctaSecondary}
-            </a>
-          </div>
-
-          {/* Trust Highlights Strip */}
-          <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs font-medium text-slate-600 pt-4">
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Ν. 5038/2023 Πλήρης Νομιμότητα</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Building2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Κατασκευές & Τουρισμός</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Home className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Συντονισμός Στέγασης</span>
-            </div>
+              <span>{t.hero.ctaSecondary}</span>
+            </Link>
           </div>
         </div>
 
-        {/* 4 Cards: Πώς σας βοηθάμε */}
-        <div className="pt-10 border-t border-slate-100">
-          <div className="text-center mb-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              Πώς σας βοηθάμε
-            </span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {t.hero.helpCards.map((card) => (
-              <div
-                key={card.id}
-                className="group p-5 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu cursor-default"
-              >
-                <div>
-                  <div className="w-9 h-9 rounded-md bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center mb-3 transition-colors duration-300">
-                    {getHelpIcon(card.id)}
-                  </div>
-                  <h3 className="text-sm font-bold text-slate-900 mb-1.5 group-hover:text-emerald-700 transition-colors duration-200">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {card.desc}
-                  </p>
-                </div>
+        {/* 4 Pillars Strip (strictly without icons) */}
+        <div className="pt-8 border-t border-slate-200/90 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          {t.hero.pillars?.map((pillar) => (
+            <div
+              key={pillar.id}
+              className="p-4 rounded-md bg-white/90 backdrop-blur-xs border border-slate-200/80 hover:border-emerald-500/50 transition-all duration-200"
+            >
+              <div className="text-[11px] font-bold text-emerald-600 mb-1 tracking-wider uppercase">
+                {pillar.num}
               </div>
-            ))}
-          </div>
+              <h3 className="text-sm font-bold text-slate-900 mb-1">
+                {pillar.title}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {pillar.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

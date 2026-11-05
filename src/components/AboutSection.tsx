@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Check, Shield, User, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ export function AboutSection() {
         {/* Company Overview & Mission */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
           <div className="lg:col-span-7">
-            <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 transition-transform hover:scale-105 duration-200">
+            <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
               {t.about.tag}
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -49,18 +50,17 @@ export function AboutSection() {
 
           {/* Right Column: Values */}
           <div className="lg:col-span-5 p-6 rounded-lg bg-white border border-slate-200 hover:border-emerald-500/40 hover:shadow-md transition-all duration-300">
-            <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-              <Shield className="w-5 h-5 text-emerald-800" />
-              <span>{t.about.valuesTitle}</span>
+            <h3 className="text-lg font-bold text-slate-900 mb-4">
+              {t.about.valuesTitle}
             </h3>
             <div className="space-y-3.5">
               {t.about.values.map((val, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 group/val hover:translate-x-1 transition-transform duration-200">
-                  <div className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-emerald-600" />
-                  </div>
+                <div key={idx} className="flex items-start gap-2.5">
+                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-1.5 py-0.5 shrink-0 mt-0.5">
+                    0{idx + 1}
+                  </span>
                   <div>
-                    <span className="text-xs font-bold text-slate-900 block group-hover/val:text-emerald-700 transition-colors">{val.title}</span>
+                    <span className="text-xs font-bold text-slate-900 block">{val.title}</span>
                     <span className="text-xs text-slate-600 leading-normal">{val.desc}</span>
                   </div>
                 </div>
@@ -82,13 +82,13 @@ export function AboutSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { role: t.about.teamRoleGM, title: "Executive Management" },
-              { role: t.about.teamRoleOps, title: "Logistics & Housing" },
-              { role: t.about.teamRoleLegal, title: "Statutory Procedures" },
+              { role: t.about.teamRoleGM, title: "Executive Management", code: "GM" },
+              { role: t.about.teamRoleOps, title: "Logistics & Housing", code: "OPS" },
+              { role: t.about.teamRoleLegal, title: "Statutory Procedures", code: "LEG" },
             ].map((member, idx) => (
-              <div key={idx} className="group p-5 rounded-lg bg-white border border-slate-200 text-center hover:border-emerald-500/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu">
-                <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200 group-hover:border-emerald-300 group-hover:bg-emerald-50 flex items-center justify-center mx-auto mb-3 text-slate-500 group-hover:text-emerald-600 transition-all duration-300">
-                  <User className="w-6 h-6" />
+              <div key={idx} className="group p-5 rounded-lg bg-white border border-slate-200 text-center hover:border-emerald-500/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold text-xs flex items-center justify-center mx-auto mb-3">
+                  {member.code}
                 </div>
                 <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{member.role}</div>
                 <div className="text-xs text-emerald-800 font-medium">{member.title}</div>
@@ -97,13 +97,13 @@ export function AboutSection() {
           </div>
 
           <div className="text-center mt-10">
-            <a
-              href="#contact"
-              className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs uppercase tracking-wider border border-slate-300 hover:border-slate-400 active:scale-95 transition-all duration-200"
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs cursor-pointer"
             >
               <span>{t.about.cta}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>

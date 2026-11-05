@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Phone, Mail, MapPin, MessageSquare, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export function Footer() {
@@ -65,15 +66,13 @@ export function Footer() {
               {t.footer.quickLinks}
             </h4>
             <ul className="space-y-2.5">
-              <li><a href="#" className="hover:text-white transition-colors">{t.nav.home}</a></li>
-              <li><a href="#employers" className="hover:text-white transition-colors">{t.nav.employers}</a></li>
-              <li><a href="#sectors" className="hover:text-white transition-colors">{t.nav.sectors}</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">{t.nav.services}</a></li>
-              <li><a href="#how-it-works" className="hover:text-white transition-colors">{t.nav.howItWorks}</a></li>
-              <li><a href="#partnerships" className="hover:text-white transition-colors">{t.nav.partnerships}</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">{t.nav.about}</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">{t.faq.tag}</a></li>
-              <li><a href="#guides" className="hover:text-white transition-colors">{t.guides.tag}</a></li>
+              <li><Link href="/" className="hover:text-white transition-colors">{t.nav.home}</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">{t.nav.services}</Link></li>
+              <li><Link href="/employers" className="hover:text-white transition-colors">{t.nav.employers}</Link></li>
+              <li><Link href="/students" className="hover:text-white transition-colors">{t.nav.students || "Φοιτητές"}</Link></li>
+              <li><Link href="/partnerships" className="hover:text-white transition-colors">{t.nav.partnerships}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t.nav.about}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t.nav.contact}</Link></li>
             </ul>
           </div>
 
@@ -85,9 +84,9 @@ export function Footer() {
             <ul className="space-y-2.5">
               {t.sectors.items.map((sec) => (
                 <li key={sec.id}>
-                  <a href="#sectors" className="hover:text-white transition-colors">
+                  <Link href="/services" className="hover:text-white transition-colors">
                     {sec.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,12 +98,12 @@ export function Footer() {
               {t.footer.legalTitle}
             </h4>
             <div className="p-4 rounded-lg bg-slate-800/80 border border-slate-700/80 space-y-2 mb-4">
-              <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <p className="text-[11px] text-slate-300 leading-relaxed">
-                  {t.footer.legalText}
-                </p>
+              <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider mb-1">
+                Ν. 5038/2023
               </div>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                {t.footer.legalText}
+              </p>
             </div>
             <div className="flex items-center gap-4 text-[11px]">
               <button

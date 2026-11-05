@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function ProcessSection() {
@@ -84,13 +85,13 @@ export function ProcessSection() {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <a
-            href="#contact"
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 shadow-xs"
+          <Link
+            href="/contact"
+            className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 shadow-xs cursor-pointer"
           >
             <span>{t.howItWorks.cta}</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

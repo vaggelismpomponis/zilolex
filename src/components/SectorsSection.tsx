@@ -1,29 +1,18 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { HardHat, UtensilsCrossed, Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function SectorsSection() {
   const { t } = useLanguage();
-
-  const getSectorIcon = (id: string) => {
-    const iconClass = "w-5 h-5 text-emerald-800 group-hover:text-white transition-colors duration-300";
-    switch (id) {
-      case "construction_industry":
-        return <HardHat className={iconClass} />;
-      case "tourism_hospitality":
-        return <UtensilsCrossed className={iconClass} />;
-      default:
-        return <Building2 className={iconClass} />;
-    }
-  };
 
   return (
     <section id="sectors" className="py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 transition-transform hover:scale-105 duration-200">
+          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
             {t.sectors.tag}
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -36,14 +25,14 @@ export function SectorsSection() {
 
         {/* 3 Sectors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {t.sectors.items.map((sector) => (
+          {t.sectors.items.map((sector, idx) => (
             <div
               key={sector.id}
-              className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 transform-gpu"
+              className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300"
             >
               <div>
-                <div className="w-10 h-10 rounded-md bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center mb-4 transition-colors duration-300">
-                  {getSectorIcon(sector.id)}
+                <div className="inline-block text-xs font-bold text-emerald-700 bg-white border border-slate-200 rounded px-2.5 py-1 mb-4">
+                  0{idx + 1}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-emerald-700 transition-colors duration-200">
                   {sector.title}
@@ -89,19 +78,19 @@ export function SectorsSection() {
               </div>
 
               {/* Card CTA */}
-              <a
-                href={sector.ctaHref}
-                className="group/btn w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-white hover:bg-emerald-600 border border-slate-300 hover:border-emerald-600 text-slate-800 hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-2xs active:scale-95"
+              <Link
+                href="/contact"
+                className="group/btn w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-white hover:bg-emerald-600 border border-slate-300 hover:border-emerald-600 text-slate-800 hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-2xs active:scale-95 cursor-pointer"
               >
                 <span>{sector.ctaText}</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
 
         {/* Note */}
-        <p className="text-xs text-center text-slate-500 italic">
+        <p className="text-xs text-slate-500 text-center italic">
           {t.sectors.note}
         </p>
       </div>
