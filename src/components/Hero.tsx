@@ -4,48 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Home, FileText, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const { language } = useLanguage();
 
-  const pillars = [
-    {
-      id: "workforce",
-      icon: <Users className="w-5 h-5 text-emerald-600" />,
-      title: language === "el" ? "Κινητικότητα Εργατικού Δυναμικού" : "Workforce Mobility",
-      desc: language === "el"
-        ? "Αναζήτηση, επιλογή και συντονισμός τοποθέτησης προσωπικού."
-        : "Recruitment, staffing and deployment solutions.",
-    },
-    {
-      id: "housing",
-      icon: <Home className="w-5 h-5 text-emerald-600" />,
-      title: language === "el" ? "Λύσεις Στέγασης" : "Housing Solutions",
-      desc: language === "el"
-        ? "Οργανωμένη διαμονή για ομάδες εργαζομένων και φοιτητές."
-        : "Managed accommodation for workforces and students.",
-    },
-    {
-      id: "migration",
-      icon: <FileText className="w-5 h-5 text-emerald-600" />,
-      title: language === "el" ? "Υπηρεσίες Μετανάστευσης" : "Migration Services",
-      desc: language === "el"
-        ? "Καθοδήγηση visa, αδειών εργασίας και διαμονής."
-        : "Visa, work and residence permit support.",
-    },
-    {
-      id: "students",
-      icon: <GraduationCap className="w-5 h-5 text-emerald-600" />,
-      title: language === "el" ? "Φοιτητική Κινητικότητα" : "Student Mobility",
-      desc: language === "el"
-        ? "Προγράμματα σπουδών στην Ελλάδα με μετεγκατάσταση και στέγαση."
-        : "Study pathways in Greece with relocation and housing.",
-    },
-  ];
-
   return (
-    <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 bg-white border-b border-slate-200 overflow-hidden">
+    <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 lg:pb-32 bg-white border-b border-slate-200 overflow-hidden">
       {/* Background Hero Image with Left White Gradient Fade */}
       <div className="absolute right-0 top-0 w-full lg:w-3/5 h-full pointer-events-none select-none z-0">
         <Image
@@ -63,7 +28,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Hero Content Area */}
-        <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-6 pb-12 sm:pb-16 lg:pb-20">
+        <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-6">
           {/* Main Headline (Exact 2 lines from photo) */}
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-4">
             {language === "el" ? (
@@ -100,25 +65,6 @@ export function Hero() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </div>
-
-        {/* 4 Pillars Strip (Matching the photo layout) */}
-        <div className="pt-8 sm:pt-10 border-t border-slate-200/90 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-          {pillars.map((pillar) => (
-            <div key={pillar.id} className="flex items-start gap-3.5">
-              <div className="w-11 h-11 rounded-lg border border-emerald-200 bg-emerald-50/70 flex items-center justify-center shrink-0 text-emerald-600 shadow-2xs">
-                {pillar.icon}
-              </div>
-              <div>
-                <h3 className="text-sm font-bold text-slate-900 mb-0.5 leading-snug">
-                  {pillar.title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {pillar.desc}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

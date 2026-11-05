@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { HeroPillars } from "@/components/HeroPillars";
 import { AudienceCards } from "@/components/AudienceCards";
 import { SectorsSection } from "@/components/SectorsSection";
 import { HomeCtaSection } from "@/components/HomeCtaSection";
@@ -11,8 +12,11 @@ export default function Home() {
     <div className="min-h-dvh flex flex-col bg-white text-slate-900 w-full antialiased">
       <Navbar />
       <main className="flex-1 w-full">
-        {/* Hero with Athens panorama and 4 infrastructure pillars */}
+        {/* Hero with Athens panorama */}
         <Hero />
+
+        {/* 4 Dedicated Infrastructure Pillars (high contrast pure white strip) */}
+        <HeroPillars />
 
         {/* 4 Dedicated Audience Pathways */}
         <AudienceCards />
