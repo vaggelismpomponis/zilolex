@@ -54,10 +54,10 @@ export function Hero() {
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
-          className="object-cover object-center lg:object-right opacity-30 sm:opacity-45 lg:opacity-100"
+          className="object-cover object-[78%_22%] sm:object-[75%_28%] lg:object-right opacity-50 sm:opacity-65 lg:opacity-100"
         />
-        {/* Soft white fade on the left so text has pure white background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white/95 lg:bg-gradient-to-r lg:from-white lg:via-white/75 lg:to-transparent" />
+        {/* Soft white fade so text has clear contrast and image fades smoothly */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white lg:bg-gradient-to-r lg:from-white lg:via-white/75 lg:to-transparent" />
         <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-44 bg-gradient-to-r from-white to-transparent" />
       </div>
 
