@@ -5,7 +5,6 @@ import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
 import { EmployersSection } from "@/components/EmployersSection";
 import { ProcessSection } from "@/components/ProcessSection";
-import { ContactFormSection } from "@/components/ContactFormSection";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { useLanguage } from "@/context/LanguageContext";
@@ -52,9 +51,6 @@ export default function EmployersPage() {
 
         {/* End to End Process */}
         <ProcessSection />
-
-        {/* Form */}
-        <ContactFormSection />
       </main>
 
       <Footer />
