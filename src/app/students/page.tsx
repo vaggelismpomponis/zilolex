@@ -91,9 +91,9 @@ export default function StudentsPage() {
                   key={box.num}
                   className="group p-6 sm:p-7 rounded-lg bg-slate-50 border border-slate-200 hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="text-xs font-bold text-emerald-700 bg-white border border-slate-200 rounded px-2.5 py-1 inline-block mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2 block">
                     {box.num}
-                  </div>
+                  </span>
                   <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
                     {box.title}
                   </h3>

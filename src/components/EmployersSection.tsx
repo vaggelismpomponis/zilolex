@@ -37,7 +37,7 @@ export function EmployersSection() {
             <ul className="space-y-3.5">
               {t.employers.whatWeDo.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-1.5 py-0.5 shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-emerald-700 shrink-0 mt-0.5">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                   <span className="text-xs sm:text-sm text-slate-700 leading-normal">{item}</span>
@@ -55,7 +55,7 @@ export function EmployersSection() {
               <ul className="space-y-3.5">
                 {t.employers.whyTrust.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-1.5 py-0.5 shrink-0 mt-0.5">
+                    <span className="text-xs font-bold text-emerald-700 shrink-0 mt-0.5">
                       ✓
                     </span>
                     <span className="text-xs sm:text-sm text-slate-700 leading-normal">{item}</span>

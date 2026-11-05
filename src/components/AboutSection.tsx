@@ -56,7 +56,7 @@ export function AboutSection() {
             <div className="space-y-3.5">
               {t.about.values.map((val, idx) => (
                 <div key={idx} className="flex items-start gap-2.5">
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-1.5 py-0.5 shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-emerald-700 shrink-0 mt-0.5">
                     0{idx + 1}
                   </span>
                   <div>
@@ -87,7 +87,7 @@ export function AboutSection() {
               { role: t.about.teamRoleLegal, title: "Statutory Procedures", code: "LEG" },
             ].map((member, idx) => (
               <div key={idx} className="group p-5 rounded-lg bg-white border border-slate-200 text-center hover:border-emerald-500/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold text-xs flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-700 font-bold text-xs flex items-center justify-center mx-auto mb-3">
                   {member.code}
                 </div>
                 <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{member.role}</div>

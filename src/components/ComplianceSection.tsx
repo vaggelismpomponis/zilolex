@@ -29,9 +29,9 @@ export function ComplianceSection() {
               className="group p-6 rounded-lg bg-white border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
             >
               <div>
-                <div className="inline-block text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-2.5 py-1 mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2 block">
                   0{idx + 1}
-                </div>
+                </span>
                 <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors duration-200">
                   {point.title}
                 </h3>

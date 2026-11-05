@@ -83,7 +83,7 @@ export function LegalModal() {
 
           {/* Title Row with Icon */}
           <div className="flex items-center gap-3 pr-10 sm:pr-12 mb-3">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0 shadow-xs">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
               {activeTab === "terms" ? (
                 <FileText className="w-5 h-5" />
               ) : (
@@ -149,7 +149,7 @@ export function LegalModal() {
               className="p-5 rounded-xl border border-slate-150 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-800/20"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-xs font-black text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/60 dark:border-emerald-800/60 px-2 py-0.5 rounded-md">
+                <span className="text-xs font-black text-emerald-600 dark:text-emerald-400 tracking-wider">
                   {article.number}
                 </span>
                 <h3 className="text-base font-bold text-slate-900 dark:text-white tracking-tight">

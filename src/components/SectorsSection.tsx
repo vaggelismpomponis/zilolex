@@ -31,9 +31,9 @@ export function SectorsSection() {
               className="group p-6 rounded-lg bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-emerald-500/40 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300"
             >
               <div>
-                <div className="inline-block text-xs font-bold text-emerald-700 bg-white border border-slate-200 rounded px-2.5 py-1 mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2 block">
                   0{idx + 1}
-                </div>
+                </span>
                 <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-emerald-700 transition-colors duration-200">
                   {sector.title}
                 </h3>

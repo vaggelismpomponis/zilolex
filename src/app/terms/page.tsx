@@ -36,7 +36,7 @@ export default function TermsPage() {
           <div className="p-6 sm:p-8 rounded-lg bg-white border border-slate-200 shadow-2xs mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0 shadow-2xs">
+                <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-700 shrink-0">
                   {activeTab === "terms" ? (
                     <FileText className="w-6 h-6" />
                   ) : (
@@ -98,7 +98,7 @@ export default function TermsPage() {
                 className="p-6 sm:p-7 rounded-lg bg-white border border-slate-200 shadow-2xs transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-sm">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
                     {article.number}
                   </span>
                   <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">

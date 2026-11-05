@@ -46,7 +46,7 @@ export function HomeCtaSection() {
             {/* 3 Value Highlights */}
             <div className="pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 text-emerald-700">
+                <div className="w-9 h-9 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-700">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ export function HomeCtaSection() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 text-emerald-700">
+                <div className="w-9 h-9 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-700">
                   <Globe2 className="w-4 h-4" />
                 </div>
                 <div>
@@ -74,7 +74,7 @@ export function HomeCtaSection() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 text-emerald-700">
+                <div className="w-9 h-9 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-700">
                   <Building className="w-4 h-4" />
                 </div>
                 <div>
