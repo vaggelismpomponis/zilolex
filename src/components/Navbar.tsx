@@ -174,29 +174,31 @@ export function Navbar() {
             <div
               role="group"
               aria-label="Language selection"
-              className="flex items-center p-0.5 rounded-md bg-slate-100 border border-slate-200"
+              className="flex items-center gap-1"
             >
               <button
                 type="button"
                 onClick={() => setLanguage("el")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-md border transition-all cursor-pointer ${
                   language === "el"
-                    ? "bg-emerald-700 text-white shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                    : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-900 shadow-2xs"
                 }`}
                 aria-label="Ελληνικά"
+                aria-pressed={language === "el"}
               >
                 EL
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 text-[11px] font-bold rounded-sm transition-all cursor-pointer ${
+                className={`px-2 py-0.5 text-[11px] font-bold rounded-md border transition-all cursor-pointer ${
                   language === "en"
-                    ? "bg-emerald-700 text-white shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                    : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-900 shadow-2xs"
                 }`}
                 aria-label="English"
+                aria-pressed={language === "en"}
               >
                 EN
               </button>
