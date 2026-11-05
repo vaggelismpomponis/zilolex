@@ -3,7 +3,6 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
-import { ContactFormSection } from "@/components/ContactFormSection";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
@@ -109,9 +108,6 @@ export default function StudentsPage() {
 
         {/* FAQs */}
         <FaqSection />
-
-        {/* Contact Form */}
-        <ContactFormSection />
       </main>
 
       <Footer />
