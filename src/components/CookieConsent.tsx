@@ -296,40 +296,22 @@ export function CookieConsent() {
                 </div>
 
                 {/* Footer Actions */}
-                <div className="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+                <div className="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 flex flex-col sm:flex-row items-center justify-end gap-2.5">
                   <button
                     type="button"
-                    onClick={() => {
-                      const hasConsented = localStorage.getItem(COOKIE_STORAGE_KEY);
-                      if (hasConsented) {
-                        setIsOpen(false);
-                        setShowPreferences(false);
-                      } else {
-                        setShowPreferences(false);
-                      }
-                    }}
-                    className="w-full sm:w-auto px-4 py-2.5 text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+                    onClick={handleSavePreferences}
+                    className="w-full sm:w-auto px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 transition-all cursor-pointer shadow-2xs"
                   >
-                    {t.cookieConsent.backToBanner}
+                    {t.cookieConsent.savePreferences}
                   </button>
 
-                  <div className="flex items-center gap-2.5 w-full sm:w-auto">
-                    <button
-                      type="button"
-                      onClick={handleSavePreferences}
-                      className="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 transition-all cursor-pointer shadow-2xs"
-                    >
-                      {t.cookieConsent.savePreferences}
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={handleAcceptAll}
-                      className="flex-1 sm:flex-initial px-5 py-2.5 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/20 active:scale-95 transition-all cursor-pointer"
-                    >
-                      {t.cookieConsent.acceptAll}
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    onClick={handleAcceptAll}
+                    className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[var(--color-emerald-400)] hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-400/20 active:scale-95 transition-all cursor-pointer"
+                  >
+                    {t.cookieConsent.acceptAll}
+                  </button>
                 </div>
               </div>
             </div>
