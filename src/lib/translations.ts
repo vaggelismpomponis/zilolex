@@ -565,7 +565,9 @@ export const translations = {
           tourism_hospitality: "Τουρισμός & Εστίαση",
           other: "Άλλος κλάδος",
         },
-        workersCount: "Ειδικότητες & αριθμός ατόμων που χρειάζεστε",
+        specialtiesLabel: "Ειδικότητες που χρειάζεστε",
+        specialtiesPlaceholder: "π.χ. Ηλεκτρολόγοι, Σιδεράδες, Σερβιτόροι, Logistics...",
+        workersCount: "Αριθμός ατόμων που χρειάζεστε",
         workersCountPlaceholder: "Επιλέξτε αριθμό ατόμων",
         workersOptions: [
           "1 - 5 άτομα",
@@ -575,7 +577,7 @@ export const translations = {
           "Περισσότερα από 50 άτομα",
         ],
         startDate: "Επιθυμητή ημερομηνία έναρξης",
-        startDatePlaceholder: "π.χ. Άμεσα, Μάιος 2026, 1η Ιουνίου",
+        startDatePlaceholder: "Επιλέξτε ημερομηνία",
         housingLabel: "Χρειάζεστε στέγαση για τους εργαζομένους;",
         housingOptions: {
           yes: "Ναι",
@@ -1219,7 +1221,9 @@ export const translations = {
           tourism_hospitality: "Tourism & Hospitality",
           other: "Other Sector",
         },
-        workersCount: "Roles & Number of People Needed",
+        specialtiesLabel: "Required Roles / Specializations",
+        specialtiesPlaceholder: "e.g. Electricians, Welders, Hospitality staff, Logistics...",
+        workersCount: "Number of personnel needed",
         workersCountPlaceholder: "Select headcount",
         workersOptions: [
           "1 - 5 people",
@@ -1229,7 +1233,7 @@ export const translations = {
           "More than 50 people",
         ],
         startDate: "Target Start Date",
-        startDatePlaceholder: "e.g. Immediately, May 2026, 1st June",
+        startDatePlaceholder: "Select date",
         housingLabel: "Do you require worker accommodation?",
         housingOptions: {
           yes: "Yes",

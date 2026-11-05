@@ -59,6 +59,7 @@ export interface ContactFormData {
   email: string;
   phone: string;
   sector: string;
+  specialties: string;
   workersCount: string;
   startDate: string;
   housing: 'yes' | 'no' | 'discuss';

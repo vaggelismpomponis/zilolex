@@ -11,6 +11,7 @@ export async function POST(request: Request) {
       email,
       phone,
       sector,
+      specialties,
       workersCount,
       startDate,
       housing,
@@ -46,7 +47,8 @@ export async function POST(request: Request) {
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Τηλέφωνο:</strong> ${escapeHtml(phone)}</p>
         <p><strong>Κλάδος:</strong> ${escapeHtml(sector || "-")}</p>
-        <p><strong>Ειδικότητες / Αριθμός Ατόμων:</strong> ${escapeHtml(workersCount || "-")}</p>
+        <p><strong>Ειδικότητες που χρειάζεστε:</strong> ${escapeHtml(specialties || "-")}</p>
+        <p><strong>Αριθμός Ατόμων:</strong> ${escapeHtml(workersCount || "-")}</p>
         <p><strong>Επιθυμητή Ημερομηνία Έναρξης:</strong> ${escapeHtml(startDate || "-")}</p>
         <p><strong>Ανάγκη Στέγασης:</strong> ${escapeHtml(housing || "-")}</p>
         <p><strong>Μήνυμα / Σχόλια:</strong></p>
@@ -72,6 +74,7 @@ export async function POST(request: Request) {
         email,
         phone,
         sector,
+        specialties,
         workersCount,
         startDate,
         housing,
