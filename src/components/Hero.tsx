@@ -29,8 +29,7 @@ export function Hero() {
         {/* Main Hero Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           {/* Tagline */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 transition-transform hover:scale-105 duration-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <div className="inline-block px-3.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 transition-transform hover:scale-105 duration-200">
             <span>{t.hero.tagline}</span>
           </div>
 

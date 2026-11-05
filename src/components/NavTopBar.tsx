@@ -11,8 +11,7 @@ export function NavTopBar() {
     <div className="hidden lg:block bg-slate-50 border-b border-slate-200 text-xs text-slate-600">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-10 flex items-center justify-between">
         {/* Brand Tagline */}
-        <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="flex items-center">
           <span className="font-medium text-slate-700 tracking-tight">{t.nav.tagline}</span>
         </div>
 
