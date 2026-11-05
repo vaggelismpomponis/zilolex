@@ -51,9 +51,9 @@ export function PageBanner({
 
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-4 pb-6 sm:pb-8">
-          <div className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-3 block">
             {tag}
-          </div>
+          </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[46px] font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-4">
             {title}
           </h1>

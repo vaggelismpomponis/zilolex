@@ -13,9 +13,9 @@ export function EmployersSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-3 block">
             {t.employers.tag}
-          </div>
+          </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
             {t.employers.headline}
           </h2>

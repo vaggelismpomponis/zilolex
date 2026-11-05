@@ -45,7 +45,7 @@ export default function TermsPage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm bg-emerald-50 border border-emerald-200 text-emerald-700">
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-emerald-700">
                       {currentDoc.badge}
                     </span>
                     <span className="text-xs text-slate-500">

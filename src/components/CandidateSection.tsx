@@ -13,9 +13,9 @@ export function CandidateSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-6 sm:p-8 rounded-lg bg-emerald-50/60 border border-emerald-200 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-emerald-300 hover:shadow-md transition-all duration-300">
           <div className="max-w-2xl">
-            <div className="inline-block px-2.5 py-0.5 rounded-sm bg-white border border-emerald-300 text-emerald-700 text-[11px] font-bold uppercase tracking-wider mb-2">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-emerald-700 mb-2 block">
               {t.candidates.tag}
-            </div>
+            </span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
               {t.candidates.title}
             </h3>

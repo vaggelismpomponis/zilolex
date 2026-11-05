@@ -14,9 +14,9 @@ export function AboutSection() {
         {/* Company Overview & Mission */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
           <div className="lg:col-span-7">
-            <div className="inline-block px-3 py-1 rounded-md bg-white border border-slate-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-3 block">
               {t.about.tag}
-            </div>
+            </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
               {t.about.title}
             </h2>
