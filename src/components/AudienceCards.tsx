@@ -75,8 +75,8 @@ export function AudienceCards() {
 
               {/* Card Bottom Area (matching photo) */}
               <div className="p-4 sm:p-5 flex items-center justify-between gap-3 bg-white">
-                <div className="flex items-start gap-3 flex-1 min-w-0">
-                  <div className="w-8 h-8 rounded-md bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5 text-emerald-700">
+                <div className="flex items-start gap-2.5 flex-1 min-w-0">
+                  <div className="shrink-0 mt-0.5 text-emerald-700">
                     {card.icon}
                   </div>
                   <div className="min-w-0 flex-1">

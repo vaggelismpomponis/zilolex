@@ -36,7 +36,7 @@ export default function TermsPage() {
           <div className="p-6 sm:p-8 rounded-lg bg-white border border-slate-200 shadow-2xs mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-700 shrink-0">
+                <div className="shrink-0 text-emerald-700">
                   {activeTab === "terms" ? (
                     <FileText className="w-6 h-6" />
                   ) : (

@@ -132,7 +132,7 @@ export function CookieConsent() {
                 {/* Header */}
                 <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between gap-4 bg-slate-50/50 dark:bg-slate-950/40">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <div className="shrink-0 text-emerald-600 dark:text-emerald-400">
                       <Cookie className="w-5 h-5" />
                     </div>
                     <div>
@@ -172,7 +172,7 @@ export function CookieConsent() {
                   <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-start gap-3">
-                        <div className="mt-0.5 w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                        <div className="mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-400">
                           <ShieldCheck className="w-4 h-4" />
                         </div>
                         <div>
@@ -206,7 +206,7 @@ export function CookieConsent() {
                   <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-start gap-3">
-                        <div className="mt-0.5 w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                        <div className="mt-0.5 shrink-0 text-sky-600 dark:text-sky-400">
                           <BarChart3 className="w-4 h-4" />
                         </div>
                         <div>
@@ -252,7 +252,7 @@ export function CookieConsent() {
                   <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-start gap-3">
-                        <div className="mt-0.5 w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                        <div className="mt-0.5 shrink-0 text-purple-600 dark:text-purple-400">
                           <Megaphone className="w-4 h-4" />
                         </div>
                         <div>
@@ -342,7 +342,7 @@ export function CookieConsent() {
             >
               <div className="relative p-6 sm:p-7 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 shadow-2xl text-slate-900 dark:text-white">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <div className="shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5">
                     <Cookie className="w-5 h-5" />
                   </div>
                   <div className="flex-1 pr-2">

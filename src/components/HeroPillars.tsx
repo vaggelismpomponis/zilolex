@@ -47,8 +47,8 @@ export function HeroPillars() {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
           {pillars.map((pillar) => (
-            <div key={pillar.id} className="flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-700">
+            <div key={pillar.id} className="flex items-start gap-3">
+              <div className="shrink-0 text-emerald-700 mt-0.5">
                 {pillar.icon}
               </div>
               <div>

@@ -83,7 +83,7 @@ export function LegalModal() {
 
           {/* Title Row with Icon */}
           <div className="flex items-center gap-3 pr-10 sm:pr-12 mb-3">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+            <div className="shrink-0 text-emerald-600 dark:text-emerald-400">
               {activeTab === "terms" ? (
                 <FileText className="w-5 h-5" />
               ) : (
