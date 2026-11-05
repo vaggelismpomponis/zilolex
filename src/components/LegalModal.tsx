@@ -115,25 +115,29 @@ export function LegalModal() {
           </p>
 
           {/* Tab Selector */}
-          <div className="flex items-center gap-2 border-t border-slate-200/80 dark:border-slate-800 pt-3">
+          <div role="tablist" aria-label="Legal documents" className="flex items-center gap-2.5 border-t border-slate-200/80 dark:border-slate-800 pt-3">
             <button
               type="button"
+              role="tab"
+              aria-selected={activeTab === "terms"}
               onClick={() => setActiveTab("terms")}
-              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-md border transition-all cursor-pointer ${
                 activeTab === "terms"
-                  ? "bg-emerald-600 text-white shadow-xs"
-                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800"
+                  ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                  : "bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white shadow-2xs"
               }`}
             >
               {language === "el" ? "Όροι Χρήσης" : "Terms of Use"}
             </button>
             <button
               type="button"
+              role="tab"
+              aria-selected={activeTab === "privacy"}
               onClick={() => setActiveTab("privacy")}
-              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial text-center px-4 py-2 text-xs font-bold rounded-md border transition-all cursor-pointer ${
                 activeTab === "privacy"
-                  ? "bg-emerald-600 text-white shadow-xs"
-                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800"
+                  ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                  : "bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white shadow-2xs"
               }`}
             >
               {language === "el" ? "Πολιτική Απορρήτου" : "Privacy Policy"}

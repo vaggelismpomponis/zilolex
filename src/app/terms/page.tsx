@@ -64,25 +64,29 @@ export default function TermsPage() {
             </p>
 
             {/* Switch tabs */}
-            <div className="mt-6 flex items-center gap-2 pt-4 border-t border-slate-100">
+            <div role="tablist" aria-label="Legal documents" className="mt-6 flex items-center gap-2.5 pt-4 border-t border-slate-100">
               <button
                 type="button"
+                role="tab"
+                aria-selected={activeTab === "terms"}
                 onClick={() => setActiveTab("terms")}
-                className={`px-4 py-2 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                className={`px-4 py-2 text-xs font-bold rounded-md border transition-all cursor-pointer ${
                   activeTab === "terms"
-                    ? "bg-emerald-700 text-white shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                    ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                    : "bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400 shadow-2xs"
                 }`}
               >
                 {language === "el" ? "Όροι Χρήσης" : "Terms of Use"}
               </button>
               <button
                 type="button"
+                role="tab"
+                aria-selected={activeTab === "privacy"}
                 onClick={() => setActiveTab("privacy")}
-                className={`px-4 py-2 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                className={`px-4 py-2 text-xs font-bold rounded-md border transition-all cursor-pointer ${
                   activeTab === "privacy"
-                    ? "bg-emerald-700 text-white shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                    ? "bg-emerald-700 text-white border-emerald-700 shadow-2xs"
+                    : "bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400 shadow-2xs"
                 }`}
               >
                 {language === "el" ? "Πολιτική Απορρήτου" : "Privacy Policy"}
