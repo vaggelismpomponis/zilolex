@@ -126,8 +126,8 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <div>{t.footer.copyright}</div>
-          <div>{t.contact.directContact.address}</div>
+          <div className="w-full sm:w-auto text-center sm:text-left">{t.footer.copyright}</div>
+          <div className="w-full sm:w-auto text-center sm:text-right">{t.contact.directContact.address}</div>
         </div>
       </div>
     </footer>
