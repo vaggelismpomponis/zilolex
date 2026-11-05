@@ -87,198 +87,197 @@ export function ContactForm() {
       {/* Audience selector */}
       <div>
         <label className="text-xs font-bold text-slate-800 block mb-1.5">{f.audienceLabel}</label>
-        <div role="group" aria-label={f.audienceLabel} className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
-          {(["employer", "agency", "student", "institution", "candidate"] as AudienceType[]).map((aud) => (
-            <button
-              key={aud}
-              type="button"
-              onClick={() => setFormData((p) => ({ ...p, audience: aud }))}
-              aria-pressed={formData.audience === aud}
-              className={`px-2.5 py-1.5 rounded-md text-[11px] font-bold border transition-all duration-200 active:scale-95 cursor-pointer ${
-                formData.audience === aud
-                  ? "bg-emerald-600 text-white border-emerald-600 shadow-2xs"
-                  : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
-              }`}
-            >
-              {f.audienceOptions[aud]}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Name & Company */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div>
-          <label htmlFor="contact-fullName" className="text-xs font-semibold text-slate-700 block mb-1">{f.fullName} *</label>
-          <input
-            id="contact-fullName"
-            name="fullName"
-            type="text"
-            required
-            aria-required="true"
-            aria-label={f.fullName}
-            value={formData.fullName}
-            onChange={handleChange}
-            placeholder={f.fullNamePlaceholder}
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label htmlFor="contact-companyName" className="text-xs font-semibold text-slate-700 block mb-1">{f.companyName}</label>
-          <input
-            id="contact-companyName"
-            name="companyName"
-            type="text"
-            aria-label={f.companyName}
-            value={formData.companyName}
-            onChange={handleChange}
-            placeholder={f.companyNamePlaceholder}
-            className={inputClass}
-          />
-        </div>
-      </div>
-
-      {/* Email & Phone */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div>
-          <label htmlFor="contact-email" className="text-xs font-semibold text-slate-700 block mb-1">{f.email} *</label>
-          <input
-            id="contact-email"
-            name="email"
-            type="email"
-            required
-            aria-required="true"
-            aria-label={f.email}
-            value={formData.email}
-            onChange={handleChange}
-            placeholder={f.emailPlaceholder}
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label htmlFor="contact-phone" className="text-xs font-semibold text-slate-700 block mb-1">{f.phone} *</label>
-          <input
-            id="contact-phone"
-            name="phone"
-            type="tel"
-            required
-            aria-required="true"
-            aria-label={f.phone}
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder={f.phonePlaceholder}
-            className={inputClass}
-          />
-        </div>
-      </div>
-
-      {/* Sector & Headcount */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div>
-          <label htmlFor="contact-sector" className="text-xs font-semibold text-slate-700 block mb-1">{f.sector}</label>
-          <select
-            id="contact-sector"
-            name="sector"
-            aria-label={f.sector}
-            value={formData.sector}
-            onChange={handleChange}
-            className={`${inputClass} bg-white cursor-pointer`}
-          >
-            <option value="construction_industry">{f.sectorsList.construction_industry}</option>
-            <option value="tourism_hospitality">{f.sectorsList.tourism_hospitality}</option>
-            <option value="other">{f.sectorsList.other}</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="contact-workersCount" className="text-xs font-semibold text-slate-700 block mb-1">{f.workersCount}</label>
-          <select
-            id="contact-workersCount"
-            name="workersCount"
-            aria-label={f.workersCount}
-            value={formData.workersCount}
-            onChange={handleChange}
-            className={`${inputClass} bg-white cursor-pointer`}
-          >
-            {f.workersOptions.map((opt, i) => (
-              <option key={i} value={opt}>{opt}</option>
+          <div role="group" aria-label={f.audienceLabel} className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+            {(["employer", "agency", "student", "institution", "candidate"] as AudienceType[]).map((aud) => (
+              <button
+                key={aud}
+                type="button"
+                onClick={() => setFormData((p) => ({ ...p, audience: aud }))}
+                aria-pressed={formData.audience === aud}
+                className={`px-2.5 py-1.5 rounded-md text-[11px] font-bold border transition-all duration-200 active:scale-95 cursor-pointer ${formData.audience === aud
+                    ? "bg-emerald-600 text-white border-emerald-600 shadow-2xs"
+                    : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
+                  }`}
+              >
+                {f.audienceOptions[aud]}
+              </button>
             ))}
-          </select>
+          </div>
         </div>
-      </div>
 
-      {/* Start Date & Housing */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {/* Name & Company */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label htmlFor="contact-fullName" className="text-xs font-semibold text-slate-700 block mb-1">{f.fullName} *</label>
+            <input
+              id="contact-fullName"
+              name="fullName"
+              type="text"
+              required
+              aria-required="true"
+              aria-label={f.fullName}
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder={f.fullNamePlaceholder}
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label htmlFor="contact-companyName" className="text-xs font-semibold text-slate-700 block mb-1">{f.companyName}</label>
+            <input
+              id="contact-companyName"
+              name="companyName"
+              type="text"
+              aria-label={f.companyName}
+              value={formData.companyName}
+              onChange={handleChange}
+              placeholder={f.companyNamePlaceholder}
+              className={inputClass}
+            />
+          </div>
+        </div>
+
+        {/* Email & Phone */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label htmlFor="contact-email" className="text-xs font-semibold text-slate-700 block mb-1">{f.email} *</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              required
+              aria-required="true"
+              aria-label={f.email}
+              value={formData.email}
+              onChange={handleChange}
+              placeholder={f.emailPlaceholder}
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label htmlFor="contact-phone" className="text-xs font-semibold text-slate-700 block mb-1">{f.phone} *</label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              required
+              aria-required="true"
+              aria-label={f.phone}
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder={f.phonePlaceholder}
+              className={inputClass}
+            />
+          </div>
+        </div>
+
+        {/* Sector & Headcount */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label htmlFor="contact-sector" className="text-xs font-semibold text-slate-700 block mb-1">{f.sector}</label>
+            <select
+              id="contact-sector"
+              name="sector"
+              aria-label={f.sector}
+              value={formData.sector}
+              onChange={handleChange}
+              className={`${inputClass} bg-white cursor-pointer`}
+            >
+              <option value="construction_industry">{f.sectorsList.construction_industry}</option>
+              <option value="tourism_hospitality">{f.sectorsList.tourism_hospitality}</option>
+              <option value="other">{f.sectorsList.other}</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="contact-workersCount" className="text-xs font-semibold text-slate-700 block mb-1">{f.workersCount}</label>
+            <select
+              id="contact-workersCount"
+              name="workersCount"
+              aria-label={f.workersCount}
+              value={formData.workersCount}
+              onChange={handleChange}
+              className={`${inputClass} bg-white cursor-pointer`}
+            >
+              {f.workersOptions.map((opt, i) => (
+                <option key={i} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Start Date & Housing */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label htmlFor="contact-startDate" className="text-xs font-semibold text-slate-700 block mb-1">{f.startDate}</label>
+            <input
+              id="contact-startDate"
+              name="startDate"
+              type="text"
+              aria-label={f.startDate}
+              value={formData.startDate}
+              onChange={handleChange}
+              placeholder={f.startDatePlaceholder}
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label htmlFor="contact-housing" className="text-xs font-semibold text-slate-700 block mb-1">{f.housingLabel}</label>
+            <select
+              id="contact-housing"
+              name="housing"
+              aria-label={f.housingLabel}
+              value={formData.housing}
+              onChange={handleChange}
+              className={`${inputClass} bg-white cursor-pointer`}
+            >
+              <option value="yes">{f.housingOptions.yes}</option>
+              <option value="no">{f.housingOptions.no}</option>
+              <option value="discuss">{f.housingOptions.discuss}</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Message */}
         <div>
-          <label htmlFor="contact-startDate" className="text-xs font-semibold text-slate-700 block mb-1">{f.startDate}</label>
-          <input
-            id="contact-startDate"
-            name="startDate"
-            type="text"
-            aria-label={f.startDate}
-            value={formData.startDate}
+          <label htmlFor="contact-message" className="text-xs font-semibold text-slate-700 block mb-1">{f.message}</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows={3}
+            aria-label={f.message}
+            value={formData.message}
             onChange={handleChange}
-            placeholder={f.startDatePlaceholder}
+            placeholder={f.messagePlaceholder}
             className={inputClass}
           />
         </div>
-        <div>
-          <label htmlFor="contact-housing" className="text-xs font-semibold text-slate-700 block mb-1">{f.housingLabel}</label>
-          <select
-            id="contact-housing"
-            name="housing"
-            aria-label={f.housingLabel}
-            value={formData.housing}
+
+        {/* GDPR Consent */}
+        <div className="flex items-start gap-2 pt-1">
+          <input
+            id="contact-gdpr"
+            name="gdprConsent"
+            type="checkbox"
+            required
+            aria-required="true"
+            aria-label={f.privacyNote}
+            checked={formData.gdprConsent}
             onChange={handleChange}
-            className={`${inputClass} bg-white cursor-pointer`}
-          >
-            <option value="yes">{f.housingOptions.yes}</option>
-            <option value="no">{f.housingOptions.no}</option>
-            <option value="discuss">{f.housingOptions.discuss}</option>
-          </select>
+            className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+          />
+            <label htmlFor="contact-gdpr" className="text-[11px] text-slate-600 leading-tight cursor-pointer">
+              {f.privacyNote}
+            </label>
         </div>
-      </div>
 
-      {/* Message */}
-      <div>
-        <label htmlFor="contact-message" className="text-xs font-semibold text-slate-700 block mb-1">{f.message}</label>
-        <textarea
-          id="contact-message"
-          name="message"
-          rows={3}
-          aria-label={f.message}
-          value={formData.message}
-          onChange={handleChange}
-          placeholder={f.messagePlaceholder}
-          className={inputClass}
-        />
-      </div>
-
-      {/* GDPR Consent */}
-      <div className="flex items-start gap-2 pt-1">
-        <input
-          id="contact-gdpr"
-          name="gdprConsent"
-          type="checkbox"
-          required
-          aria-required="true"
-          aria-label={f.privacyNote}
-          checked={formData.gdprConsent}
-          onChange={handleChange}
-          className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
-        />
-        <label htmlFor="contact-gdpr" className="text-[11px] text-slate-600 leading-tight cursor-pointer">
-          {f.privacyNote}
-        </label>
-      </div>
-
-      {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="w-full py-3 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
-      >
-        {status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : f.submitBtn}
-      </button>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="w-full py-3 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+        >
+          {status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : f.submitBtn}
+        </button>
     </form>
   );
 }
