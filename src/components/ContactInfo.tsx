@@ -19,7 +19,7 @@ export function ContactInfo() {
           <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
           <div>
             <div className="text-[11px] text-slate-400 font-medium">{c.addressLabel}</div>
-            <div className="text-xs font-semibold text-white">{c.address}</div>
+            <div className="text-xs font-semibold text-white break-words">{c.address}</div>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export function ContactInfo() {
             <div className="text-[11px] text-slate-400 font-medium">{c.phoneLabel}</div>
             <a
               href={`tel:${c.phone.replace(/\s+/g, "")}`}
-              className="text-xs font-semibold text-white hover:text-emerald-300 transition-colors"
+              className="text-xs font-semibold text-white hover:text-emerald-300 transition-colors whitespace-nowrap"
             >
               {c.phone}
             </a>
@@ -60,7 +60,7 @@ export function ContactInfo() {
             <div className="text-[11px] text-slate-400 font-medium">{c.emailLabel}</div>
             <a
               href={`mailto:${c.email}`}
-              className="text-xs font-semibold text-white hover:text-emerald-300 transition-colors"
+              className="text-xs font-semibold text-white hover:text-emerald-300 transition-colors break-all"
             >
               {c.email}
             </a>

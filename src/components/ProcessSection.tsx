@@ -58,7 +58,7 @@ export function ProcessSection() {
           </div>
 
           <div className="overflow-x-auto rounded-lg border border-slate-200 shadow-2xs">
-            <table className="w-full text-left text-xs sm:text-sm border-collapse bg-white">
+            <table className="w-full min-w-[580px] text-left text-xs sm:text-sm border-collapse bg-white">
               <thead>
                 <tr className="bg-slate-100 border-b border-slate-200 text-slate-900 font-bold">
                   <th className="p-3 sm:p-4">{t.howItWorks.tableHeaders.action}</th>

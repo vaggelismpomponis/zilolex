@@ -10,7 +10,7 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 bg-white border-b border-slate-200 overflow-hidden">
+    <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 bg-white border-b border-slate-200 overflow-hidden">
       {/* Background Hero Image with Left White Gradient Fade */}
       <div className="absolute right-0 top-0 w-full lg:w-3/5 h-full pointer-events-none select-none z-0">
         <Image
@@ -19,18 +19,18 @@ export function Hero() {
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
-          className="object-cover object-center lg:object-right"
+          className="object-cover object-center lg:object-right opacity-30 sm:opacity-45 lg:opacity-100"
         />
-        {/* Gradients: White fade to the left, and subtle bottom fade */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:via-white/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80" />
+        {/* Gradients: White fade on mobile/tablet, right-side transparency on desktop */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white/95 lg:bg-gradient-to-r lg:from-white lg:via-white/75 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-70" />
       </div>
 
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Hero Content Area */}
-        <div className="max-w-2xl lg:max-w-3xl pt-4 sm:pt-8 pb-10 sm:pb-16">
+        <div className="max-w-2xl lg:max-w-3xl pt-2 sm:pt-6 pb-8 sm:pb-14">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.14] mb-4">
             <span>{t.hero.titleStart}</span>
             <br />
             <span className="text-emerald-600">{t.hero.titleHighlight}</span>

@@ -18,7 +18,7 @@ export default function TermsPage() {
     <div className="min-h-screen flex flex-col bg-background text-foreground w-full">
       <Navbar />
 
-      <main className="flex-1 py-12 sm:py-20 bg-slate-50/50 dark:bg-slate-950/40">
+      <main className="flex-1 pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-20 bg-slate-50/50 dark:bg-slate-950/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <div className="mb-8">

@@ -46,14 +46,14 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-6">
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-5">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap py-1 px-1.5 border-b-2 ${
+                  className={`text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap py-1 px-1 xl:px-1.5 border-b-2 ${
                     active
                       ? "text-emerald-700 border-emerald-600"
                       : "text-slate-700 hover:text-emerald-700 border-transparent"
