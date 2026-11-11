@@ -66,7 +66,7 @@ Built with **Next.js 16 (Turbopack)**, **React 19**, **Tailwind CSS 4**, and **T
    ```env
    # Email delivery via Resend (optional in dev mode)
    RESEND_API_KEY=re_your_api_key_here
-   CONTACT_EMAIL=info@zilolex.gr
+   CONTACT_EMAIL=sales@zilolex.gr
    RESEND_FROM_EMAIL=ZILOLEX <onboarding@resend.dev>
    ```
    *(Note: If `RESEND_API_KEY` is omitted, submissions are logged directly to the development console).*

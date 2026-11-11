@@ -119,7 +119,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           number: "11",
           title: "Στοιχεία Επικοινωνίας",
           paragraphs: [
-            "Για οποιαδήποτε ερώτηση, διευκρίνιση ή αίτημα σχετικά με τους παρόντες Όρους Χρήσης, μπορείτε να επικοινωνήσετε μαζί μας στην έδρα μας: ZILOLEX, Λεωφ. Αμφιθέας 77, Παλαιό Φάληρο 17564, Αθήνα, μέσω ηλεκτρονικού ταχυδρομείου στο info@zilolex.gr ή τηλεφωνικά στο +30 210 9400000.",
+            "Για οποιαδήποτε ερώτηση, διευκρίνιση ή αίτημα σχετικά με τους παρόντες Όρους Χρήσης, μπορείτε να επικοινωνήσετε μαζί μας στην έδρα μας: ZILOLEX, Λεωφ. Αμφιθέας 77, Παλαιό Φάληρο 17564, Αθήνα, μέσω ηλεκτρονικού ταχυδρομείου στο sales@zilolex.gr ή τηλεφωνικά στο +30 694 253 0100.",
           ],
         },
       ],
@@ -135,7 +135,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           number: "01",
           title: "Υπεύθυνος Επεξεργασίας",
           paragraphs: [
-            "Υπεύθυνος Επεξεργασίας των προσωπικών σας δεδομένων είναι η ZILOLEX («Εταιρεία»), με έδρα: Λεωφ. Αμφιθέας 77, Παλαιό Φάληρο 17564, Αθήνα, Ελλάδα. Στοιχεία επικοινωνίας: info@zilolex.gr, Τηλέφωνο: +30 210 9400000.",
+            "Υπεύθυνος Επεξεργασίας των προσωπικών σας δεδομένων είναι η ZILOLEX («Εταιρεία»), με έδρα: Λεωφ. Αμφιθέας 77, Παλαιό Φάληρο 17564, Αθήνα, Ελλάδα. Στοιχεία επικοινωνίας: sales@zilolex.gr, Τηλέφωνο: +30 694 253 0100.",
             "Δεσμευόμαστε να προστατεύουμε την ιδιωτικότητά σας και να επεξεργαζόμαστε τα δεδομένα σας με απόλυτη διαφάνεια, νομιμότητα και ασφάλεια.",
           ],
         },
@@ -164,7 +164,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           title: "Τα Δικαιώματά σας βάσει GDPR",
           paragraphs: [
             "Δικαίωμα πρόσβασης στα δεδομένα σας, δικαίωμα διόρθωσης ανακριβών στοιχείων, δικαίωμα διαγραφής («δικαίωμα στη λήθη»), δικαίωμα περιορισμού της επεξεργασίας, δικαίωμα φορητότητας δεδομένων και δικαίωμα εναντίωσης.",
-            "Μπορείτε να ασκήσετε τα δικαιώματά σας οποτεδήποτε αποστέλλοντας αίτημα στο info@ZILOLEX.gr. Έχετε επίσης το δικαίωμα υποβολής καταγγελίας στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (dpa.gr).",
+            "Μπορείτε να ασκήσετε τα δικαιώματά σας οποτεδήποτε αποστέλλοντας αίτημα στο sales@zilolex.gr. Έχετε επίσης το δικαίωμα υποβολής καταγγελίας στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (dpa.gr).",
           ],
         },
       ],
@@ -270,7 +270,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           number: "11",
           title: "Contact Details",
           paragraphs: [
-            "For inquiries regarding these Terms of Use or regulatory compliance, contact our team at: ZILOLEX, 77 Amfitheas Ave., Paleo Faliro 17564, Athens, Greece, email: info@zilolex.gr or phone: +30 210 9400000.",
+            "For inquiries regarding these Terms of Use or regulatory compliance, contact our team at: ZILOLEX, 77 Amfitheas Ave., Paleo Faliro 17564, Athens, Greece, email: sales@zilolex.gr or phone: +30 694 253 0100.",
           ],
         },
       ],
@@ -286,7 +286,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           number: "01",
           title: "Data Controller",
           paragraphs: [
-            "The Data Controller is ZILOLEX ('Company'), headquartered at 77 Amfitheas Ave., Paleo Faliro 17564, Athens, Greece. Contact points: info@zilolex.gr, Phone: +30 210 9400000.",
+            "The Data Controller is ZILOLEX ('Company'), headquartered at 77 Amfitheas Ave., Paleo Faliro 17564, Athens, Greece. Contact points: sales@zilolex.gr, Phone: +30 694 253 0100.",
             "We are committed to preserving your privacy and handling your information transparently, legally, and securely.",
           ],
         },
@@ -315,7 +315,7 @@ export const legalContent: Record<'el' | 'en', LegalContent> = {
           title: "Your Rights Under GDPR",
           paragraphs: [
             "Right of access, rectification of inaccurate records, erasure ('right to be forgotten'), restriction of processing, data portability, and objection.",
-            "You may exercise your rights at any time by emailing info@ZILOLEX.gr. You also retain the right to lodge a complaint with the Hellenic Data Protection Authority (dpa.gr).",
+            "You may exercise your rights at any time by emailing sales@zilolex.gr. You also retain the right to lodge a complaint with the Hellenic Data Protection Authority (dpa.gr).",
           ],
         },
       ],

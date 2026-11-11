@@ -101,7 +101,7 @@ export default function RootLayout({
     description:
       "Συντονισμός αναζήτησης και επιλογής προσωπικού, μετάκλησης, μετακίνησης και διαμονής εργαζομένων από τρίτες χώρες στην Ελλάδα.",
     url: "https://zilolex.gr",
-    telephone: "+30 210 9400000",
+    telephone: "+30 694 253 0100",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Λεωφ. Αμφιθέας 77",

@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipientEmail = process.env.CONTACT_EMAIL || "info@zilolex.gr";
+    const recipientEmail = process.env.CONTACT_EMAIL || "sales@zilolex.gr";
     const apiKey = process.env.RESEND_API_KEY;
 
     if (apiKey) {
