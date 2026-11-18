@@ -11,34 +11,47 @@ export function HeroPillars() {
     {
       id: "workforce",
       icon: <Users className="w-5 h-5 text-emerald-700" />,
-      title: language === "el" ? "Κινητικότητα Εργατικού Δυναμικού" : "Workforce Mobility",
-      desc: language === "el"
-        ? "Αναζήτηση, επιλογή και συντονισμός τοποθέτησης προσωπικού."
-        : "Recruitment, staffing and deployment solutions.",
+      title:
+        language === "el"
+          ? "Μετάκληση & Τοποθέτηση Προσωπικού"
+          : "Workforce Relocation & Placement",
+      desc: "",
     },
     {
       id: "housing",
       icon: <Home className="w-5 h-5 text-emerald-700" />,
-      title: language === "el" ? "Λύσεις Στέγασης" : "Housing Solutions",
-      desc: language === "el"
-        ? "Οργανωμένη διαμονή για ομάδες εργαζομένων και φοιτητές."
-        : "Managed accommodation for workforces and students.",
+      title:
+        language === "el"
+          ? "Οργάνωση & Διαχείριση Διαμονής"
+          : "Accommodation Organization & Management",
+      desc:
+        language === "el"
+          ? "Εξασφαλίζουμε την αναζήτηση και οργάνωση κατάλληλων λύσεων διαμονής για εργαζομένους και φοιτητές."
+          : "Ensuring the search and organization of suitable accommodation solutions for workers and students.",
     },
     {
       id: "migration",
       icon: <FileText className="w-5 h-5 text-emerald-700" />,
-      title: language === "el" ? "Υπηρεσίες Μετανάστευσης" : "Migration Services",
-      desc: language === "el"
-        ? "Καθοδήγηση visa, αδειών εργασίας και διαμονής."
-        : "Visa, work and residence permit support.",
+      title:
+        language === "el"
+          ? "Διεκπεραίωση Διαδικασιών Visa & Αδειών Διαμονής"
+          : "Visa & Residence Permit Processing",
+      desc:
+        language === "el"
+          ? "Αναλαμβάνουμε τη συγκέντρωση και προετοιμασία των απαραίτητων δικαιολογητικών, καθώς και τον συντονισμό και τη διεκπεραίωση των διαδικασιών για την έκδοση visa, αδειών εργασίας και αδειών διαμονής στην Ελλάδα."
+          : "We handle the collection and preparation of required documents, coordinating and processing procedures for visas, work permits, and residence permits in Greece.",
     },
     {
       id: "students",
       icon: <GraduationCap className="w-5 h-5 text-emerald-700" />,
-      title: language === "el" ? "Φοιτητική Κινητικότητα" : "Student Mobility",
-      desc: language === "el"
-        ? "Προγράμματα σπουδών στην Ελλάδα με μετεγκατάσταση και στέγαση."
-        : "Study pathways in Greece with relocation and housing.",
+      title:
+        language === "el"
+          ? "Σπουδές & Εγκατάσταση στην Ελλάδα"
+          : "Studies & Relocation in Greece",
+      desc:
+        language === "el"
+          ? "Υποστηρίζουμε τη διαδικασία μετακίνησης φοιτητών στην Ελλάδα για σπουδές, αναλαμβάνοντας τον συντονισμό των απαραίτητων διαδικασιών μετεγκατάστασης και την οργάνωση της διαμονής τους."
+          : "We support the relocation process for international students in Greece, coordinating all required procedures and managing their accommodation.",
     },
   ];
 
@@ -55,9 +68,11 @@ export function HeroPillars() {
                 <h3 className="text-sm font-bold text-slate-900 mb-0.5 leading-snug">
                   {pillar.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {pillar.desc}
-                </p>
+                {pillar.desc && (
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {pillar.desc}
+                  </p>
+                )}
               </div>
             </div>
           ))}

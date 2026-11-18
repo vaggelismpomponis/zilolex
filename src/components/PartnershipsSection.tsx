@@ -40,17 +40,43 @@ export function PartnershipsSection() {
                 <div className="text-xs font-semibold text-emerald-800 mb-3">
                   {item.subtitle}
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed mb-5">
-                  {item.description}
-                </p>
+                <div className="text-xs text-slate-600 leading-relaxed mb-4 space-y-2">
+                  {item.description.split("\n\n").map((para, pIdx) => (
+                    <p
+                      key={pIdx}
+                      className={
+                        pIdx > 0 ? "font-semibold text-slate-900 pt-1" : ""
+                      }
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
 
                 <ul className="space-y-2 mb-6">
-                  {item.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="text-xs text-slate-700 flex items-start gap-2 group-hover:text-slate-900 transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
+                  {item.bullets.map((bullet, bIdx) => {
+                    const parts = bullet.split(": ");
+                    return (
+                      <li
+                        key={bIdx}
+                        className="text-xs text-slate-700 flex items-start gap-2 group-hover:text-slate-900 transition-colors"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                        <span className="leading-relaxed">
+                          {parts.length > 1 ? (
+                            <>
+                              <strong className="font-bold text-slate-900">
+                                {parts[0]}:{" "}
+                              </strong>
+                              {parts.slice(1).join(": ")}
+                            </>
+                          ) : (
+                            bullet
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 

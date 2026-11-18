@@ -59,48 +59,56 @@ export async function POST(request: Request) {
 
       const fromEmail = process.env.RESEND_FROM_EMAIL || "ZILOLEX <onboarding@resend.dev>";
 
-      await resend.emails.send({
-        from: fromEmail,
-        to: recipientEmail,
-        replyTo: email,
-        subject: `[Αίτημα Ιστοσελίδας - ${audience.toUpperCase()}] ${companyName ? companyName + " - " : ""}${fullName}`,
-        html: emailContent,
-      });
-    } else {
-      console.log("[Dev Mode - No RESEND_API_KEY] Contact form submission:", {
-        audience,
-        fullName,
-        companyName,
-        email,
-        phone,
-        sector,
-        specialties,
-        workersCount,
-        startDate,
-        housing,
-        message,
-        targetEmail: recipientEmail,
-      });
-    }
+        const { error } = await resend.emails.send({
+          from: fromEmail,
+          to: recipientEmail,
+          replyTo: email,
+          subject: `[Αίτημα Ιστοσελίδας - ${audience.toUpperCase()}] ${companyName ? companyName + " - " : ""}${fullName}`,
+          html: emailContent,
+        });
+
+        if(error) {
+          console.error("Resend delivery error:", error);
+          return NextResponse.json(
+            { error: `Αποτυχία αποστολής: ${error.message}` },
+            { status: 500 }
+          );
+        }
+      } else {
+        console.log("[Dev Mode - No RESEND_API_KEY] Contact form submission:", {
+          audience,
+          fullName,
+          companyName,
+          email,
+          phone,
+          sector,
+          specialties,
+          workersCount,
+          startDate,
+          housing,
+          message,
+          targetEmail: recipientEmail,
+        });
+      }
 
     return NextResponse.json({
-      success: true,
-      message: "Το αίτημά σας καταχωρήθηκε επιτυχώς.",
-    });
-  } catch (error: unknown) {
-    console.error("Error sending contact email:", error);
-    return NextResponse.json(
-      { error: "Παρουσιάστηκε σφάλμα κατά την αποστολή. Παρακαλούμε δοκιμάστε ξανά." },
-      { status: 500 }
-    );
+        success: true,
+        message: "Το αίτημά σας καταχωρήθηκε επιτυχώς.",
+      });
+    } catch (error: unknown) {
+      console.error("Error sending contact email:", error);
+      return NextResponse.json(
+        { error: "Παρουσιάστηκε σφάλμα κατά την αποστολή. Παρακαλούμε δοκιμάστε ξανά." },
+        { status: 500 }
+      );
+    }
   }
-}
 
 function escapeHtml(text: string): string {
-  return text
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }

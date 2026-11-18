@@ -21,36 +21,36 @@ export const translations = {
     },
     hero: {
       tagline: "Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους",
-      serviceTagline: "Workforce & Student Infrastructure Services in Greece",
-      titleStart: "Συνδέουμε Ανθρώπους,",
-      titleHighlight: "Ευκαιρίες & Τόπους",
-      subtitle: "Υπηρεσίες υποδομής για εργατικό δυναμικό και διεθνείς φοιτητές στην Ελλάδα. Ολοκληρωμένη διαχείριση αναζήτησης, μετάκλησης, μετακίνησης και στέγασης.",
+      serviceTagline: "Ολοκληρωμένες Υπηρεσίες Μετάκλησης & εγκατάστασης Εργαζομένων και φοιτητών στην Ελλάδα",
+      titleStart: "Ολοκληρωμένες Υπηρεσίες Μετάκλησης & εγκατάστασης",
+      titleHighlight: "Εργαζομένων και φοιτητών στην Ελλάδα",
+      subtitle: "Συνδέουμε Ανθρώπους, Ευκαιρίες & Τόπους. Ολοκληρωμένη διαχείριση αναζήτησης, μετάκλησης, μετακίνησης και στέγασης.",
       ctaPrimary: "ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ",
       ctaSecondary: "ΕΠΙΚΟΙΝΩΝΙΑ",
       pillars: [
         {
           id: "workforce",
           num: "01",
-          title: "Κινητικότητα Εργατικού Δυναμικού",
-          desc: "Αναζήτηση, αξιολόγηση και συντονισμός τοποθέτησης προσωπικού.",
+          title: "Μετάκληση & Τοποθέτηση Προσωπικού",
+          desc: "",
         },
         {
           id: "housing",
           num: "02",
-          title: "Λύσεις Στέγασης",
-          desc: "Οργανωμένη διαμονή για ομάδες εργαζομένων και φοιτητές.",
+          title: "Οργάνωση & Διαχείριση Διαμονής",
+          desc: "Εξασφαλίζουμε την αναζήτηση και οργάνωση κατάλληλων λύσεων διαμονής για εργαζομένους και φοιτητές.",
         },
         {
           id: "migration",
           num: "03",
-          title: "Υπηρεσίες Μετανάστευσης",
-          desc: "Καθοδήγηση visa, αδειών εργασίας και διαμονής.",
+          title: "Διεκπεραίωση Διαδικασιών Visa & Αδειών Διαμονής",
+          desc: "Αναλαμβάνουμε τη συγκέντρωση και προετοιμασία των απαραίτητων δικαιολογητικών, καθώς και τον συντονισμό και τη διεκπεραίωση των διαδικασιών για την έκδοση visa, αδειών εργασίας και αδειών διαμονής στην Ελλάδα.",
         },
         {
           id: "students",
           num: "04",
-          title: "Φοιτητική Κινητικότητα",
-          desc: "Προγράμματα σπουδών στην Ελλάδα με πλήρη υποστήριξη.",
+          title: "Σπουδές & Εγκατάσταση στην Ελλάδα",
+          desc: "Υποστηρίζουμε τη διαδικασία μετακίνησης φοιτητών στην Ελλάδα για σπουδές, αναλαμβάνοντας τον συντονισμό των απαραίτητων διαδικασιών μετεγκατάστασης και την οργάνωση της διαμονής τους.",
         },
       ],
       audienceCards: [
@@ -112,9 +112,9 @@ export const translations = {
     },
     employers: {
       tag: "Για Εργοδότες",
-      headline: "Από την ανάγκη σας μέχρι την άφιξη της ομάδας σας, με έναν συνομιλητή",
-      subhead: "Η επιχείρησή σας χρειάζεται ανθρώπους. Θα τους βρούμε μαζί.",
-      lead: "Ξέρουμε πόσο δύσκολο είναι να βρεθεί αξιόπιστο και κατάλληλο προσωπικό, και πόσο χρόνο παίρνουν οι διαδικασίες όταν πρόκειται για εργαζομένους από το εξωτερικό. Η Zilolex συνεργάζεται με επιχειρήσεις από πολλούς κλάδους: βρίσκουμε τους κατάλληλους υποψηφίους και οργανώνουμε όσα χρειάζονται για να έρθουν στην Ελλάδα εργαζόμενοι από τρίτες χώρες.",
+      headline: "Οι άνθρωποι που χρειάζεται η επιχείρησή σας, από τη διεθνή αγορά εργασίας.",
+      subhead: "",
+      lead: "Αναζητούμε, επιλέγουμε και οργανώνουμε τη μετάκληση εργαζομένων από τρίτες χώρες, καλύπτοντας τις ανάγκες στελέχωσής σας.",
       whatWeDoTitle: "Τι φροντίζουμε για εσάς",
       whatWeDo: [
         "Ακούμε τις ανάγκες σας: ειδικότητες, προσόντα, εμπειρία, αριθμός ατόμων και χρονοδιάγραμμα.",
@@ -123,15 +123,16 @@ export const translations = {
         "Οργανώνουμε τη μετακίνηση: φροντίζουμε το ταξίδι και την υποδοχή.",
         "Βρίσκουμε στέγαση: εντοπίζουμε και συντονίζουμε κατάλληλη διαμονή.",
       ],
-      whyTrustTitle: "Γιατί να μας εμπιστευτείτε",
+      whyTrustTitle: "Γιατί να επιλέξετε τη Zilolex",
       whyTrust: [
-        "Έχετε ένα σημείο επικοινωνίας σε όλη τη διαδικασία.",
-        "Προσαρμόζουμε τη λύση στις ανάγκες της επιχείρησής σας και του κλάδου σας.",
-        "Αναλαμβάνουμε τον συντονισμό και των πιο σύνθετων διαδικασιών μετεγκατάστασης.",
-        "Ευέλικτες λύσεις, είτε χρειάζεστε έναν εργαζόμενο είτε μια ολόκληρη ομάδα.",
+        "Ενιαία συνεργασία και επικοινωνία: Έχετε έναν σταθερό συνεργάτη και ένα κεντρικό σημείο επικοινωνίας σε όλα τα στάδια της συνεργασίας.",
+        "Εξατομικευμένες λύσεις: Διαμορφώνουμε τις υπηρεσίες μας σύμφωνα με τις λειτουργικές ανάγκες, τις απαιτήσεις και τις ιδιαιτερότητες κάθε επιχείρησης.",
+        "Ολοκληρωμένη διαχείριση διαδικασιών: Συντονίζουμε όλα τα στάδια, από την αναζήτηση και επιλογή προσωπικού έως τη μετάκληση, τη μετακίνηση και την οργάνωση της εγκατάστασής του στην Ελλάδα.",
+        "Ευελιξία και δυνατότητα προσαρμογής: Ανταποκρινόμαστε σε διαφορετικές ανάγκες στελέχωσης, είτε πρόκειται για την κάλυψη μεμονωμένων θέσεων είτε για τη δημιουργία μεγαλύτερων ομάδων εργαζομένων.",
       ],
       commitmentTitle: "Η δέσμευσή μας",
-      commitmentText: "Η επιχείρησή σας διατηρεί την πρόσληψη, την απασχόληση και τη μισθοδοσία των εργαζομένων που θα επιλέξετε. Εμείς συντονίζουμε την αναζήτηση και τη μετεγκατάσταση, ώστε να γλιτώσετε χρόνο και κόπο από τον διοικητικό και οργανωτικό φόρτο.",
+      commitmentText:
+        "Η επιχείρησή σας διατηρεί την αποκλειστική ευθύνη για την επιλογή, την πρόσληψη, την απασχόληση και τη μισθοδοσία των εργαζομένων. Η Zilolex αναλαμβάνει την αναζήτηση κατάλληλων υποψηφίων, τον συντονισμό των διαδικασιών μετάκλησης και τη διοργάνωση της μετακίνησης και εγκατάστασής τους στην Ελλάδα.\n\nΣτόχος μας είναι να απλοποιήσουμε τη διαδικασία στελέχωσης, περιορίζοντας τον διοικητικό και οργανωτικό φόρτο της επιχείρησής σας, ώστε να μπορείτε να επικεντρωθείτε απρόσκοπτα στην επιχειρηματική σας δραστηριότητα.",
       cta: "ΖΗΤΗΣΤΕ ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΓΙΑ ΤΟ ΠΡΟΣΩΠΙΚΟ ΣΑΣ",
     },
     sectors: {
@@ -204,12 +205,13 @@ export const translations = {
         {
           id: "search",
           title: "Αναζήτηση & Επιλογή Προσωπικού",
-          description: "Ξεκινάμε από τη θέση που θέλετε να καλύψετε και βρίσκουμε τους ανθρώπους που της ταιριάζουν.",
+          description:
+            "Κάθε συνεργασία ξεκινά με την κατανόηση των αναγκών σας. Αναζητούμε και αξιολογούμε υποψηφίους, με στόχο να εντοπίσουμε τους κατάλληλους ανθρώπους για κάθε θέση εργασίας.",
           points: [
-            "Εντοπίζουμε κατάλληλους υποψηφίους με βάση τις απαιτήσεις της θέσης.",
-            "Αναζητούμε από τοπικές και διεθνείς αγορές εργασίας, σε συνεργασία με διεθνείς συνεργάτες.",
-            "Κάνουμε την αρχική αξιολόγηση και ελέγχουμε προσόντα και εμπειρία.",
-            "Συντονίζουμε τις συνεντεύξεις και σας παρουσιάζουμε τους υποψηφίους που ταιριάζουν.",
+            "Στοχευμένη αναζήτηση: Εντοπίζουμε υποψηφίους με βάση τις απαιτήσεις, τα προσόντα και την εμπειρία που χρειάζεστε.",
+            "Τοπική & διεθνής αναζήτηση: Αξιοποιούμε την ελληνική και τη διεθνή αγορά εργασίας, καθώς και το δίκτυο συνεργατών μας.",
+            "Αξιολόγηση υποψηφίων: Εξετάζουμε τα προσόντα, την επαγγελματική εμπειρία και την καταλληλότητα κάθε υποψηφίου.",
+            "Συνεντεύξεις & παρουσίαση: Συντονίζουμε τη διαδικασία των συνεντεύξεων και σας παρουσιάζουμε τους υποψηφίους που ανταποκρίνονται καλύτερα στις ανάγκες σας.",
           ],
           ctaText: "ΖΗΤΗΣΤΕ ΠΡΟΣΩΠΙΚΟ",
           ctaHref: "#contact",
@@ -246,38 +248,46 @@ export const translations = {
     },
     howItWorks: {
       tag: "Πώς Λειτουργεί",
-      title: "Έξι απλά βήματα, από την ανάγκη σας μέχρι την άφιξη των εργαζομένων",
-      subtitle: "Μια ξεκάθαρη και οργανωμένη διαδρομή για την επιχείρησή σας.",
+      title:
+        "Έξι απλά βήματα, από την ανάγκη σας μέχρι την άφιξη των εργαζομένων",
+      subtitle:
+        "Μια ξεκάθαρη και οργανωμένη διαδρομή για την επιχείρησή σας.",
       steps: [
         {
           number: "01",
-          title: "Μιλάμε για τις ανάγκες σας",
-          description: "Καταγράφουμε ειδικότητες, αριθμό ατόμων και χρονοδιάγραμμα.",
+          title: "Καταγραφή & Αξιολόγηση Αναγκών",
+          description:
+            "Συζητάμε μαζί σας και καταγράφουμε τις ανάγκες της επιχείρησής σας, προσδιορίζοντας τις απαιτούμενες ειδικότητες, τον αριθμό των εργαζομένων, τον τόπο απασχόλησης και το επιθυμητό χρονοδιάγραμμα κάλυψης των θέσεων.",
         },
         {
           number: "02",
-          title: "Αναζητούμε υποψηφίους",
-          description: "Ψάχνουμε από τοπικά και διεθνή κανάλια για το κατάλληλο προφίλ.",
+          title: "Αναζήτηση & Εντοπισμός Υποψηφίων",
+          description:
+            "Αναζητούμε και εντοπίζουμε κατάλληλους υποψηφίους από το εξωτερικό, αξιοποιώντας διεθνή δίκτυα συνεργατών και εξειδικευμένα κανάλια αναζήτησης.",
         },
         {
           number: "03",
-          title: "Αξιολογούμε και οργανώνουμε συνεντεύξεις",
-          description: "Σας παρουσιάζουμε όσους ταιριάζουν και συντονίζουμε τις συναντήσεις.",
+          title: "Αξιολόγηση Υποψηφίων & Συνεντεύξεις",
+          description:
+            "Αξιολογούμε τους υποψηφίους βάσει των απαιτήσεων της θέσης, σας παρουσιάζουμε τους κατάλληλους και συντονίζουμε τις συνεντεύξεις για την τελική σας επιλογή.",
         },
         {
           number: "04",
-          title: "Επιλέγετε εσείς",
-          description: "Η επιχείρησή σας κάνει την τελική επιλογή και προσλαμβάνει απευθείας.",
+          title: "Η Τελική Επιλογή Είναι Δική σας",
+          description:
+            "Η επιχείρησή σας επιλέγει τους υποψηφίους που επιθυμεί και αναλαμβάνει απευθείας την πρόσληψη και απασχόλησή τους.",
         },
         {
           number: "05",
-          title: "Συντονίζουμε τις διαδικασίες μετάκλησης",
-          description: "Οργανώνουμε τα δικαιολογητικά και τις αιτήσεις με τους αρμόδιους επαγγελματίες και τις αρχές.",
+          title: "Συντονίζουμε τις Διαδικασίες Μετάκλησης",
+          description:
+            "Αναλαμβάνουμε την προετοιμασία και συγκέντρωση των απαραίτητων δικαιολογητικών, καθώς και τον συντονισμό των αιτήσεων και των απαιτούμενων ενεργειών με τους αρμόδιους επαγγελματίες και τις δημόσιες αρχές.",
         },
         {
           number: "06",
-          title: "Οργανώνουμε άφιξη, στέγαση και εγκατάσταση",
-          description: "Φροντίζουμε να έχουν ετοιμαστεί όλα για μια ομαλή αρχή.",
+          title: "Οργανώνουμε την Άφιξη & Εγκατάσταση",
+          description:
+            "Συντονίζουμε την άφιξη, τη μετακίνηση και τη διευθέτηση της διαμονής των εργαζομένων, ώστε η εγκατάστασή τους στην Ελλάδα να γίνει όσο το δυνατόν πιο ομαλά.",
         },
       ],
       tableTitle: "Ποιος κάνει τι",
@@ -366,19 +376,22 @@ export const translations = {
       ],
     },
     partnerships: {
-      tag: "Συνεργασίες & Φοιτητές",
-      title: "Δευτερεύοντα Κοινά & Εξειδικευμένες Συνεργασίες",
-      subtitle: "Είστε εταιρεία recruitment, εκπαιδευτικό ίδρυμα ή φοιτητής; Έχουμε σχεδιάσει ειδικές ροές υποστήριξης για εσάς.",
+      tag: "Συνεργασίες & Εξειδικευμένες Υπηρεσίες",
+      title: "Λύσεις για Συνεργάτες & Διεθνείς Φοιτητές",
+      subtitle:
+        "Συνεργαζόμαστε με διεθνή γραφεία στελέχωσης, πανεπιστήμια, κολέγια και εκπαιδευτικούς οργανισμούς, προσφέροντας εξειδικευμένες υπηρεσίες μετάκλησης, μετεγκατάστασης και οργάνωσης διαμονής στην Ελλάδα. Παράλληλα, υποστηρίζουμε διεθνείς φοιτητές στις διαδικασίες εγκατάστασης και στέγασής τους.",
       items: [
         {
           id: "recruitment",
           title: "Για Εταιρείες Recruitment",
-          subtitle: "Μαζί, πιο μακριά: συνεργασίες διεθνούς αναζήτησης προσωπικού",
-          description: "Πιστεύουμε ότι η επιτυχημένη διεθνής αναζήτηση προσωπικού χτίζεται πάνω σε αξιόπιστες συνεργασίες. Αν είστε εταιρεία recruitment ή πάροχος υπηρεσιών HR και θέλετε να διευρύνετε τη διεθνή σας εμβέλεια, μπορούμε να αναλάβουμε τον τοπικό συντονισμό και την υποστήριξη της μετεγκατάστασης στην Ελλάδα.",
+          subtitle:
+            "Ο συνεργάτης σας στην Ελλάδα για την ολοκλήρωση της διαδικασίας στελέχωσης",
+          description:
+            "Η εύρεση και επιλογή προσωπικού από το εξωτερικό είναι μόνο το πρώτο βήμα. Η Zilolex συνεργάζεται με διεθνείς εταιρείες Recruitment και γραφεία HR, αναλαμβάνοντας τις απαραίτητες διαδικασίες για τη μετάκληση, την άφιξη και την εγκατάσταση των εργαζομένων στην Ελλάδα.\n\nΟι υπηρεσίες μας περιλαμβάνουν:",
           bullets: [
-            "Συντονισμός με Έλληνες εργοδότες και παρακολούθηση της διαδικασίας.",
-            "Συντονισμός δικαιολογητικών και υποστήριξη στις διαδικασίες μετανάστευσης.",
-            "Μετακίνηση, άφιξη και στέγαση.",
+            "Συντονισμό με Έλληνες εργοδότες: Επικοινωνία και συνεργασία με την επιχείρηση που πρόκειται να προσλάβει τους εργαζομένους.",
+            "Διαδικασίες μετάκλησης: Συγκέντρωση δικαιολογητικών, προετοιμασία φακέλων και διεκπεραίωση των απαραίτητων διαδικασιών για την έκδοση των απαιτούμενων εγκρίσεων και αδειών.",
+            "Οργάνωση άφιξης και διαμονής: Συντονισμός της μετακίνησης, υποδοχή των εργαζομένων στην Ελλάδα και οργάνωση της διαμονής τους.",
           ],
           ctaText: "ΓΙΝΕΤΕ ΣΥΝΕΡΓΑΤΗΣ ΜΑΣ",
           ctaHref: "#contact",
@@ -386,12 +399,14 @@ export const translations = {
         {
           id: "institutions",
           title: "Για Εκπαιδευτικά Ιδρύματα",
-          subtitle: "Συνεργασίες φοιτητικής κινητικότητας & εγκατάστασης",
-          description: "Στηρίζουμε πανεπιστήμια, κολέγια και εκπαιδευτικούς οργανισμούς στην προσέλκυση και μετεγκατάσταση διεθνών φοιτητών: συντονίζουμε αιτήσεις, υποστηρίζουμε θέματα visa και διαμονής και φροντίζουμε τη φοιτητική στέγαση και την άφιξη, ώστε οι φοιτητές σας να ξεκινήσουν ομαλά.",
+          subtitle:
+            "Ο συνεργάτης σας για την υποδοχή και εγκατάσταση διεθνών φοιτητών",
+          description:
+            "Συνεργαζόμαστε με πανεπιστήμια, κολέγια και εκπαιδευτικούς οργανισμούς που υποδέχονται φοιτητές από το εξωτερικό στην Ελλάδα. Αναλαμβάνουμε τον συντονισμό των απαραίτητων διαδικασιών για την είσοδο και την εγκατάστασή τους, συμπεριλαμβανομένων των διαδικασιών visa, των αδειών διαμονής για σπουδές, της οργάνωσης της στέγασης και της υποδοχής τους στην Ελλάδα.\n\nΟι υπηρεσίες μας περιλαμβάνουν:",
           bullets: [
-            "Συντονισμός φοιτητικών αιτήσεων και προξενικών εγκρίσεων.",
-            "Υποστήριξη θεμάτων visa και αδειών διαμονής σπουδών.",
-            "Οργάνωση φοιτητικής στέγασης και υποδοχής.",
+            "Συντονισμό αιτήσεων και δικαιολογητικών: Συγκέντρωση και προετοιμασία των απαραίτητων εγγράφων για τις διαδικασίες εισόδου και φοίτησης.",
+            "Διαδικασίες visa και αδειών διαμονής: Ανάληψη και διεκπεραίωση των απαιτούμενων διαδικασιών για την έκδοση των σχετικών εγγράφων.",
+            "Φοιτητική στέγαση και υποδοχή: Οργάνωση της διαμονής, συντονισμός της άφιξης και υποστήριξη κατά την αρχική εγκατάσταση στην Ελλάδα.",
           ],
           ctaText: "ΣΥΖΗΤΗΣΤΕ ΜΙΑ ΣΥΝΕΡΓΑΣΙΑ",
           ctaHref: "#contact",
@@ -399,12 +414,13 @@ export const translations = {
         {
           id: "students",
           title: "Για Φοιτητές",
-          subtitle: "Σπουδές, μετεγκατάσταση & στέγαση στην Ελλάδα",
-          description: "Σκέφτεστε να σπουδάσετε στην Ελλάδα; Θα σας συνοδεύσουμε σε κάθε βήμα: ενημέρωση για τις επιλογές σπουδών, καθοδήγηση για τις αιτήσεις και τα δικαιολογητικά, πληροφόρηση για το visa, φοιτητική στέγαση και στήριξη κατά την άφιξή σας.",
+          subtitle: "Το ταξίδι σας προς τις σπουδές στην Ελλάδα ξεκινά εδώ",
+          description:
+            "Σκέφτεστε να συνεχίσετε τις σπουδές σας στην Ελλάδα; Η Zilolex σας υποστηρίζει σε κάθε στάδιο της προετοιμασίας και της εγκατάστασής σας. Σας ενημερώνουμε για τις διαθέσιμες επιλογές σπουδών και αναλαμβάνουμε τον συντονισμό των απαραίτητων διαδικασιών για τις αιτήσεις, τη visa και την άδεια διαμονής σας. Παράλληλα, οργανώνουμε τη φοιτητική σας στέγαση και συντονίζουμε την υποδοχή και την άφιξή σας στην Ελλάδα.\n\nΟι υπηρεσίες μας περιλαμβάνουν:",
           bullets: [
-            "Ενημέρωση για τις επιλογές σπουδών στην Ελλάδα.",
-            "Καθοδήγηση για αιτήσεις και απαραίτητα έγγραφα.",
-            "Φοιτητική στέγαση και υποστήριξη άφιξης.",
+            "Επιλογές σπουδών: Ενημέρωση για εκπαιδευτικά ιδρύματα και διαθέσιμες επιλογές σπουδών στην Ελλάδα.",
+            "Αιτήσεις και διαδικασίες visa: Συντονισμός αιτήσεων, συγκέντρωση δικαιολογητικών και διεκπεραίωση των απαραίτητων διαδικασιών για visa και άδεια διαμονής.",
+            "Στέγαση και υποδοχή: Οργάνωση της φοιτητικής σας διαμονής, συντονισμός της άφιξής σας και υποστήριξη κατά την εγκατάστασή σας στην Ελλάδα.",
           ],
           ctaText: "ΞΕΚΙΝΗΣΤΕ ΤΟ ΤΑΞΙΔΙ ΣΑΣ",
           ctaHref: "#contact",
@@ -538,8 +554,12 @@ export const translations = {
     },
     contact: {
       tag: "Επικοινωνία",
-      title: "Θα χαρούμε να σας ακούσουμε",
-      subtitle: "Πείτε μας τι χρειάζεστε και θα βρούμε μαζί τη σωστή λύση. Θα εξετάσουμε το αίτημά σας και θα επικοινωνήσουμε μαζί σας το συντομότερο.",
+      title: "Επικοινωνήστε μαζί μας",
+      subtitle:
+        "Ενημερώστε μας για τις ανάγκες και τις απαιτήσεις της επιχείρησής σας. Η ομάδα της Zilolex θα αξιολογήσει το αίτημά σας και θα επικοινωνήσει μαζί σας, προκειμένου να συζητήσουμε τις κατάλληλες λύσεις και να διαμορφώσουμε μια πρόταση προσαρμοσμένη στις ανάγκες σας.",
+      sectionTitle: "Ας συζητήσουμε τις ανάγκες σας",
+      sectionSubtitle:
+        "Κάθε επιχείρηση έχει τις δικές της ανάγκες και προκλήσεις. Επικοινωνήστε μαζί μας για να συζητήσουμε τις απαιτήσεις σας και να εξετάσουμε πώς οι υπηρεσίες της Zilolex μπορούν να προσφέρουν την κατάλληλη λύση. Θα αξιολογήσουμε το αίτημά σας και θα επικοινωνήσουμε μαζί σας για τα επόμενα βήματα.",
       form: {
         title: "Φόρμα Αιτήματος",
         audienceLabel: "Ενδιαφέρομαι ως:",
@@ -677,36 +697,36 @@ export const translations = {
     },
     hero: {
       tagline: "Connecting People, Opportunities & Places",
-      serviceTagline: "Workforce & Student Infrastructure Services in Greece",
-      titleStart: "Connecting People,",
-      titleHighlight: "Opportunities & Places",
-      subtitle: "Workforce & Student Infrastructure Services in Greece. End-to-end recruitment, visa coordination, accommodation, and educational pathways.",
+      serviceTagline: "Comprehensive Relocation & Settlement Services for Workers and Students in Greece",
+      titleStart: "Comprehensive Relocation & Settlement Services",
+      titleHighlight: "for Workers and Students in Greece",
+      subtitle: "Connecting People, Opportunities & Places. End-to-end recruitment, visa coordination, accommodation, and educational pathways.",
       ctaPrimary: "Our Services",
       ctaSecondary: "Get in Touch",
       pillars: [
         {
           id: "workforce",
           num: "01",
-          title: "Workforce Mobility",
-          desc: "Recruitment, staffing, and deployment solutions.",
+          title: "Workforce Relocation & Placement",
+          desc: "Search, selection, and coordination for workforce placement.",
         },
         {
           id: "housing",
           num: "02",
-          title: "Housing Solutions",
-          desc: "Managed accommodation for workforces and students.",
+          title: "Accommodation Organization & Management",
+          desc: "Ensuring the search and organization of suitable accommodation solutions for workers and students.",
         },
         {
           id: "migration",
           num: "03",
-          title: "Migration Services",
-          desc: "Visa, work and residence permit support.",
+          title: "Visa & Residence Permit Processing",
+          desc: "We handle the collection and preparation of required documents, coordinating and processing procedures for visas, work permits, and residence permits in Greece.",
         },
         {
           id: "students",
           num: "04",
-          title: "Student Mobility",
-          desc: "Study pathways in Greece with relocation and housing.",
+          title: "Studies & Relocation in Greece",
+          desc: "We support the relocation process for international students in Greece, coordinating all required procedures and managing their accommodation.",
         },
       ],
       audienceCards: [
@@ -768,9 +788,9 @@ export const translations = {
     },
     employers: {
       tag: "For Employers",
-      headline: "From your initial staffing need to team arrival, with a single point of contact",
-      subhead: "Your business needs workforce. We will find them together.",
-      lead: "We understand how challenging it is to find reliable, qualified personnel, and how time-consuming international procedures can be. Zilolex partners with enterprises across multiple industries: we source candidates and organize everything required for third-country personnel to work in Greece.",
+      headline: "The workforce your enterprise needs, sourced from the global talent market.",
+      subhead: "",
+      lead: "We source, select, and organize the relocation of third-country workers, covering your staffing requirements.",
       whatWeDoTitle: "What we take care of for you",
       whatWeDo: [
         "We listen to your requirements: roles, qualifications, experience, headcount, and timeline.",
@@ -779,15 +799,16 @@ export const translations = {
         "We organize travel: arranging flights and on-ground reception.",
         "We secure accommodation: locating and coordinating suitable living arrangements.",
       ],
-      whyTrustTitle: "Why trust Zilolex",
+      whyTrustTitle: "Why Choose Zilolex",
       whyTrust: [
-        "Single point of contact throughout the entire process.",
-        "Solutions tailored specifically to your enterprise and industry requirements.",
-        "Professional coordination of complex relocation and logistics steps.",
-        "Flexible scaling, whether you need an individual specialist or an entire operational crew.",
+        "Unified partnership & communication: A consistent partner and a central point of contact throughout all collaboration stages.",
+        "Tailored solutions: We design our services around the operational needs, requirements, and specifics of each business.",
+        "End-to-end process management: We coordinate every phase, from sourcing and candidate selection to relocation, travel, and settlement support in Greece.",
+        "Flexibility & adaptability: Catering to diverse staffing needs, whether filling single positions or deploying larger workforce teams.",
       ],
       commitmentTitle: "Our Commitment",
-      commitmentText: "Your enterprise retains direct employment and payroll for all chosen workers. We handle sourcing and relocation coordination, freeing you from administrative and logistical overhead.",
+      commitmentText:
+        "Your enterprise retains sole responsibility for selecting, hiring, employing, and payroll processing for all workers. Zilolex undertakes candidate sourcing, relocation coordination, and the organization of their transfer and settlement in Greece.\n\nOur objective is to simplify the staffing process, minimizing administrative and logistical burdens on your company so you can focus unhindered on your core business operations.",
       cta: "REQUEST WORKFORCE CONSULTATION",
     },
     sectors: {
@@ -859,13 +880,14 @@ export const translations = {
       items: [
         {
           id: "search",
-          title: "Sourcing & Selection",
-          description: "Starting from your job requirements, we find the people who fit best.",
+          title: "Sourcing & Candidate Selection",
+          description:
+            "Every collaboration begins with understanding your needs. We source and evaluate candidates with the objective of identifying the right people for every job position.",
           points: [
-            "Targeting eligible candidates according to specific role requirements.",
-            "Searching domestic and international talent markets with verified partners.",
-            "Conducting initial vetting, experience checks, and interviews.",
-            "Presenting candidate shortlists and facilitating final interviews.",
+            "Targeted sourcing: We identify candidates based on the requirements, qualifications, and experience you need.",
+            "Local & international talent: We leverage the Greek and global labor markets, as well as our partner network.",
+            "Candidate vetting: We assess qualifications, professional experience, and suitability for each applicant.",
+            "Interviews & presentation: We coordinate the interview process and introduce the candidates who best meet your needs.",
           ],
           ctaText: "REQUEST STAFF",
           ctaHref: "#contact",
@@ -902,38 +924,46 @@ export const translations = {
     },
     howItWorks: {
       tag: "How It Works",
-      title: "Six straightforward steps from initial inquiry to team arrival",
-      subtitle: "A transparent, structured roadmap designed for peace of mind.",
+      title:
+        "Six simple steps, from your staffing need to worker arrival",
+      subtitle:
+        "A clear and structured path for your enterprise.",
       steps: [
         {
           number: "01",
-          title: "Needs Assessment",
-          description: "We record required roles, headcount, and schedule specifications.",
+          title: "Needs Assessment & Evaluation",
+          description:
+            "We discuss with you and record your company's requirements, specifying the roles needed, headcount, work location, and target hiring timeline.",
         },
         {
           number: "02",
-          title: "Candidate Sourcing",
-          description: "We search targeted channels to find the most qualified profiles.",
+          title: "Candidate Sourcing & Identification",
+          description:
+            "We search and identify suitable international candidates, leveraging global partner networks and specialized talent sourcing channels.",
         },
         {
           number: "03",
-          title: "Evaluation & Interviews",
-          description: "We present candidate shortlists and coordinate interviews with you.",
+          title: "Candidate Screening & Interviews",
+          description:
+            "We evaluate candidates against position requirements, present the best matches, and coordinate interview rounds for your final decision.",
         },
         {
           number: "04",
-          title: "Employer Decision",
-          description: "Your enterprise makes the final hiring decision and contracts directly.",
+          title: "The Final Choice is Yours",
+          description:
+            "Your enterprise selects the candidates you want and directly manages their hiring and employment.",
         },
         {
           number: "05",
-          title: "Relocation Coordination",
-          description: "We organize applications with certified specialists and public authorities.",
+          title: "Relocation Procedures Coordination",
+          description:
+            "We prepare and assemble the required documentation, coordinating applications and statutory procedures with certified specialists and public authorities.",
         },
         {
           number: "06",
-          title: "Arrival, Housing & Onboarding",
-          description: "We prepare travel and living arrangements for a seamless start.",
+          title: "Arrival & Settlement Organization",
+          description:
+            "We coordinate arrival, transportation, and accommodation arrangements for workers, ensuring their settlement in Greece is as seamless as possible.",
         },
       ],
       tableTitle: "Who Does What",
@@ -1022,19 +1052,22 @@ export const translations = {
       ],
     },
     partnerships: {
-      tag: "Partnerships & Students",
-      title: "Specialized Programs for Partners & Students",
-      subtitle: "Are you a recruitment agency, an educational institution, or an international student? We have dedicated pathways for you.",
+      tag: "Partnerships & Specialized Services",
+      title: "Solutions for Partners & International Students",
+      subtitle:
+        "We partner with international staffing agencies, universities, colleges, and educational organizations, providing specialized relocation, settlement, and accommodation management services in Greece. In parallel, we support international students with their relocation and housing procedures.",
       items: [
         {
           id: "recruitment",
           title: "For Recruitment Agencies",
-          subtitle: "Partnering for international workforce mobility",
-          description: "Successful global talent acquisition relies on solid local partnerships. If you are a recruitment agency or HR provider seeking to expand your reach into Greece, we handle local coordination and relocation support.",
+          subtitle:
+            "Your partner in Greece for completing the staffing process",
+          description:
+            "Sourcing and selecting international personnel is only the first step. Zilolex partners with international recruitment agencies and HR firms, managing the required procedures for the relocation, arrival, and settlement of workers in Greece.\n\nOur services include:",
           bullets: [
-            "Coordination with Greek employers and continuous monitoring.",
-            "Documentation alignment and migration process guidance.",
-            "Arrival management, transfers, and team housing.",
+            "Coordination with Greek employers: Communication and collaboration with the enterprise hiring the workforce.",
+            "Relocation procedures: Dossier preparation, document collection, and processing of all required approvals and permits.",
+            "Arrival & housing management: Transportation coordination, reception of workers upon arrival in Greece, and accommodation organization.",
           ],
           ctaText: "BECOME A PARTNER",
           ctaHref: "#contact",
@@ -1042,12 +1075,14 @@ export const translations = {
         {
           id: "institutions",
           title: "For Educational Institutions",
-          subtitle: "Student mobility and relocation partnerships",
-          description: "We assist universities, colleges, and educational organizations in welcoming international students to Greece: coordinating applications, supporting visa and residence inquiries, and organizing housing.",
+          subtitle:
+            "Your partner for international student reception and settlement",
+          description:
+            "We partner with universities, colleges, and educational organizations hosting international students in Greece. We coordinate the necessary procedures for their entry and settlement, including student visa and residence permit processing, accommodation management, and arrival reception in Greece.\n\nOur services include:",
           bullets: [
-            "Coordination of student dossiers and institutional requirements.",
-            "Assistance with study visas and residence permits.",
-            "Student housing placement and arrival reception.",
+            "Application & dossier coordination: Gathering and preparing the required paperwork for admission and study entry procedures.",
+            "Visa & residence permit procedures: End-to-end handling and submission of required statutory filings for student visas and permits.",
+            "Student housing & reception: Accommodation organization, arrival coordination, and onboarding support upon arrival in Greece.",
           ],
           ctaText: "EXPLORE PARTNERSHIP",
           ctaHref: "#contact",
@@ -1055,12 +1090,13 @@ export const translations = {
         {
           id: "students",
           title: "For Students",
-          subtitle: "Studies, relocation, and housing in Greece",
-          description: "Planning to study in Greece? We accompany you through each stage: guidance on academic choices, application support, visa documentation information, and verified student accommodation.",
+          subtitle: "Your journey to studying in Greece starts here",
+          description:
+            "Considering pursuing your studies in Greece? Zilolex supports you at every step of your preparation and relocation. We guide you through available study options and coordinate the required procedures for admissions, student visa, and residence permits. At the same time, we arrange your student housing and coordinate your arrival and warm welcome in Greece.\n\nOur services include:",
           bullets: [
-            "Information on recognized academic pathways in Greece.",
-            "Guidance through application documentation.",
-            "Assistance finding safe student housing.",
+            "Study options: Information on educational institutions and available study options in Greece.",
+            "Applications & visa procedures: Application coordination, gathering of supporting documents, and processing of necessary procedures for visa and residence permit.",
+            "Housing & reception: Organization of your student accommodation, coordination of your arrival, and onboarding support during your settlement in Greece.",
           ],
           ctaText: "BEGIN YOUR JOURNEY",
           ctaHref: "#contact",
@@ -1194,8 +1230,12 @@ export const translations = {
     },
     contact: {
       tag: "Contact",
-      title: "We Would Love to Hear From You",
-      subtitle: "Tell us what you need and we will formulate the right solution together. We review every request promptly and reply as soon as possible.",
+      title: "Get in Touch With Us",
+      subtitle:
+        "Inform us of your enterprise's specific requirements and needs. The Zilolex team will evaluate your request and get in touch to discuss suitable solutions and formulate a proposal tailored to your needs.",
+      sectionTitle: "Let's Discuss Your Requirements",
+      sectionSubtitle:
+        "Every enterprise has its own unique requirements and challenges. Get in touch with us to discuss your staffing needs and explore how Zilolex can deliver the right solutions. We will evaluate your request and contact you regarding the next steps.",
       form: {
         title: "Request Form",
         audienceLabel: "I am interested as:",

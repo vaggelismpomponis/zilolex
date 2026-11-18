@@ -43,12 +43,24 @@ export function ServicesSection() {
 
                 {/* Service Points */}
                 <ul className="space-y-2 mb-6">
-                  {service.points.map((point, pIdx) => (
-                    <li key={pIdx} className="text-xs text-slate-700 flex items-start gap-2 group-hover:text-slate-900 transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
+                  {service.points.map((point, pIdx) => {
+                    const parts = point.split(": ");
+                    return (
+                      <li key={pIdx} className="text-xs text-slate-700 flex items-start gap-2 group-hover:text-slate-900 transition-colors">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                        <span className="leading-relaxed">
+                          {parts.length > 1 ? (
+                            <>
+                              <strong className="font-bold text-slate-900">{parts[0]}: </strong>
+                              {parts.slice(1).join(": ")}
+                            </>
+                          ) : (
+                            point
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 {/* Legal Note if present */}

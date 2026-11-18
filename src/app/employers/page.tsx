@@ -19,20 +19,8 @@ export default function EmployersPage() {
       <main className="flex-1 w-full">
         <PageBanner
           tag={t.employers.tag}
-          title={
-            language === "el" ? (
-              <>
-                <span>Αξιόπιστο Προσωπικό </span>
-                <span className="text-emerald-600">για την Επιχείρησή σας</span>
-              </>
-            ) : (
-              <>
-                <span>Reliable Staffing </span>
-                <span className="text-emerald-600">for Your Business</span>
-              </>
-            )
-          }
-          subtitle={t.employers.subhead}
+          title={t.employers.headline}
+          subtitle={t.employers.lead}
           imageSrc="/images/audience-employer.jpg"
           imageAlt="Employers in Greece"
           objectPosition="object-[65%_25%] sm:object-[60%_30%] lg:object-right"

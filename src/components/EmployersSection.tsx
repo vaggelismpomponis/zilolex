@@ -19,9 +19,11 @@ export function EmployersSection() {
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
             {t.employers.headline}
           </h2>
-          <p className="text-lg font-semibold text-emerald-800 mb-4">
-            {t.employers.subhead}
-          </p>
+          {t.employers.subhead && (
+            <p className="text-lg font-semibold text-emerald-800 mb-4">
+              {t.employers.subhead}
+            </p>
+          )}
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {t.employers.lead}
           </p>
@@ -53,25 +55,39 @@ export function EmployersSection() {
                 {t.employers.whyTrustTitle}
               </h3>
               <ul className="space-y-3.5">
-                {t.employers.whyTrust.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-xs font-bold text-emerald-700 shrink-0 mt-0.5">
-                      ✓
-                    </span>
-                    <span className="text-xs sm:text-sm text-slate-700 leading-normal">{item}</span>
-                  </li>
-                ))}
+                {t.employers.whyTrust.map((item, idx) => {
+                  const parts = item.split(": ");
+                  return (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-xs font-bold text-emerald-700 shrink-0 mt-0.5">
+                        ✓
+                      </span>
+                      <span className="text-xs sm:text-sm text-slate-700 leading-normal">
+                        {parts.length > 1 ? (
+                          <>
+                            <strong className="font-bold text-slate-900">{parts[0]}: </strong>
+                            {parts.slice(1).join(": ")}
+                          </>
+                        ) : (
+                          item
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
             {/* Commitment Box */}
             <div className="mt-6 p-4 rounded-md bg-emerald-50 border border-emerald-200">
-              <div className="text-xs font-bold text-emerald-900 uppercase tracking-wider mb-1">
+              <div className="text-xs font-bold text-emerald-900 uppercase tracking-wider mb-2">
                 {t.employers.commitmentTitle}
               </div>
-              <p className="text-xs text-emerald-800 leading-relaxed">
-                {t.employers.commitmentText}
-              </p>
+              <div className="space-y-2 text-xs text-emerald-800 leading-relaxed">
+                {t.employers.commitmentText.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
             </div>
           </div>
         </div>

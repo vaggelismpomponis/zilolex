@@ -29,31 +29,24 @@ export function Hero() {
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Hero Content Area */}
         <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-6">
-          {/* Main Headline (Exact 2 lines from photo) */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-4">
+          {/* Main Headline */}
+          <h1 className="text-2xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-extrabold text-slate-900 tracking-tight leading-[1.18] mb-6 sm:mb-8">
             {language === "el" ? (
               <>
-                <span>Συνδέουμε Ανθρώπους,</span>
-                <br />
-                <span>Ευκαιρίες </span>
-                <span className="text-emerald-600">&amp; Τόπους</span>
+                <span>Ολοκληρωμένες Υπηρεσίες Μετάκλησης </span>
+                <br className="hidden sm:inline" />
+                <span>&amp; εγκατάστασης </span>
+                <span className="text-emerald-600">Εργαζομένων και φοιτητών στην Ελλάδα</span>
               </>
             ) : (
               <>
-                <span>Connecting People,</span>
-                <br />
-                <span>Opportunities </span>
-                <span className="text-emerald-600">&amp; Places</span>
+                <span>Comprehensive Relocation </span>
+                <br className="hidden sm:inline" />
+                <span>&amp; Settlement Services </span>
+                <span className="text-emerald-600">for Workers and Students in Greece</span>
               </>
             )}
           </h1>
-
-          {/* Subtitle / Service tagline */}
-          <p className="text-base sm:text-lg lg:text-xl font-medium text-slate-700 mb-8 leading-snug">
-            {language === "el"
-              ? "Υπηρεσίες Υποδομής Εργατικού Δυναμικού & Φοιτητών στην Ελλάδα"
-              : "Workforce & Student Infrastructure Services in Greece"}
-          </p>
 
           {/* Single CTA Button matching the photo */}
           <div>

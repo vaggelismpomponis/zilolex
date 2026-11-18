@@ -16,10 +16,10 @@ export function ContactFormSection() {
             {t.contact.tag}
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
-            {t.contact.title}
+            {t.contact.sectionTitle || t.contact.title}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            {t.contact.subtitle}
+            {t.contact.sectionSubtitle || t.contact.subtitle}
           </p>
         </div>
 

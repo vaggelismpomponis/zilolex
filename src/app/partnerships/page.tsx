@@ -68,12 +68,12 @@ export default function PartnershipsPage() {
                       {language === "el" ? "Για Recruitment Agencies" : "For Recruitment Agencies"}
                     </div>
                     <h3 className="text-base font-bold text-slate-900 mb-2">
-                      {language === "el" ? "Τοπικός Συνεργάτης στην Ελλάδα" : "Your Local Partner in Greece"}
+                      {language === "el" ? "Ο αξιόπιστος συνεργάτης σας στην Ελλάδα" : "Your Reliable Partner in Greece"}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {language === "el"
-                        ? "Αναλαμβάνουμε τον συντονισμό υποδοχής, τις διαδικασίες μετάκλησης και την οργανωμένη στέγαση των υποψηφίων σας."
-                        : "We handle ground reception, statutory relocation coordination, and managed housing for your candidates."}
+                        ? "Λειτουργούμε ως τοπικός συνεργάτης διεθνών εταιρειών στελέχωσης, αναλαμβάνοντας τον συντονισμό των διαδικασιών μετάκλησης, την υποδοχή των υποψηφίων κατά την άφιξή τους στην Ελλάδα, καθώς και την οργάνωση της διαμονής τους. Παρέχουμε την απαραίτητη υποστήριξη σε κάθε στάδιο, διευκολύνοντας την ομαλή εγκατάσταση των εργαζομένων και τη συνεργασία σας με τις ελληνικές επιχειρήσεις."
+                        : "We act as the local partner for international staffing agencies, managing the coordination of relocation procedures, candidate reception upon arrival in Greece, and accommodation arrangements. We provide comprehensive support at every stage, ensuring seamless worker onboarding and effective cooperation with Greek enterprises."}
                     </p>
                   </div>
                   <Link
@@ -102,12 +102,12 @@ export default function PartnershipsPage() {
                       {language === "el" ? "Για Εκπαιδευτικά Ιδρύματα" : "For Educational Institutions"}
                     </div>
                     <h3 className="text-base font-bold text-slate-900 mb-2">
-                      {language === "el" ? "Υποδομή Διεθνών Φοιτητών" : "International Student Infrastructure"}
+                      {language === "el" ? "Υποστήριξη Διεθνών Φοιτητών" : "International Student Support"}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {language === "el"
-                        ? "Στηρίζουμε πανεπιστήμια και κολέγια στην προσέλκυση, μετεγκατάσταση και στέγαση ξένων φοιτητών."
-                        : "Supporting universities in attracting, relocating, and accommodating international students."}
+                        ? "Συνεργαζόμαστε με πανεπιστήμια, κολέγια και εκπαιδευτικούς οργανισμούς, αναλαμβάνοντας τον συντονισμό των διαδικασιών υποδοχής και μετεγκατάστασης διεθνών φοιτητών στην Ελλάδα, καθώς και την οργάνωση της διαμονής τους. Στόχος μας είναι να διευκολύνουμε την εγκατάστασή τους και να υποστηρίζουμε τα εκπαιδευτικά ιδρύματα σε κάθε σχετικό οργανωτικό στάδιο."
+                        : "We collaborate with universities, colleges, and educational organizations, coordinating reception and relocation procedures for international students in Greece, as well as arranging their accommodation. Our mission is to facilitate their smooth settlement and support educational institutions at every organizational stage."}
                     </p>
                   </div>
                   <Link
